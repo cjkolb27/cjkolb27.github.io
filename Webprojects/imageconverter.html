@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="mine.css">
+  <title>Caleb Kolb: Portfolio</title>
+  <script async src='https://www.googletagmanager.com/gtag/js?id=G-Y9J9RT3K18'></script>
+  <script
+    id='google-analytics'
+    strategy='afterInteractive'
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y9J9RT3K18', {
+          page_path: window.location.pathname,
+        });
+      `,
+    }}
+  ></script>
+  <script type="module">import Color from "https://cdn.jsdelivr.net/npm/colorjs.io/+esm";</script>
+  <script src="https://unpkg.com/pica/dist/pica.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+  <script type="module" src="converter.js" defer></script>
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  <br>
+  <div class="imageConversions">
+    <div class="save-data">
+      <div>
+        <input id="save-input">
+        <select id="save-select">
+          <option value="" disabled selected>None</option>
+        </select>
+        <button id="load-button">Load</button>
+      </div>
+      <button id="save-button">Save</button>
+    </div>
+    <div class="all-blocks">
+      <div class="expand" id="wood">
+        <div class="seperate">
+          <div>
+            <p class="title-text">Wood</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-wood">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-wood">
+          </div>
+        </div>
+        
+        <div class="wrapper-wood"></div>
+      </div>
+
+      <div class="expand" id="ore">
+        <div class="seperate">
+          <div>
+            <p class="title-text">Ore</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-ore">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-ore">
+          </div>
+        </div>
+
+        <div class="wrapper-ore"></div>
+      </div>
+
+      <div class="expand" id="wool">
+        <div class="seperate">
+          <div>
+            <p class="title-text">Wool</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-wool">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-wool">
+          </div>
+        </div>
+
+        <div class="wrapper-wool"></div>
+      </div>
+
+      <div class="expand" id="complex">
+        <div class="seperate">
+          <div>
+            <p class="title-text">Complex</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-complex">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-complex">
+          </div>
+        </div>
+
+        <div class="wrapper-complex"></div>
+      </div>
+
+      <div class="expand" id="expensive">
+        <div class="seperate">
+          <div>
+            <p class="title-text">Expensive</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-expensive">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-expensive">
+          </div>
+        </div>
+
+        <div class="wrapper-expensive"></div>
+      </div>
+
+      <div class="expand" id="high-contrast">
+        <div class="seperate">
+          <div>
+            <p class="title-text">High Contrast</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-high-contrast">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-high-contrast">
+          </div>
+        </div>
+
+        <div class="wrapper-high-contrast"></div>
+      </div>
+
+      <div class="expand" id="other">
+        <div class="seperate">
+          <div>
+            <p class="title-text">Other</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-other">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-other">
+          </div>
+        </div>
+
+        <div class="wrapper-other"></div>
+      </div>
+
+      <div class="expand" id="impossible">
+        <div class="seperate">
+          <div>
+            <p class="title-text">Impossible</p>
+          </div>
+          <div class="all-none-div">
+            <p>All</p>
+            <input type="checkbox" id="all-check-impossible">
+
+            <p>None</p>
+            <input type="checkbox" id="none-check-impossible">
+          </div>
+        </div>
+
+        <div class="wrapper-impossible"></div>
+      </div>
+    </div>
+    <template>
+      <div class="selectIcons">
+        <div class="selectIcon">
+          <div id="box-icon">
+            <input type="checkbox" id="myToggle"/>
+            <img src="../images/minecraft/acacia_log.png" id="selectImages">
+          </div>
+          <p id="centerText">Item name</p>
+        </div>
+      </div>
+    </template>
+    <div>
+        <img id="previewImage" alt="Preview">
+        <img id="convertedImage" alt="Preview">
+    </div>
+    <div>
+      <input id="mimage" type="file" accept=".png, .jpg, .jpeg">
+      <label for="width">width (1-256):</label>
+      <input type="number" id="width" name="width" min="1" max="256" value="64">
+
+      <label for="height">height (1-256):</label>
+      <input type="number" id="height" name="height" min="1" max="256" value="64">
+      <button id="generateImage">Generate</button>
+    </div>
+    <img id="minecraftImage" alt="Preview">
+  </div>
+  <br>
+  <div>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,4062 @@
+[
+  {
+    "id": 0,
+    "type": ["wood"],
+    "file": "images/minecraft/acacia_log.png",
+    "lab": [
+      41.232774076370916,
+      0.8222614179237133,
+      6.462903114644274
+    ]
+  },
+  {
+    "id": 1,
+    "type": ["wood"],
+    "file": "images/minecraft/acacia_log_top.png",
+    "lab": [
+      44.4447730173207,
+      22.31963347376032,
+      30.098878517673924
+    ]
+  },
+  {
+    "id": 2,
+    "type": ["wood"],
+    "file": "images/minecraft/acacia_planks.png",
+    "lab": [
+      46.84492880090399,
+      28.428265320017115,
+      36.59122237334218
+    ]
+  },
+  {
+    "id": 3,
+    "type": ["ore"],
+    "file": "images/minecraft/amethyst_block.png",
+    "lab": [
+      48.7886550269512,
+      34.566881526683716,
+      -43.99131200610811
+    ]
+  },
+  {
+    "id": 4,
+    "type": ["ore"],
+    "file": "images/minecraft/ancient_debris_side.png",
+    "lab": [
+      30.17987361957667,
+      13.146605021073315,
+      10.80275624608508
+    ]
+  },
+  {
+    "id": 5,
+    "type": ["ore"],
+    "file": "images/minecraft/ancient_debris_top.png",
+    "lab": [
+      30.566388391034373,
+      11.676820686926977,
+      10.324002039928546
+    ]
+  },
+  {
+    "id": 6,
+    "type": ["other"],
+    "file": "images/minecraft/andesite.png",
+    "lab": [
+      56.74498332912648,
+      0.08260834226358602,
+      -0.3107753605893775
+    ]
+  },
+  {
+    "id": 7,
+    "type": ["wood"],
+    "file": "images/minecraft/bamboo_block.png",
+    "lab": [
+      56.71424183896776,
+      -19.027672645437015,
+      42.80596295892728
+    ]
+  },
+  {
+    "id": 8,
+    "type": ["wood"],
+    "file": "images/minecraft/bamboo_block_top.png",
+    "lab": [
+      56.991337753722405,
+      -12.390230481110118,
+      41.071978272211325
+    ]
+  },
+  {
+    "id": 9,
+    "type": ["wood"],
+    "file": "images/minecraft/bamboo_mosaic.png",
+    "lab": [
+      69.59239434054774,
+      -4.093503669254913,
+      49.04858490110944
+    ]
+  },
+  {
+    "id": 10,
+    "type": ["wood"],
+    "file": "images/minecraft/bamboo_planks.png",
+    "lab": [
+      70.67181371579127,
+      -4.102628971748493,
+      49.24272497211508
+    ]
+  },
+  {
+    "id": 11,
+    "type": ["complex"],
+    "file": "images/minecraft/barrel_bottom.png",
+    "lab": [
+      38.59449061272005,
+      7.86400731913719,
+      25.949284340137098
+    ]
+  },
+  {
+    "id": 12,
+    "type": ["complex"],
+    "file": "images/minecraft/barrel_side.png",
+    "lab": [
+      36.31014359846363,
+      6.9692546818229,
+      21.994519672072286
+    ]
+  },
+  {
+    "id": 13,
+    "type": ["complex"],
+    "file": "images/minecraft/barrel_top.png",
+    "lab": [
+      45.08989787597104,
+      8.506598277333891,
+      28.880823641456644
+    ]
+  },
+  {
+    "id": 14,
+    "type": ["other"],
+    "file": "images/minecraft/basalt_side.png",
+    "lab": [
+      30.941985736496033,
+      1.6044671098016652,
+      -3.2124111992473137
+    ]
+  },
+  {
+    "id": 15,
+    "type": ["other"],
+    "file": "images/minecraft/basalt_top.png",
+    "lab": [
+      34.44039041095378,
+      0.8525538250045617,
+      -3.086511274668964
+    ]
+  },
+  {
+    "id": 16,
+    "type": ["impossible"],
+    "file": "images/minecraft/bedrock.png",
+    "lab": [
+      35.59779054948508,
+      0.0033154627671504915,
+      -0.005310363177158219
+    ]
+  },
+  {
+    "id": 17,
+    "type": ["complex"],
+    "file": "images/minecraft/beehive_front.png",
+    "lab": [
+      55.30083735696824,
+      5.4988268840778005,
+      31.74332460438261
+    ]
+  },
+  {
+    "id": 18,
+    "type": ["complex"],
+    "file": "images/minecraft/beehive_side.png",
+    "lab": [
+      54.61302464863055,
+      5.42712901938485,
+      31.80131678459307
+    ]
+  },
+  {
+    "id": 19,
+    "type": ["complex"],
+    "file": "images/minecraft/bee_nest_front.png",
+    "lab": [
+      61.09007209253863,
+      8.538965941941992,
+      39.53651378467858
+    ]
+  },
+  {
+    "id": 20,
+    "type": ["complex"],
+    "file": "images/minecraft/bee_nest_side.png",
+    "lab": [
+      64.93043348085293,
+      9.281374580870391,
+      43.9336940477859
+    ]
+  },
+  {
+    "id": 21,
+    "type": ["wood"],
+    "file": "images/minecraft/birch_log.png",
+    "lab": [
+      85.39846833164594,
+      -0.30780603992173794,
+      2.6243115123868637
+    ]
+  },
+  {
+    "id": 22,
+    "type": ["wood"],
+    "file": "images/minecraft/birch_log_top.png",
+    "lab": [
+      73.04401398014748,
+      -1.552184766123666,
+      24.435703560763596
+    ]
+  },
+  {
+    "id": 23,
+    "type": ["wood"],
+    "file": "images/minecraft/birch_planks.png",
+    "lab": [
+      71.76482138732688,
+      -1.7066331255194465,
+      29.929535958160795
+    ]
+  },
+  {
+    "id": 24,
+    "type": ["other"],
+    "file": "images/minecraft/blackstone.png",
+    "lab": [
+      14.771562633817362,
+      4.423193569416685,
+      -2.141461957401137
+    ]
+  },
+  {
+    "id": 25,
+    "type": ["other"],
+    "file": "images/minecraft/black_concrete.png",
+    "lab": [
+      2.8569583964060286,
+      0.2875776951429751,
+      -2.4096813207328998
+    ]
+  },
+  {
+    "id": 26,
+    "type": ["other"],
+    "file": "images/minecraft/black_concrete_powder.png",
+    "lab": [
+      9.69112835736902,
+      0.7479742425964341,
+      -3.7671479724615202
+    ]
+  },
+  {
+    "id": 27,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/black_glazed_terracotta.png",
+    "lab": [
+      18.311121596038127,
+      16.286267257190826,
+      8.454662869351875
+    ]
+  },
+  {
+    "id": 28,
+    "type": ["expensive"],
+    "file": "images/minecraft/black_shulker_box.png",
+    "lab": [
+      9.181326949152632,
+      0.9001491228147799,
+      -2.7476339148105127
+    ]
+  },
+  {
+    "id": 29,
+    "type": ["other"],
+    "file": "images/minecraft/black_terracotta.png",
+    "lab": [
+      9.335734506881925,
+      6.251613402903181,
+      6.857870467158603
+    ]
+  },
+  {
+    "id": 30,
+    "type": ["wool"],
+    "file": "images/minecraft/black_wool.png",
+    "lab": [
+      7.310997757011374,
+      0.7686200694559608,
+      -2.7377061708943753
+    ]
+  },
+  {
+    "id": 31,
+    "type": ["complex"],
+    "file": "images/minecraft/blast_furnace_front.png",
+    "lab": [
+      44.93619780246234,
+      -0.07696659643321373,
+      0.18370125077083932
+    ]
+  },
+  {
+    "id": 32,
+    "type": ["complex"],
+    "file": "images/minecraft/blast_furnace_side.png",
+    "lab": [
+      45.076714330704725,
+      0.18582039822067956,
+      -0.08870915580033928
+    ]
+  },
+  {
+    "id": 33,
+    "type": ["other"],
+    "file": "images/minecraft/blue_concrete.png",
+    "lab": [
+      25.38117041146104,
+      31.713649199380942,
+      -53.77249420678747
+    ]
+  },
+  {
+    "id": 34,
+    "type": ["other"],
+    "file": "images/minecraft/blue_concrete_powder.png",
+    "lab": [
+      35.77073270599853,
+      26.96957814054749,
+      -50.99236377981966
+    ]
+  },
+  {
+    "id": 35,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/blue_glazed_terracotta.png",
+    "lab": [
+      29.81308090506949,
+      19.15321179934739,
+      -42.665042528083134
+    ]
+  },
+  {
+    "id": 36,
+    "type": ["other"],
+    "file": "images/minecraft/blue_ice.png",
+    "lab": [
+      68.54033870305499,
+      7.029430186679555,
+      -47.59303190870977
+    ]
+  },
+  {
+    "id": 37,
+    "type": ["expensive"],
+    "file": "images/minecraft/blue_shulker_box.png",
+    "lab": [
+      24.754289726206157,
+      31.035415624602166,
+      -52.69064565110728
+    ]
+  },
+  {
+    "id": 38,
+    "type": ["other"],
+    "file": "images/minecraft/blue_terracotta.png",
+    "lab": [
+      27.907921071913677,
+      13.509295224038834,
+      -16.40218578305936
+    ]
+  },
+  {
+    "id": 39,
+    "type": ["wool"],
+    "file": "images/minecraft/blue_wool.png",
+    "lab": [
+      29.808057768424906,
+      31.054990518992337,
+      -55.1034544301046
+    ]
+  },
+  {
+    "id": 40,
+    "type": ["other"],
+    "file": "images/minecraft/bone_block_side.png",
+    "lab": [
+      89.67829144642705,
+      -1.8752944520703532,
+      9.272117282961247
+    ]
+  },
+  {
+    "id": 41,
+    "type": ["other"],
+    "file": "images/minecraft/bone_block_top.png",
+    "lab": [
+      82.44981421052442,
+      -3.2584956273968473,
+      13.821393768177229
+    ]
+  },
+  {
+    "id": 42,
+    "type": ["expensive"],
+    "file": "images/minecraft/brain_coral_block.png",
+    "lab": [
+      55.56172587057347,
+      53.19656291798404,
+      -14.299415287162404
+    ]
+  },
+  {
+    "id": 43,
+    "type": ["other"],
+    "file": "images/minecraft/bricks.png",
+    "lab": [
+      46.90633900168447,
+      20.2356560677126,
+      17.7232690396429
+    ]
+  },
+  {
+    "id": 44,
+    "type": ["other"],
+    "file": "images/minecraft/brown_concrete.png",
+    "lab": [
+      28.895650535791425,
+      13.220900884534279,
+      23.74683049951253
+    ]
+  },
+  {
+    "id": 45,
+    "type": ["other"],
+    "file": "images/minecraft/brown_concrete_powder.png",
+    "lab": [
+      39.79178320266547,
+      13.254662188120935,
+      24.75947333500142
+    ]
+  },
+  {
+    "id": 46,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/brown_glazed_terracotta.png",
+    "lab": [
+      46.9538571189829,
+      7.093732059507392,
+      15.628452325528421
+    ]
+  },
+  {
+    "id": 47,
+    "type": ["other"],
+    "file": "images/minecraft/brown_mushroom_block.png",
+    "lab": [
+      50.17067798728209,
+      10.825150190897746,
+      22.608306776251702
+    ]
+  },
+  {
+    "id": 48,
+    "type": ["expensive"],
+    "file": "images/minecraft/brown_shulker_box.png",
+    "lab": [
+      32.046120117128375,
+      14.206920987652325,
+      25.23976828181711
+    ]
+  },
+  {
+    "id": 49,
+    "type": ["other"],
+    "file": "images/minecraft/brown_terracotta.png",
+    "lab": [
+      23.98726171930201,
+      9.65595683744892,
+      14.517679827289262
+    ]
+  },
+  {
+    "id": 50,
+    "type": ["wool"],
+    "file": "images/minecraft/brown_wool.png",
+    "lab": [
+      34.64183504013898,
+      14.888809527310384,
+      25.894742982474025
+    ]
+  },
+  {
+    "id": 51,
+    "type": ["expensive"],
+    "file": "images/minecraft/bubble_coral_block.png",
+    "lab": [
+      40.26852905053643,
+      66.50938853591144,
+      -40.244772775761646
+    ]
+  },
+  {
+    "id": 52,
+    "type": ["other"],
+    "file": "images/minecraft/calcite.png",
+    "lab": [
+      89.11452760797825,
+      -1.0011349439811388,
+      1.7319983153771212
+    ]
+  },
+  {
+    "id": 53,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/cartography_table_side1.png",
+    "lab": [
+      23.245235703566006,
+      9.491956457802688,
+      14.518239570745182
+    ]
+  },
+  {
+    "id": 54,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/cartography_table_side2.png",
+    "lab": [
+      27.861807926485554,
+      8.709266679286923,
+      15.882664498665362
+    ]
+  },
+  {
+    "id": 55,
+    "type": ["complex"],
+    "file": "images/minecraft/cartography_table_side3.png",
+    "lab": [
+      20.20340279691725,
+      8.152876657883878,
+      19.07161273195478
+    ]
+  },
+  {
+    "id": 56,
+    "type": ["other"],
+    "file": "images/minecraft/carved_pumpkin.png",
+    "lab": [
+      41.681101453081574,
+      22.711750616519833,
+      44.057093261968426
+    ]
+  },
+  {
+    "id": 57,
+    "type": ["complex"],
+    "file": "images/minecraft/cauldron_side.png",
+    "lab": [
+      31.18424463811503,
+      0.6251589293314637,
+      -0.7159810372837287
+    ]
+  },
+  {
+    "id": 58,
+    "type": ["wood"],
+    "file": "images/minecraft/cherry_leaves.png",
+    "lab": [
+      76.75184814531362,
+      23.86285343255665,
+      -2.0816114583393412
+    ]
+  },
+  {
+    "id": 59,
+    "type": ["wood"],
+    "file": "images/minecraft/cherry_log.png",
+    "lab": [
+      15.81273033812879,
+      12.538544708836362,
+      -3.270497743028
+    ]
+  },
+  {
+    "id": 60,
+    "type": ["wood"],
+    "file": "images/minecraft/cherry_log_top.png",
+    "lab": [
+      61.43509821088758,
+      16.303557668936012,
+      8.108466381356166
+    ]
+  },
+  {
+    "id": 61,
+    "type": ["wood"],
+    "file": "images/minecraft/cherry_planks.png",
+    "lab": [
+      76.93039019469201,
+      16.5748450267796,
+      9.842117953073371
+    ]
+  },
+  {
+    "id": 62,
+    "type": ["complex"],
+    "file": "images/minecraft/chiseled_bookshelf_empty.png",
+    "lab": [
+      30.121159628124417,
+      3.853668065968471,
+      19.389293753329234
+    ]
+  },
+  {
+    "id": 63,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/chiseled_bookshelf_occupied.png",
+    "lab": [
+      42.6651275778767,
+      10.191069908025908,
+      17.325017055931035
+    ]
+  },
+  {
+    "id": 64,
+    "type": ["complex"],
+    "file": "images/minecraft/chiseled_bookshelf_side.png",
+    "lab": [
+      60.75327151801348,
+      5.603577650037745,
+      34.04055480445004
+    ]
+  },
+  {
+    "id": 65,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_copper.png",
+    "lab": [
+      51.66557472254087,
+      30.884453272103528,
+      29.922772687468807
+    ]
+  },
+  {
+    "id": 66,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_deepslate.png",
+    "lab": [
+      22.610606434652787,
+      0.12265428397268692,
+      -0.3384828391433879
+    ]
+  },
+  {
+    "id": 67,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_nether_bricks.png",
+    "lab": [
+      11.073446536589568,
+      11.654197043483052,
+      1.8843582843249354
+    ]
+  },
+  {
+    "id": 68,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_polished_blackstone.png",
+    "lab": [
+      20.77984020716048,
+      4.3795883270284985,
+      -4.141114850458893
+    ]
+  },
+  {
+    "id": 69,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_quartz_block.png",
+    "lab": [
+      90.34103613226227,
+      0.17270009742721115,
+      4.924572967802571
+    ]
+  },
+  {
+    "id": 70,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_quartz_block_top.png",
+    "lab": [
+      90.22346511627583,
+      0.07728918226367579,
+      5.185678179186191
+    ]
+  },
+  {
+    "id": 71,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_red_sandstone.png",
+    "lab": [
+      50.30122501104067,
+      30.301278812162764,
+      51.13797067665532
+    ]
+  },
+  {
+    "id": 72,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_resin_bricks.png",
+    "lab": [
+      50.595578275411015,
+      43.33973932347203,
+      53.366829542561916
+    ]
+  },
+  {
+    "id": 73,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_sandstone.png",
+    "lab": [
+      81.65837301266173,
+      -2.484597128224405,
+      25.544074424098284
+    ]
+  },
+  {
+    "id": 74,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_stone_bricks.png",
+    "lab": [
+      49.94840580302453,
+      0.4986973539532855,
+      -0.35789532829000986
+    ]
+  },
+  {
+    "id": 75,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_tuff.png",
+    "lab": [
+      39.2272450566108,
+      -3.608323395963647,
+      3.6747588190208234
+    ]
+  },
+  {
+    "id": 76,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_tuff_bricks.png",
+    "lab": [
+      42.995182191435546,
+      -3.3017975524905463,
+      3.803222757876485
+    ]
+  },
+  {
+    "id": 77,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_tuff_bricks_top.png",
+    "lab": [
+      47.49630548502269,
+      -2.633719793296962,
+      3.5561034062105215
+    ]
+  },
+  {
+    "id": 78,
+    "type": ["other"],
+    "file": "images/minecraft/chiseled_tuff_top.png",
+    "lab": [
+      41.045345984764765,
+      -3.4358023873574455,
+      3.6051777386336505
+    ]
+  },
+  {
+    "id": 79,
+    "type": ["other"],
+    "file": "images/minecraft/clay.png",
+    "lab": [
+      68.20201772552332,
+      0.5851200489834937,
+      -7.377269868277305
+    ]
+  },
+  {
+    "id": 80,
+    "type": ["ore"],
+    "file": "images/minecraft/coal_block.png",
+    "lab": [
+      5.149141323972226,
+      0.05067372894339348,
+      0.016149388177290572
+    ]
+  },
+  {
+    "id": 81,
+    "type": ["ore"],
+    "file": "images/minecraft/coal_ore.png",
+    "lab": [
+      44.36965150240598,
+      -0.16314369282173302,
+      0.25612590569917626
+    ]
+  },
+  {
+    "id": 82,
+    "type": ["other"],
+    "file": "images/minecraft/coarse_dirt.png",
+    "lab": [
+      39.10801078285848,
+      10.620740679500214,
+      20.664999984075916
+    ]
+  },
+  {
+    "id": 83,
+    "type": ["other"],
+    "file": "images/minecraft/cobbled_deepslate.png",
+    "lab": [
+      32.77640548908319,
+      0.7742333948028712,
+      -2.030511544424424
+    ]
+  },
+  {
+    "id": 84,
+    "type": ["other"],
+    "file": "images/minecraft/cobblestone.png",
+    "lab": [
+      53.124654974580224,
+      0.24434193012000469,
+      -0.09965902565508053
+    ]
+  },
+  {
+    "id": 85,
+    "type": ["complex"],
+    "file": "images/minecraft/composter_side.png",
+    "lab": [
+      33.55085828446672,
+      14.07267151528158,
+      29.42423274827478
+    ]
+  },
+  {
+    "id": 86,
+    "type": ["other"],
+    "file": "images/minecraft/copper_block.png",
+    "lab": [
+      54.459979106336164,
+      31.038442020023737,
+      30.25827845089086
+    ]
+  },
+  {
+    "id": 87,
+    "type": ["complex"],
+    "file": "images/minecraft/copper_bulb.png",
+    "lab": [
+      44.18606496239957,
+      25.687077538171383,
+      29.436109400731446
+    ]
+  },
+  {
+    "id": 88,
+    "type": ["ore"],
+    "file": "images/minecraft/copper_ore.png",
+    "lab": [
+      52.68806348637178,
+      -0.8528664362297176,
+      3.401994733377026
+    ]
+  },
+  {
+    "id": 89,
+    "type": ["other"],
+    "file": "images/minecraft/cracked_deepslate_bricks.png",
+    "lab": [
+      27.224128293941316,
+      0.11975011324350504,
+      -0.19869777012048906
+    ]
+  },
+  {
+    "id": 90,
+    "type": ["other"],
+    "file": "images/minecraft/cracked_deepslate_tiles.png",
+    "lab": [
+      21.81438604279284,
+      0.10747544434750633,
+      -0.1238113280263215
+    ]
+  },
+  {
+    "id": 91,
+    "type": ["other"],
+    "file": "images/minecraft/cracked_nether_bricks.png",
+    "lab": [
+      9.37445214037698,
+      10.43529188297929,
+      1.6350607156664216
+    ]
+  },
+  {
+    "id": 92,
+    "type": ["other"],
+    "file": "images/minecraft/cracked_polished_blackstone_bricks.png",
+    "lab": [
+      15.751924273424878,
+      4.439859371371559,
+      -2.8790826324338545
+    ]
+  },
+  {
+    "id": 93,
+    "type": ["other"],
+    "file": "images/minecraft/cracked_stone_bricks.png",
+    "lab": [
+      49.47224793104391,
+      0.3804982878896559,
+      -0.2738972292509449
+    ]
+  },
+  {
+    "id": 94,
+    "type": ["complex"],
+    "file": "images/minecraft/crafter_bottom.png",
+    "lab": [
+      33.44337225708003,
+      0.0022696547776457875,
+      0.0885110324329598
+    ]
+  },
+  {
+    "id": 95,
+    "type": ["complex"],
+    "file": "images/minecraft/crafter_east.png",
+    "lab": [
+      48.430174039643475,
+      2.3449328881179157,
+      13.23246791278408
+    ]
+  },
+  {
+    "id": 96,
+    "type": ["complex"],
+    "file": "images/minecraft/crafter_north.png",
+    "lab": [
+      45.86156221880476,
+      0.9057841446381618,
+      5.287611297517819
+    ]
+  },
+  {
+    "id": 97,
+    "type": ["complex"],
+    "file": "images/minecraft/crafter_north_crafting.png",
+    "lab": [
+      40.35167948366656,
+      1.6726331959277843,
+      8.854567929904139
+    ]
+  },
+  {
+    "id": 98,
+    "type": ["complex"],
+    "file": "images/minecraft/crafter_south.png",
+    "lab": [
+      47.76968862374245,
+      2.363613998339784,
+      10.224012405503725
+    ]
+  },
+  {
+    "id": 99,
+    "type": ["complex"],
+    "file": "images/minecraft/crafter_top.png",
+    "lab": [
+      42.80838420758896,
+      6.543821773809288,
+      2.6740338432832456
+    ]
+  },
+  {
+    "id": 100,
+    "type": ["complex"],
+    "file": "images/minecraft/crafter_west.png",
+    "lab": [
+      48.904019709835836,
+      2.539515330869102,
+      13.246247457954695
+    ]
+  },
+  {
+    "id": 101,
+    "type": ["complex"],
+    "file": "images/minecraft/crafting_table_front.png",
+    "lab": [
+      44.82603421285422,
+      4.886220443104437,
+      22.80018077318288
+    ]
+  },
+  {
+    "id": 102,
+    "type": ["complex"],
+    "file": "images/minecraft/crafting_table_side.png",
+    "lab": [
+      44.01153593488457,
+      5.1619730149405445,
+      25.31885796391671
+    ]
+  },
+  {
+    "id": 103,
+    "type": ["wood"],
+    "file": "images/minecraft/creaking_heart.png",
+    "lab": [
+      30.005663601857073,
+      5.132934063698659,
+      5.499569151905126
+    ]
+  },
+  {
+    "id": 104,
+    "type": ["wood"],
+    "file": "images/minecraft/creaking_heart_awake.png",
+    "lab": [
+      43.26756356599182,
+      24.74662272265959,
+      30.752758386569138
+    ]
+  },
+  {
+    "id": 105,
+    "type": ["wood"],
+    "file": "images/minecraft/creaking_heart_dormant.png",
+    "lab": [
+      31.683159399224213,
+      14.150802115826975,
+      16.977854485141915
+    ]
+  },
+  {
+    "id": 106,
+    "type": ["wood"],
+    "file": "images/minecraft/creaking_heart_top.png",
+    "lab": [
+      26.19439245267149,
+      5.06664576875435,
+      5.44783760214492
+    ]
+  },
+  {
+    "id": 107,
+    "type": ["wood"],
+    "file": "images/minecraft/creaking_heart_top_awake.png",
+    "lab": [
+      43.640005323254805,
+      25.527456676784333,
+      33.52018727957476
+    ]
+  },
+  {
+    "id": 108,
+    "type": ["wood"],
+    "file": "images/minecraft/creaking_heart_top_dormant.png",
+    "lab": [
+      31.457714120059368,
+      14.338926162742155,
+      18.88820942500367
+    ]
+  },
+  {
+    "id": 109,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/crimson_nylium_side.png",
+    "lab": [
+      24.209695628467266,
+      33.96141177727069,
+      20.837519645339093
+    ]
+  },
+  {
+    "id": 110,
+    "type": ["wood"],
+    "file": "images/minecraft/crimson_planks.png",
+    "lab": [
+      27.714087277256315,
+      26.13108862149196,
+      -2.6962528707366658
+    ]
+  },
+  {
+    "id": 111,
+    "type": ["wood"],
+    "file": "images/minecraft/crimson_stem_top.png",
+    "lab": [
+      30.044902456793267,
+      30.011010718590903,
+      1.1968691121932973
+    ]
+  },
+  {
+    "id": 112,
+    "type": ["other"],
+    "file": "images/minecraft/crying_obsidian.png",
+    "lab": [
+      10.086453623558675,
+      18.7245023944518,
+      -22.397000327120317
+    ]
+  },
+  {
+    "id": 113,
+    "type": ["other"],
+    "file": "images/minecraft/cut_copper.png",
+    "lab": [
+      54.11092894844775,
+      31.017284169497906,
+      29.394035568521904
+    ]
+  },
+  {
+    "id": 114,
+    "type": ["other"],
+    "file": "images/minecraft/cut_red_sandstone.png",
+    "lab": [
+      52.270117073680815,
+      30.376923558512004,
+      51.6257312346152
+    ]
+  },
+  {
+    "id": 115,
+    "type": ["other"],
+    "file": "images/minecraft/cut_sandstone.png",
+    "lab": [
+      82.76925614841647,
+      -3.1469618496686858,
+      24.727231048345534
+    ]
+  },
+  {
+    "id": 116,
+    "type": ["other"],
+    "file": "images/minecraft/cyan_concrete.png",
+    "lab": [
+      45.89663960111488,
+      -20.2262922734587,
+      -16.872321778788027
+    ]
+  },
+  {
+    "id": 117,
+    "type": ["other"],
+    "file": "images/minecraft/cyan_concrete_powder.png",
+    "lab": [
+      56.06464901513677,
+      -26.57153306001723,
+      -13.61658656758219
+    ]
+  },
+  {
+    "id": 118,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/cyan_glazed_terracotta.png",
+    "lab": [
+      46.26349299783944,
+      -14.87725520014856,
+      -8.735731349775625
+    ]
+  },
+  {
+    "id": 119,
+    "type": ["expensive"],
+    "file": "images/minecraft/cyan_shulker_box.png",
+    "lab": [
+      46.46636447688402,
+      -21.779965365893236,
+      -15.280815280703528
+    ]
+  },
+  {
+    "id": 120,
+    "type": ["other"],
+    "file": "images/minecraft/cyan_terracotta.png",
+    "lab": [
+      38.28963571552147,
+      -1.6889108420714882,
+      -0.5890336796145313
+    ]
+  },
+  {
+    "id": 121,
+    "type": ["wool"],
+    "file": "images/minecraft/cyan_wool.png",
+    "lab": [
+      52.17293487794793,
+      -26.69659623184125,
+      -12.719674974809848
+    ]
+  },
+  {
+    "id": 122,
+    "type": ["wood"],
+    "file": "images/minecraft/dark_oak_log.png",
+    "lab": [
+      20.166241068761135,
+      3.1481289876175165,
+      15.41053337233798
+    ]
+  },
+  {
+    "id": 123,
+    "type": ["wood"],
+    "file": "images/minecraft/dark_oak_log_top.png",
+    "lab": [
+      20.662101842743855,
+      7.47218473169152,
+      18.606525689530102
+    ]
+  },
+  {
+    "id": 124,
+    "type": ["wood"],
+    "file": "images/minecraft/dark_oak_planks.png",
+    "lab": [
+      19.82963098998677,
+      8.083509102509193,
+      18.755576942969462
+    ]
+  },
+  {
+    "id": 125,
+    "type": ["other"],
+    "file": "images/minecraft/dead_brain_coral_block.png",
+    "lab": [
+      49.81108825620587,
+      1.9918121410570735,
+      2.748750403260639
+    ]
+  },
+  {
+    "id": 126,
+    "type": ["other"],
+    "file": "images/minecraft/dead_bubble_coral_block.png",
+    "lab": [
+      52.33916330798975,
+      2.4153896080231636,
+      3.3792266695462208
+    ]
+  },
+  {
+    "id": 127,
+    "type": ["other"],
+    "file": "images/minecraft/dead_fire_coral_block.png",
+    "lab": [
+      52.38081099956294,
+      2.282188593069765,
+      3.244275523661287
+    ]
+  },
+  {
+    "id": 128,
+    "type": ["other"],
+    "file": "images/minecraft/dead_horn_coral_block.png",
+    "lab": [
+      53.26588992352826,
+      2.0956265965281538,
+      3.1367548730842882
+    ]
+  },
+  {
+    "id": 129,
+    "type": ["other"],
+    "file": "images/minecraft/dead_tube_coral_block.png",
+    "lab": [
+      52.10633033833515,
+      2.1317168873100836,
+      2.895481695215866
+    ]
+  },
+  {
+    "id": 130,
+    "type": ["other"],
+    "file": "images/minecraft/deepslate.png",
+    "lab": [
+      33.962528996686515,
+      0.591143150746076,
+      -1.5248355499233461
+    ]
+  },
+  {
+    "id": 131,
+    "type": ["other"],
+    "file": "images/minecraft/deepslate_bricks.png",
+    "lab": [
+      29.884557389617033,
+      0.11248716812552312,
+      -0.20945815209346363
+    ]
+  },
+  {
+    "id": 132,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_coal_ore.png",
+    "lab": [
+      31.32209364867107,
+      0.37931130596569035,
+      -1.0051256191792821
+    ]
+  },
+  {
+    "id": 133,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_copper_ore.png",
+    "lab": [
+      39.37640255151316,
+      -0.4234792153547848,
+      2.292821464904514
+    ]
+  },
+  {
+    "id": 134,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_diamond_ore.png",
+    "lab": [
+      43.0437080609545,
+      -6.2317216336929,
+      -2.415511196235992
+    ]
+  },
+  {
+    "id": 135,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_emerald_ore.png",
+    "lab": [
+      41.92694304518986,
+      -9.734035748211726,
+      6.253251894705897
+    ]
+  },
+  {
+    "id": 136,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_gold_ore.png",
+    "lab": [
+      43.89133398208341,
+      2.907277623045471,
+      13.110253953534523
+    ]
+  },
+  {
+    "id": 137,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_iron_ore.png",
+    "lab": [
+      42.37991395192395,
+      2.041626407851116,
+      3.544560344466714
+    ]
+  },
+  {
+    "id": 138,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_lapis_ore.png",
+    "lab": [
+      38.983407776281744,
+      5.177516866427901,
+      -13.956073513203174
+    ]
+  },
+  {
+    "id": 139,
+    "type": ["ore"],
+    "file": "images/minecraft/deepslate_redstone_ore.png",
+    "lab": [
+      36.547391119403905,
+      11.718881977564047,
+      6.927725805510077
+    ]
+  },
+  {
+    "id": 140,
+    "type": ["other"],
+    "file": "images/minecraft/deepslate_tiles.png",
+    "lab": [
+      22.85640624999566,
+      0.11399605176872754,
+      -0.14519960615160954
+    ]
+  },
+  {
+    "id": 141,
+    "type": ["expensive"],
+    "file": "images/minecraft/diamond_block.png",
+    "lab": [
+      86.6917134376357,
+      -37.86015530007756,
+      -6.505513743293245
+    ]
+  },
+  {
+    "id": 142,
+    "type": ["ore"],
+    "file": "images/minecraft/diamond_ore.png",
+    "lab": [
+      57.40732150426574,
+      -5.465946630945957,
+      -1.3825365777059941
+    ]
+  },
+  {
+    "id": 143,
+    "type": ["other"],
+    "file": "images/minecraft/diorite.png",
+    "lab": [
+      76.22384931408898,
+      0.20136287202289785,
+      -0.23888441293856666
+    ]
+  },
+  {
+    "id": 144,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/dirt_path_side.png",
+    "lab": [
+      45.501650884462734,
+      9.964818894221223,
+      24.915747568157713
+    ]
+  },
+  {
+    "id": 145,
+    "type": ["complex"],
+    "file": "images/minecraft/dispenser_front.png",
+    "lab": [
+      50.480952291504664,
+      0.20626201365111513,
+      0.06480790561626133
+    ]
+  },
+  {
+    "id": 146,
+    "type": ["other"],
+    "file": "images/minecraft/dried_kelp_side.png",
+    "lab": [
+      18.44835123837632,
+      -8.86802641345323,
+      10.91580529651794
+    ]
+  },
+  {
+    "id": 147,
+    "type": ["other"],
+    "file": "images/minecraft/dripstone_block.png",
+    "lab": [
+      47.546631216782245,
+      8.431892346769896,
+      12.402923736099877
+    ]
+  },
+  {
+    "id": 148,
+    "type": ["complex"],
+    "file": "images/minecraft/dropper_front.png",
+    "lab": [
+      50.566266873777785,
+      0.20627082854219425,
+      0.06479378734682512
+    ]
+  },
+  {
+    "id": 149,
+    "type": ["expensive"],
+    "file": "images/minecraft/emerald_block.png",
+    "lab": [
+      72.35032220027945,
+      -62.414857644708505,
+      45.576077275784414
+    ]
+  },
+  {
+    "id": 150,
+    "type": ["ore"],
+    "file": "images/minecraft/emerald_ore.png",
+    "lab": [
+      54.794667072311036,
+      -11.406923084844571,
+      8.379776815175905
+    ]
+  },
+  {
+    "id": 151,
+    "type": ["other"],
+    "file": "images/minecraft/end_stone.png",
+    "lab": [
+      87.1315397553214,
+      -11.17482593486578,
+      31.370491271303944
+    ]
+  },
+  {
+    "id": 152,
+    "type": ["other"],
+    "file": "images/minecraft/end_stone_bricks.png",
+    "lab": [
+      87.36447754349099,
+      -11.5719566792227,
+      29.72682474063223
+    ]
+  },
+  {
+    "id": 153,
+    "type": ["other"],
+    "file": "images/minecraft/exposed_chiseled_copper.png",
+    "lab": [
+      53.1099661563039,
+      10.9191298236832,
+      15.600367085346585
+    ]
+  },
+  {
+    "id": 154,
+    "type": ["other"],
+    "file": "images/minecraft/exposed_copper.png",
+    "lab": [
+      55.58972038521205,
+      10.449459027496115,
+      17.27724753653171
+    ]
+  },
+  {
+    "id": 155,
+    "type": ["other"],
+    "file": "images/minecraft/exposed_copper_bulb.png",
+    "lab": [
+      47.52935516239901,
+      8.017543585504775,
+      14.085457802582894
+    ]
+  },
+  {
+    "id": 156,
+    "type": ["other"],
+    "file": "images/minecraft/exposed_copper_grate.png",
+    "lab": [
+      55.73386641938635,
+      10.72154705195393,
+      17.11475494637804
+    ]
+  },
+  {
+    "id": 157,
+    "type": ["other"],
+    "file": "images/minecraft/exposed_cut_copper.png",
+    "lab": [
+      53.804254468791164,
+      9.663967212643131,
+      16.27976706910856
+    ]
+  },
+  {
+    "id": 158,
+    "type": ["expensive"],
+    "file": "images/minecraft/fire_coral_block.png",
+    "lab": [
+      36.40590850904369,
+      51.68237262126554,
+      26.167661259301006
+    ]
+  },
+  {
+    "id": 159,
+    "type": ["complex"],
+    "file": "images/minecraft/fletching_table_front.png",
+    "lab": [
+      63.96503700349636,
+      0.6894651042411646,
+      25.525915827435735
+    ]
+  },
+  {
+    "id": 160,
+    "type": ["complex"],
+    "file": "images/minecraft/fletching_table_side.png",
+    "lab": [
+      69.82245764234075,
+      4.131960405982633,
+      23.956680481930636
+    ]
+  },
+  {
+    "id": 161,
+    "type": ["other"],
+    "file": "images/minecraft/frosted_ice_0.png",
+    "lab": [
+      73.42508572905002,
+      4.800544145223764,
+      -39.68932891615584
+    ]
+  },
+  {
+    "id": 162,
+    "type": ["other"],
+    "file": "images/minecraft/frosted_ice_1.png",
+    "lab": [
+      73.35268442339549,
+      4.841530786057152,
+      -39.74759628115992
+    ]
+  },
+  {
+    "id": 163,
+    "type": ["other"],
+    "file": "images/minecraft/frosted_ice_2.png",
+    "lab": [
+      72.96058670132685,
+      4.990517321731037,
+      -40.22996352498057
+    ]
+  },
+  {
+    "id": 164,
+    "type": ["other"],
+    "file": "images/minecraft/frosted_ice_3.png",
+    "lab": [
+      72.32569653571016,
+      5.266663215556134,
+      -41.109303908640804
+    ]
+  },
+  {
+    "id": 165,
+    "type": ["complex"],
+    "file": "images/minecraft/furnace_front.png",
+    "lab": [
+      37.66993884080214,
+      0.2033918118791445,
+      0.06546973831083838
+    ]
+  },
+  {
+    "id": 166,
+    "type": ["complex"],
+    "file": "images/minecraft/furnace_side.png",
+    "lab": [
+      50.08431707634384,
+      0.2249247473624681,
+      0.07145443846792096
+    ]
+  },
+  {
+    "id": 167,
+    "type": ["ore"],
+    "file": "images/minecraft/gilded_blackstone.png",
+    "lab": [
+      18.562023656502568,
+      6.104882729859081,
+      3.898193015433972
+    ]
+  },
+  {
+    "id": 168,
+    "type": ["other"],
+    "file": "images/minecraft/glowstone.png",
+    "lab": [
+      57.07236767746641,
+      10.880426732982716,
+      31.686133576469103
+    ]
+  },
+  {
+    "id": 169,
+    "type": ["expensive"],
+    "file": "images/minecraft/gold_block.png",
+    "lab": [
+      84.64286977638203,
+      -0.5027815991403245,
+      72.24138133216508
+    ]
+  },
+  {
+    "id": 170,
+    "type": ["ore"],
+    "file": "images/minecraft/gold_ore.png",
+    "lab": [
+      56.36038546116821,
+      1.921394532781031,
+      14.320703289561273
+    ]
+  },
+  {
+    "id": 171,
+    "type": ["other"],
+    "file": "images/minecraft/granite.png",
+    "lab": [
+      47.949203179593425,
+      16.356772074076932,
+      17.220808755207326
+    ]
+  },
+  {
+    "id": 172,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/grass_block_side.png",
+    "lab": [
+      46.431976500556104,
+      2.834311758784279,
+      26.30945119706117
+    ]
+  },
+  {
+    "id": 173,
+    "type": ["other"],
+    "file": "images/minecraft/gravel.png",
+    "lab": [
+      53.65006053997123,
+      1.5319081046929073,
+      1.1303229987195007
+    ]
+  },
+  {
+    "id": 174,
+    "type": ["other"],
+    "file": "images/minecraft/gray_concrete.png",
+    "lab": [
+      24.104712235784245,
+      -0.3007921539348384,
+      -2.920471877659103
+    ]
+  },
+  {
+    "id": 175,
+    "type": ["other"],
+    "file": "images/minecraft/gray_concrete_powder.png",
+    "lab": [
+      34.23915458454454,
+      -0.7894560460209901,
+      -2.8101289537111955
+    ]
+  },
+  {
+    "id": 176,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/gray_glazed_terracotta.png",
+    "lab": [
+      37.45480904479582,
+      -1.9981655789265298,
+      -2.921693419788953
+    ]
+  },
+  {
+    "id": 177,
+    "type": ["expensive"],
+    "file": "images/minecraft/gray_shulker_box.png",
+    "lab": [
+      24.54486716245297,
+      -0.581079593382394,
+      -2.770360861790498
+    ]
+  },
+  {
+    "id": 178,
+    "type": ["other"],
+    "file": "images/minecraft/gray_terracotta.png",
+    "lab": [
+      18.813596106424182,
+      5.946477945146845,
+      7.220194868447072
+    ]
+  },
+  {
+    "id": 179,
+    "type": ["wool"],
+    "file": "images/minecraft/gray_wool.png",
+    "lab": [
+      28.55201613040623,
+      -1.4483942369541052,
+      -2.781919229520313
+    ]
+  },
+  {
+    "id": 180,
+    "type": ["other"],
+    "file": "images/minecraft/green_concrete.png",
+    "lab": [
+      36.1813354940644,
+      -16.596370868841642,
+      28.875703037306124
+    ]
+  },
+  {
+    "id": 181,
+    "type": ["other"],
+    "file": "images/minecraft/green_concrete_powder.png",
+    "lab": [
+      46.909198412097815,
+      -20.12825669580771,
+      37.237723853648276
+    ]
+  },
+  {
+    "id": 182,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/green_glazed_terracotta.png",
+    "lab": [
+      55.5267209998902,
+      -20.53602201084054,
+      35.36167717194789
+    ]
+  },
+  {
+    "id": 183,
+    "type": ["expensive"],
+    "file": "images/minecraft/green_shulker_box.png",
+    "lab": [
+      39.652115019355996,
+      -19.542943624163705,
+      35.05637771149096
+    ]
+  },
+  {
+    "id": 184,
+    "type": ["other"],
+    "file": "images/minecraft/green_terracotta.png",
+    "lab": [
+      33.85070466227463,
+      -10.191616919149713,
+      22.90601379916242
+    ]
+  },
+  {
+    "id": 185,
+    "type": ["wool"],
+    "file": "images/minecraft/green_wool.png",
+    "lab": [
+      42.81992436860984,
+      -21.835285098036792,
+      40.15541302101969
+    ]
+  },
+  {
+    "id": 186,
+    "type": ["other"],
+    "file": "images/minecraft/hay_block_side.png",
+    "lab": [
+      58.11052881819438,
+      1.3170494236992292,
+      53.42330820868888
+    ]
+  },
+  {
+    "id": 187,
+    "type": ["other"],
+    "file": "images/minecraft/honeycomb_block.png",
+    "lab": [
+      68.24102969644983,
+      22.840828656714454,
+      66.00686459171443
+    ]
+  },
+  {
+    "id": 188,
+    "type": ["other"],
+    "file": "images/minecraft/honey_block_side.png",
+    "lab": [
+      80.2872379519563,
+      11.547990834429246,
+      68.56378382729146
+    ]
+  },
+  {
+    "id": 189,
+    "type": ["expensive"],
+    "file": "images/minecraft/horn_coral_block.png",
+    "lab": [
+      79.71718317406942,
+      -9.124577368082958,
+      65.63507277747041
+    ]
+  },
+  {
+    "id": 190,
+    "type": ["other"],
+    "file": "images/minecraft/ice.png",
+    "lab": [
+      74.4626480902009,
+      4.96459499584971,
+      -38.72596721435877
+    ]
+  },
+  {
+    "id": 191,
+    "type": ["expensive"],
+    "file": "images/minecraft/iron_block.png",
+    "lab": [
+      87.71980883530726,
+      0.04447668356909129,
+      0.002680649913831823
+    ]
+  },
+  {
+    "id": 192,
+    "type": ["ore"],
+    "file": "images/minecraft/iron_ore.png",
+    "lab": [
+      54.48709539439085,
+      1.6723416533751412,
+      4.500567690495036
+    ]
+  },
+  {
+    "id": 193,
+    "type": ["other"],
+    "file": "images/minecraft/jack_o_lantern.png",
+    "lab": [
+      67.38471791701046,
+      15.466712454462701,
+      57.76070458201556
+    ]
+  },
+  {
+    "id": 194,
+    "type": ["complex"],
+    "file": "images/minecraft/jukebox_side.png",
+    "lab": [
+      27.616193863182126,
+      10.57534806845607,
+      16.426935251313004
+    ]
+  },
+  {
+    "id": 195,
+    "type": ["wood"],
+    "file": "images/minecraft/jungle_log.png",
+    "lab": [
+      29.695820486771606,
+      1.8639798103355232,
+      27.924071985438026
+    ]
+  },
+  {
+    "id": 196,
+    "type": ["wood"],
+    "file": "images/minecraft/jungle_log_top.png",
+    "lab": [
+      49.127371150122336,
+      11.066753941559778,
+      27.743199703623482
+    ]
+  },
+  {
+    "id": 197,
+    "type": ["wood"],
+    "file": "images/minecraft/jungle_planks.png",
+    "lab": [
+      52.13560086518907,
+      13.60371809296953,
+      26.001426667174506
+    ]
+  },
+  {
+    "id": 198,
+    "type": ["expensive"],
+    "file": "images/minecraft/lapis_block.png",
+    "lab": [
+      30.047899613578245,
+      14.55552745372714,
+      -44.13962500998314
+    ]
+  },
+  {
+    "id": 199,
+    "type": ["ore"],
+    "file": "images/minecraft/lapis_ore.png",
+    "lab": [
+      49.97860956287391,
+      4.910875571125307,
+      -13.265733016777766
+    ]
+  },
+  {
+    "id": 200,
+    "type": ["other"],
+    "file": "images/minecraft/light_blue_concrete.png",
+    "lab": [
+      54.43736200220011,
+      -6.398320875376179,
+      -39.97956037183908
+    ]
+  },
+  {
+    "id": 201,
+    "type": ["other"],
+    "file": "images/minecraft/light_blue_concrete_powder.png",
+    "lab": [
+      68.902686531084,
+      -20.35190462040618,
+      -25.490798225047595
+    ]
+  },
+  {
+    "id": 202,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/light_blue_glazed_terracotta.png",
+    "lab": [
+      64.91480219929966,
+      -5.012276456599004,
+      -29.07931432655157
+    ]
+  },
+  {
+    "id": 203,
+    "type": ["expensive"],
+    "file": "images/minecraft/light_blue_shulker_box.png",
+    "lab": [
+      63.25556294218383,
+      -15.145223884998657,
+      -33.58836842320928
+    ]
+  },
+  {
+    "id": 204,
+    "type": ["other"],
+    "file": "images/minecraft/light_blue_terracotta.png",
+    "lab": [
+      47.25484279111588,
+      8.387553708869364,
+      -15.46601678975368
+    ]
+  },
+  {
+    "id": 205,
+    "type": ["wool"],
+    "file": "images/minecraft/light_blue_wool.png",
+    "lab": [
+      66.95383495465127,
+      -18.35134810992928,
+      -30.69589135186776
+    ]
+  },
+  {
+    "id": 206,
+    "type": ["other"],
+    "file": "images/minecraft/light_gray_concrete.png",
+    "lab": [
+      52.14669325383498,
+      -1.9206358914716462,
+      5.44619906329401
+    ]
+  },
+  {
+    "id": 207,
+    "type": ["other"],
+    "file": "images/minecraft/light_gray_concrete_powder.png",
+    "lab": [
+      63.75702692574704,
+      -1.2938439747715464,
+      3.5337931451332163
+    ]
+  },
+  {
+    "id": 208,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/light_gray_glazed_terracotta.png",
+    "lab": [
+      66.68966874468366,
+      -5.541792982703842,
+      -2.864892339886026
+    ]
+  },
+  {
+    "id": 209,
+    "type": ["expensive"],
+    "file": "images/minecraft/light_gray_shulker_box.png",
+    "lab": [
+      51.83716496566126,
+      -1.7376694550073057,
+      4.9113548265560985
+    ]
+  },
+  {
+    "id": 210,
+    "type": ["other"],
+    "file": "images/minecraft/light_gray_terracotta.png",
+    "lab": [
+      47.667879658888886,
+      9.792651001999918,
+      9.54685619394752
+    ]
+  },
+  {
+    "id": 211,
+    "type": ["wool"],
+    "file": "images/minecraft/light_gray_wool.png",
+    "lab": [
+      58.8454258951264,
+      -1.4864454217072098,
+      4.010753100682962
+    ]
+  },
+  {
+    "id": 212,
+    "type": ["other"],
+    "file": "images/minecraft/lime_concrete.png",
+    "lab": [
+      62.29966289851051,
+      -45.42036726047841,
+      59.6214553385225
+    ]
+  },
+  {
+    "id": 213,
+    "type": ["other"],
+    "file": "images/minecraft/lime_concrete_powder.png",
+    "lab": [
+      70.2165338516371,
+      -42.188446883267474,
+      62.55175339232793
+    ]
+  },
+  {
+    "id": 214,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/lime_glazed_terracotta.png",
+    "lab": [
+      75.65412439905415,
+      -29.054154907067794,
+      61.920984441521256
+    ]
+  },
+  {
+    "id": 215,
+    "type": ["expensive"],
+    "file": "images/minecraft/lime_shulker_box.png",
+    "lab": [
+      63.690065964173584,
+      -45.07584720526172,
+      61.2583860063528
+    ]
+  },
+  {
+    "id": 216,
+    "type": ["other"],
+    "file": "images/minecraft/lime_terracotta.png",
+    "lab": [
+      47.040139364764684,
+      -15.885236119111042,
+      33.565932893653574
+    ]
+  },
+  {
+    "id": 217,
+    "type": ["wool"],
+    "file": "images/minecraft/lime_wool.png",
+    "lab": [
+      68.236917256561,
+      -45.85672116877929,
+      64.80604180397013
+    ]
+  },
+  {
+    "id": 218,
+    "type": ["expensive"],
+    "file": "images/minecraft/lodestone_side.png",
+    "lab": [
+      50.06750332516265,
+      0.5254947332876534,
+      -1.8419651961313468
+    ]
+  },
+  {
+    "id": 219,
+    "type": ["complex"],
+    "file": "images/minecraft/loom_front.png",
+    "lab": [
+      51.52861503294931,
+      6.584154021245929,
+      24.338842995980652
+    ]
+  },
+  {
+    "id": 220,
+    "type": ["complex"],
+    "file": "images/minecraft/loom_side.png",
+    "lab": [
+      46.65649692854825,
+      14.712315214863143,
+      23.239725552827213
+    ]
+  },
+  {
+    "id": 221,
+    "type": ["other"],
+    "file": "images/minecraft/magenta_concrete.png",
+    "lab": [
+      42.94534844694472,
+      60.893849073220494,
+      -34.29149789235765
+    ]
+  },
+  {
+    "id": 222,
+    "type": ["other"],
+    "file": "images/minecraft/magenta_concrete_powder.png",
+    "lab": [
+      53.07226121490298,
+      56.5008140674995,
+      -33.08832363568495
+    ]
+  },
+  {
+    "id": 223,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/magenta_glazed_terracotta.png",
+    "lab": [
+      58.954866191512814,
+      53.565253193755666,
+      -28.086557655986038
+    ]
+  },
+  {
+    "id": 224,
+    "type": ["expensive"],
+    "file": "images/minecraft/magenta_shulker_box.png",
+    "lab": [
+      44.63526238185799,
+      60.62169987825953,
+      -34.12879481819029
+    ]
+  },
+  {
+    "id": 225,
+    "type": ["other"],
+    "file": "images/minecraft/magenta_terracotta.png",
+    "lab": [
+      45.00473254983964,
+      28.151879004840012,
+      -0.7882364742545295
+    ]
+  },
+  {
+    "id": 226,
+    "type": ["wool"],
+    "file": "images/minecraft/magenta_wool.png",
+    "lab": [
+      50.00579622381786,
+      61.351327435624995,
+      -35.15753968164157
+    ]
+  },
+  {
+    "id": 227,
+    "type": ["wood"],
+    "file": "images/minecraft/mangrove_log.png",
+    "lab": [
+      29.387512744953085,
+      3.402710565305319,
+      18.188500737208514
+    ]
+  },
+  {
+    "id": 228,
+    "type": ["wood"],
+    "file": "images/minecraft/mangrove_log_top.png",
+    "lab": [
+      27.70006521108701,
+      23.05755758161796,
+      15.82931257573887
+    ]
+  },
+  {
+    "id": 229,
+    "type": ["wood"],
+    "file": "images/minecraft/mangrove_planks.png",
+    "lab": [
+      31.158604380025004,
+      27.41155909105245,
+      16.739576673399977
+    ]
+  },
+  {
+    "id": 230,
+    "type": ["other"],
+    "file": "images/minecraft/melon_side.png",
+    "lab": [
+      56.457469634027234,
+      -26.981786086478913,
+      53.03355199747309
+    ]
+  },
+  {
+    "id": 231,
+    "type": ["other"],
+    "file": "images/minecraft/mossy_cobblestone.png",
+    "lab": [
+      48.48529771048119,
+      -7.479909703847175,
+      12.069177806229245
+    ]
+  },
+  {
+    "id": 232,
+    "type": ["other"],
+    "file": "images/minecraft/mossy_stone_bricks.png",
+    "lab": [
+      49.98778815062011,
+      -5.016181857512974,
+      8.108127875604813
+    ]
+  },
+  {
+    "id": 233,
+    "type": ["other"],
+    "file": "images/minecraft/moss_block.png",
+    "lab": [
+      43.31005157331059,
+      -18.595820891460527,
+      32.65387961121278
+    ]
+  },
+  {
+    "id": 234,
+    "type": ["other"],
+    "file": "images/minecraft/mud.png",
+    "lab": [
+      24.530191131341528,
+      1.9056323629197387,
+      -1.566032421941969
+    ]
+  },
+  {
+    "id": 235,
+    "type": ["wood"],
+    "file": "images/minecraft/muddy_mangrove_roots_side.png",
+    "lab": [
+      25.479567685675327,
+      2.7321697177457946,
+      7.903973999529977
+    ]
+  },
+  {
+    "id": 236,
+    "type": ["other"],
+    "file": "images/minecraft/mud_bricks.png",
+    "lab": [
+      46.54905959668199,
+      9.955067127688757,
+      18.95584311212137
+    ]
+  },
+  {
+    "id": 237,
+    "type": ["other"],
+    "file": "images/minecraft/mushroom_stem.png",
+    "lab": [
+      79.61948263632571,
+      0.3657758486184606,
+      6.345436533438529
+    ]
+  },
+  {
+    "id": 238,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/mycelium_side.png",
+    "lab": [
+      39.28281710180723,
+      8.693778985065894,
+      13.307834386330518
+    ]
+  },
+  {
+    "id": 239,
+    "type": ["expensive"],
+    "file": "images/minecraft/netherite_block.png",
+    "lab": [
+      26.415510900119745,
+      2.721917341008531,
+      -0.6393254807064753
+    ]
+  },
+  {
+    "id": 240,
+    "type": ["other"],
+    "file": "images/minecraft/netherrack.png",
+    "lab": [
+      24.029526706292284,
+      26.83657121830721,
+      13.556423107039661
+    ]
+  },
+  {
+    "id": 241,
+    "type": ["other"],
+    "file": "images/minecraft/nether_bricks.png",
+    "lab": [
+      10.502944954848727,
+      11.569203103253432,
+      1.9131203813632036
+    ]
+  },
+  {
+    "id": 242,
+    "type": ["ore"],
+    "file": "images/minecraft/nether_gold_ore.png",
+    "lab": [
+      30.531223929586673,
+      25.652722822268792,
+      19.49385703979073
+    ]
+  },
+  {
+    "id": 243,
+    "type": ["ore"],
+    "file": "images/minecraft/nether_quartz_ore.png",
+    "lab": [
+      33.875969509815164,
+      22.680744090858532,
+      13.14176338454557
+    ]
+  },
+  {
+    "id": 244,
+    "type": ["wood"],
+    "file": "images/minecraft/nether_wart_block.png",
+    "lab": [
+      22.563157989336364,
+      43.84512796460089,
+      32.84522535522006
+    ]
+  },
+  {
+    "id": 245,
+    "type": ["complex"],
+    "file": "images/minecraft/note_block.png",
+    "lab": [
+      27.616193863182126,
+      10.57534806845607,
+      16.426935251313004
+    ]
+  },
+  {
+    "id": 246,
+    "type": ["wood"],
+    "file": "images/minecraft/oak_log.png",
+    "lab": [
+      37.66009522845671,
+      5.1656080043693,
+      23.62640451354479
+    ]
+  },
+  {
+    "id": 247,
+    "type": ["wood"],
+    "file": "images/minecraft/oak_log_top.png",
+    "lab": [
+      52.58073961128422,
+      5.21262348561398,
+      30.71951695475295
+    ]
+  },
+  {
+    "id": 248,
+    "type": ["wood"],
+    "file": "images/minecraft/oak_planks.png",
+    "lab": [
+      56.3594434156906,
+      5.289706682210817,
+      32.557872108164936
+    ]
+  },
+  {
+    "id": 249,
+    "type": ["complex"],
+    "file": "images/minecraft/observer_back.png",
+    "lab": [
+      29.550834890483628,
+      0.9293737483418457,
+      0.4545795550489179
+    ]
+  },
+  {
+    "id": 250,
+    "type": ["complex"],
+    "file": "images/minecraft/observer_front.png",
+    "lab": [
+      42.75563963623632,
+      0.12049435222958559,
+      0.03563393796133734
+    ]
+  },
+  {
+    "id": 251,
+    "type": ["complex"],
+    "file": "images/minecraft/observer_side.png",
+    "lab": [
+      29.045721377149828,
+      0.5154227492246517,
+      0.1786079044702124
+    ]
+  },
+  {
+    "id": 252,
+    "type": ["complex"],
+    "file": "images/minecraft/observer_top.png",
+    "lab": [
+      41.19993261735807,
+      0.0036754334799292193,
+      -0.0058869267980720535
+    ]
+  },
+  {
+    "id": 253,
+    "type": ["other"],
+    "file": "images/minecraft/obsidian.png",
+    "lab": [
+      4.62755830352997,
+      4.94893924035504,
+      -7.379670380143576
+    ]
+  },
+  {
+    "id": 254,
+    "type": ["expensive"],
+    "file": "images/minecraft/ochre_froglight_side.png",
+    "lab": [
+      92.28363510408624,
+      -3.0987556632505777,
+      26.74456972347901
+    ]
+  },
+  {
+    "id": 255,
+    "type": ["expensive"],
+    "file": "images/minecraft/ochre_froglight_top.png",
+    "lab": [
+      96.16326923813206,
+      -3.9260750348856384,
+      19.4353102781476
+    ]
+  },
+  {
+    "id": 256,
+    "type": ["other"],
+    "file": "images/minecraft/orange_concrete.png",
+    "lab": [
+      56.562384128787,
+      46.08198908201387,
+      65.44634461864632
+    ]
+  },
+  {
+    "id": 257,
+    "type": ["other"],
+    "file": "images/minecraft/orange_concrete_powder.png",
+    "lab": [
+      64.14321875463288,
+      30.212658101615236,
+      63.57266549648924
+    ]
+  },
+  {
+    "id": 258,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/orange_glazed_terracotta.png",
+    "lab": [
+      65.23015598532359,
+      8.421203702609903,
+      32.64819758822745
+    ]
+  },
+  {
+    "id": 259,
+    "type": ["expensive"],
+    "file": "images/minecraft/orange_shulker_box.png",
+    "lab": [
+      59.7995225236113,
+      45.39516880386078,
+      66.7367957590514
+    ]
+  },
+  {
+    "id": 260,
+    "type": ["other"],
+    "file": "images/minecraft/orange_terracotta.png",
+    "lab": [
+      44.37187293322148,
+      28.617065558571813,
+      40.12777764305854
+    ]
+  },
+  {
+    "id": 261,
+    "type": ["wool"],
+    "file": "images/minecraft/orange_wool.png",
+    "lab": [
+      63.107690832757186,
+      42.327353354312926,
+      66.95549095512689
+    ]
+  },
+  {
+    "id": 262,
+    "type": ["other"],
+    "file": "images/minecraft/oxidized_chiseled_copper.png",
+    "lab": [
+      60.930312310317895,
+      -31.312825718309874,
+      8.004265226479031
+    ]
+  },
+  {
+    "id": 263,
+    "type": ["other"],
+    "file": "images/minecraft/oxidized_copper.png",
+    "lab": [
+      61.17459682906339,
+      -31.779464222042886,
+      7.97269982061828
+    ]
+  },
+  {
+    "id": 264,
+    "type": ["other"],
+    "file": "images/minecraft/oxidized_copper_bulb.png",
+    "lab": [
+      50.36404792505546,
+      -25.627541492506072,
+      6.263015332819382
+    ]
+  },
+  {
+    "id": 265,
+    "type": ["other"],
+    "file": "images/minecraft/oxidized_copper_grate.png",
+    "lab": [
+      60.64194522612121,
+      -31.549304914907427,
+      8.18182255414534
+    ]
+  },
+  {
+    "id": 266,
+    "type": ["other"],
+    "file": "images/minecraft/oxidized_cut_copper.png",
+    "lab": [
+      58.05595754607732,
+      -29.63281406109721,
+      7.18264734652623
+    ]
+  },
+  {
+    "id": 267,
+    "type": ["other"],
+    "file": "images/minecraft/packed_ice.png",
+    "lab": [
+      73.08278616640625,
+      5.094718985362897,
+      -39.01410324269169
+    ]
+  },
+  {
+    "id": 268,
+    "type": ["other"],
+    "file": "images/minecraft/packed_mud.png",
+    "lab": [
+      48.01249967448573,
+      10.622312195229373,
+      20.54817069502832
+    ]
+  },
+  {
+    "id": 269,
+    "type": ["wood"],
+    "file": "images/minecraft/pale_oak_log.png",
+    "lab": [
+      33.7582867284708,
+      3.6699537468835897,
+      3.039915007561347
+    ]
+  },
+  {
+    "id": 270,
+    "type": ["wood"],
+    "file": "images/minecraft/pale_oak_log_top.png",
+    "lab": [
+      76.65409721190856,
+      3.1533888808403208,
+      1.9521022714484417
+    ]
+  },
+  {
+    "id": 271,
+    "type": ["wood"],
+    "file": "images/minecraft/pale_oak_planks.png",
+    "lab": [
+      87.55478138925936,
+      3.320410047486322,
+      1.7989926159111702
+    ]
+  },
+  {
+    "id": 272,
+    "type": ["expensive"],
+    "file": "images/minecraft/pearlescent_froglight_side.png",
+    "lab": [
+      90.33027080538977,
+      4.345800469886309,
+      -0.5127896040474514
+    ]
+  },
+  {
+    "id": 273,
+    "type": ["expensive"],
+    "file": "images/minecraft/pearlescent_froglight_top.png",
+    "lab": [
+      95.18929183969625,
+      1.8886528752241558,
+      0.8534090832977376
+    ]
+  },
+  {
+    "id": 274,
+    "type": ["other"],
+    "file": "images/minecraft/pink_concrete.png",
+    "lab": [
+      57.56777607575391,
+      48.597335632177966,
+      -1.686049227318233
+    ]
+  },
+  {
+    "id": 275,
+    "type": ["other"],
+    "file": "images/minecraft/pink_concrete_powder.png",
+    "lab": [
+      71.49151331037483,
+      32.12372893899572,
+      -2.6632778414271208
+    ]
+  },
+  {
+    "id": 276,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/pink_glazed_terracotta.png",
+    "lab": [
+      72.75734921906776,
+      33.47269050827937,
+      -0.8980667329014871
+    ]
+  },
+  {
+    "id": 277,
+    "type": ["expensive"],
+    "file": "images/minecraft/pink_shulker_box.png",
+    "lab": [
+      64.3530739739132,
+      45.7989479552319,
+      0.034706510910619354
+    ]
+  },
+  {
+    "id": 278,
+    "type": ["other"],
+    "file": "images/minecraft/pink_terracotta.png",
+    "lab": [
+      43.83013962414461,
+      34.609650998237676,
+      16.103206490746924
+    ]
+  },
+  {
+    "id": 279,
+    "type": ["wool"],
+    "file": "images/minecraft/pink_wool.png",
+    "lab": [
+      69.783861278697,
+      40.299329429732126,
+      -0.14948801983910773
+    ]
+  },
+  {
+    "id": 280,
+    "type": ["complex"],
+    "file": "images/minecraft/piston_side.png",
+    "lab": [
+      44.22988529738718,
+      0.9432871357272153,
+      5.144410416269655
+    ]
+  },
+  {
+    "id": 281,
+    "type": ["complex"],
+    "file": "images/minecraft/piston_top.png",
+    "lab": [
+      54.51681711627922,
+      4.478911985134185,
+      26.939403761708544
+    ]
+  },
+  {
+    "id": 282,
+    "type": ["complex"],
+    "file": "images/minecraft/piston_top_sticky.png",
+    "lab": [
+      58.700544959707194,
+      -18.50553308152413,
+      28.3284953479181
+    ]
+  },
+  {
+    "id": 283,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/podzol_side.png",
+    "lab": [
+      40.03357327326647,
+      10.529377914907533,
+      23.33015698808909
+    ]
+  },
+  {
+    "id": 284,
+    "type": ["other"],
+    "file": "images/minecraft/polished_andesite.png",
+    "lab": [
+      55.87974331051266,
+      -1.0591631951353835,
+      0.06208480159015045
+    ]
+  },
+  {
+    "id": 285,
+    "type": ["other"],
+    "file": "images/minecraft/polished_basalt_side.png",
+    "lab": [
+      37.40763418770296,
+      0.9228835939497229,
+      -1.9746954486726875
+    ]
+  },
+  {
+    "id": 286,
+    "type": ["other"],
+    "file": "images/minecraft/polished_basalt_top.png",
+    "lab": [
+      41.71346597814834,
+      0.8405125541865938,
+      -1.1617589246437916
+    ]
+  },
+  {
+    "id": 287,
+    "type": ["other"],
+    "file": "images/minecraft/polished_blackstone.png",
+    "lab": [
+      20.7858356081256,
+      4.044932290929258,
+      -4.238890361875846
+    ]
+  },
+  {
+    "id": 288,
+    "type": ["other"],
+    "file": "images/minecraft/polished_blackstone_bricks.png",
+    "lab": [
+      18.027574392437334,
+      4.38476772351693,
+      -3.5381514006964507
+    ]
+  },
+  {
+    "id": 289,
+    "type": ["other"],
+    "file": "images/minecraft/polished_deepslate.png",
+    "lab": [
+      30.64010558946444,
+      0.08257446436069667,
+      -0.353679136939117
+    ]
+  },
+  {
+    "id": 290,
+    "type": ["other"],
+    "file": "images/minecraft/polished_diorite.png",
+    "lab": [
+      77.90474593930497,
+      0.22619366718485137,
+      -0.7578940633322833
+    ]
+  },
+  {
+    "id": 291,
+    "type": ["other"],
+    "file": "images/minecraft/polished_granite.png",
+    "lab": [
+      49.481049507039046,
+      16.63584942345507,
+      17.481224427683856
+    ]
+  },
+  {
+    "id": 292,
+    "type": ["other"],
+    "file": "images/minecraft/polished_tuff.png",
+    "lab": [
+      43.34534418290181,
+      -3.387592070669928,
+      1.5523340687921223
+    ]
+  },
+  {
+    "id": 293,
+    "type": ["other"],
+    "file": "images/minecraft/prismarine_bricks.png",
+    "lab": [
+      65.29530289782093,
+      -25.82032722539243,
+      -0.19494673533601267
+    ]
+  },
+  {
+    "id": 294,
+    "type": ["other"],
+    "file": "images/minecraft/pumpkin_side.png",
+    "lab": [
+      55.88146983525948,
+      25.84159399179217,
+      57.53949088180753
+    ]
+  },
+  {
+    "id": 295,
+    "type": ["other"],
+    "file": "images/minecraft/purple_concrete.png",
+    "lab": [
+      29.80999179885889,
+      52.26150189305808,
+      -54.247957254669636
+    ]
+  },
+  {
+    "id": 296,
+    "type": ["other"],
+    "file": "images/minecraft/purple_concrete_powder.png",
+    "lab": [
+      39.39551424051226,
+      53.02500381088189,
+      -51.22517424875408
+    ]
+  },
+  {
+    "id": 297,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/purple_glazed_terracotta.png",
+    "lab": [
+      33.75920772071989,
+      43.945675407708066,
+      -44.026629123918404
+    ]
+  },
+  {
+    "id": 298,
+    "type": ["expensive"],
+    "file": "images/minecraft/purple_shulker_box.png",
+    "lab": [
+      30.283344716584583,
+      52.3923647700366,
+      -53.39362832694945
+    ]
+  },
+  {
+    "id": 299,
+    "type": ["other"],
+    "file": "images/minecraft/purple_terracotta.png",
+    "lab": [
+      35.92556097629699,
+      22.91922263185636,
+      -0.5622810813073921
+    ]
+  },
+  {
+    "id": 300,
+    "type": ["wool"],
+    "file": "images/minecraft/purple_wool.png",
+    "lab": [
+      35.583851399598664,
+      55.600248364194194,
+      -54.40392171310939
+    ]
+  },
+  {
+    "id": 301,
+    "type": ["other"],
+    "file": "images/minecraft/purpur_block.png",
+    "lab": [
+      58.29935653410409,
+      24.629485913160075,
+      -16.600541577886442
+    ]
+  },
+  {
+    "id": 302,
+    "type": ["other"],
+    "file": "images/minecraft/purpur_pillar.png",
+    "lab": [
+      59.409846884382716,
+      23.62258906677137,
+      -15.971153465842042
+    ]
+  },
+  {
+    "id": 303,
+    "type": ["other"],
+    "file": "images/minecraft/purpur_pillar_top.png",
+    "lab": [
+      59.155862009755495,
+      24.249591402664148,
+      -16.33049971222467
+    ]
+  },
+  {
+    "id": 304,
+    "type": ["other"],
+    "file": "images/minecraft/quartz_block_side.png",
+    "lab": [
+      91.52776507087513,
+      0.7990628191272195,
+      4.080242864377206
+    ]
+  },
+  {
+    "id": 305,
+    "type": ["other"],
+    "file": "images/minecraft/quartz_block_top.png",
+    "lab": [
+      91.52776507087513,
+      0.7990628191272195,
+      4.080242864377206
+    ]
+  },
+  {
+    "id": 306,
+    "type": ["other"],
+    "file": "images/minecraft/quartz_bricks.png",
+    "lab": [
+      91.23267049094694,
+      0.6023551046500117,
+      4.273235266022251
+    ]
+  },
+  {
+    "id": 307,
+    "type": ["other"],
+    "file": "images/minecraft/quartz_pillar.png",
+    "lab": [
+      91.72654346492232,
+      0.4803666371693874,
+      3.8292106057190574
+    ]
+  },
+  {
+    "id": 308,
+    "type": ["expensive"],
+    "file": "images/minecraft/raw_copper_block.png",
+    "lab": [
+      49.678310563350166,
+      16.270040944342867,
+      23.746154092849647
+    ]
+  },
+  {
+    "id": 309,
+    "type": ["expensive"],
+    "file": "images/minecraft/raw_gold_block.png",
+    "lab": [
+      72.2948223512889,
+      9.062634709498726,
+      64.6611930038675
+    ]
+  },
+  {
+    "id": 310,
+    "type": ["expensive"],
+    "file": "images/minecraft/raw_iron_block.png",
+    "lab": [
+      58.400932988347755,
+      7.513993852303763,
+      19.75692715170526
+    ]
+  },
+  {
+    "id": 311,
+    "type": ["expensive"],
+    "file": "images/minecraft/redstone_block.png",
+    "lab": [
+      37.42067961263275,
+      56.68885179836088,
+      48.79878409677357
+    ]
+  },
+  {
+    "id": 312,
+    "type": ["complex"],
+    "file": "images/minecraft/redstone_lamp.png",
+    "lab": [
+      26.84215582116762,
+      15.422524441141679,
+      22.14025198564811
+    ]
+  },
+  {
+    "id": 313,
+    "type": ["ore"],
+    "file": "images/minecraft/redstone_ore.png",
+    "lab": [
+      51.33958659617168,
+      10.956880105133187,
+      7.676029910953541
+    ]
+  },
+  {
+    "id": 314,
+    "type": ["other"],
+    "file": "images/minecraft/red_concrete.png",
+    "lab": [
+      31.74015926588918,
+      45.27738554408984,
+      28.36722116889094
+    ]
+  },
+  {
+    "id": 315,
+    "type": ["other"],
+    "file": "images/minecraft/red_concrete_powder.png",
+    "lab": [
+      39.96297123302341,
+      46.427090630371616,
+      28.377457726120028
+    ]
+  },
+  {
+    "id": 316,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/red_glazed_terracotta.png",
+    "lab": [
+      43.59489157611503,
+      48.50571758891884,
+      32.18153242860128
+    ]
+  },
+  {
+    "id": 317,
+    "type": ["other"],
+    "file": "images/minecraft/red_mushroom_block.png",
+    "lab": [
+      45.35329524508555,
+      58.51940575173324,
+      39.59165924251026
+    ]
+  },
+  {
+    "id": 318,
+    "type": ["other"],
+    "file": "images/minecraft/red_nether_bricks.png",
+    "lab": [
+      12.041949050152592,
+      28.924277926052472,
+      14.37252432818262
+    ]
+  },
+  {
+    "id": 319,
+    "type": ["other"],
+    "file": "images/minecraft/red_sand.png",
+    "lab": [
+      52.7545484130665,
+      30.331082064668717,
+      51.64226284759854
+    ]
+  },
+  {
+    "id": 320,
+    "type": ["other"],
+    "file": "images/minecraft/red_sandstone.png",
+    "lab": [
+      51.34866743096919,
+      30.526375957258985,
+      51.63444336257961
+    ]
+  },
+  {
+    "id": 321,
+    "type": ["expensive"],
+    "file": "images/minecraft/red_shulker_box.png",
+    "lab": [
+      31.043145848509184,
+      45.09267152072066,
+      29.190808448914122
+    ]
+  },
+  {
+    "id": 322,
+    "type": ["other"],
+    "file": "images/minecraft/red_terracotta.png",
+    "lab": [
+      36.73058346249482,
+      33.7659797246617,
+      25.675710859410863
+    ]
+  },
+  {
+    "id": 323,
+    "type": ["wool"],
+    "file": "images/minecraft/red_wool.png",
+    "lab": [
+      36.28408531615726,
+      49.04236463125284,
+      33.29086282111547
+    ]
+  },
+  {
+    "id": 324,
+    "type": ["other"],
+    "file": "images/minecraft/resin_block.png",
+    "lab": [
+      56.07888754710236,
+      42.46443720699687,
+      58.62934291355932
+    ]
+  },
+  {
+    "id": 325,
+    "type": ["other"],
+    "file": "images/minecraft/resin_bricks.png",
+    "lab": [
+      52.23724983875333,
+      43.24289722046099,
+      55.21356091710313
+    ]
+  },
+  {
+    "id": 326,
+    "type": ["expensive"],
+    "file": "images/minecraft/respawn_anchor_side0.png",
+    "lab": [
+      13.539495700224766,
+      14.862456968287493,
+      -18.866661985111563
+    ]
+  },
+  {
+    "id": 327,
+    "type": ["expensive"],
+    "file": "images/minecraft/respawn_anchor_side1.png",
+    "lab": [
+      14.60347929395195,
+      14.834358334367927,
+      -18.413923200463742
+    ]
+  },
+  {
+    "id": 328,
+    "type": ["expensive"],
+    "file": "images/minecraft/respawn_anchor_side2.png",
+    "lab": [
+      15.447899065040085,
+      14.988430502013303,
+      -18.038948960965193
+    ]
+  },
+  {
+    "id": 329,
+    "type": ["expensive"],
+    "file": "images/minecraft/respawn_anchor_side3.png",
+    "lab": [
+      16.263006477781623,
+      15.133623768103188,
+      -17.502349944086333
+    ]
+  },
+  {
+    "id": 330,
+    "type": ["expensive"],
+    "file": "images/minecraft/respawn_anchor_side4.png",
+    "lab": [
+      17.10742624886978,
+      15.287695935748566,
+      -17.127375704587784
+    ]
+  },
+  {
+    "id": 331,
+    "type": ["other"],
+    "file": "images/minecraft/rooted_dirt.png",
+    "lab": [
+      47.15753572588971,
+      12.828871022831786,
+      21.712085576240753
+    ]
+  },
+  {
+    "id": 332,
+    "type": ["other"],
+    "file": "images/minecraft/sand.png",
+    "lab": [
+      83.15063098064633,
+      -2.677639997699953,
+      23.48240530088933
+    ]
+  },
+  {
+    "id": 333,
+    "type": ["other"],
+    "file": "images/minecraft/sandstone.png",
+    "lab": [
+      81.75664759804965,
+      -2.512127658869034,
+      25.444850870833477
+    ]
+  },
+  {
+    "id": 334,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/sculk_catalyst_side.png",
+    "lab": [
+      36.84072567324819,
+      -5.851549151589145,
+      -0.5971563570794441
+    ]
+  },
+  {
+    "id": 335,
+    "type": ["other"],
+    "file": "images/minecraft/shroomlight.png",
+    "lab": [
+      69.9533357414998,
+      30.18911877694744,
+      52.5103627865116
+    ]
+  },
+  {
+    "id": 336,
+    "type": ["expensive"],
+    "file": "images/minecraft/shulker_box.png",
+    "lab": [
+      46.84031762505652,
+      24.607831707477523,
+      -16.57481238243586
+    ]
+  },
+  {
+    "id": 337,
+    "type": ["other"],
+    "file": "images/minecraft/slime_block.png",
+    "lab": [
+      70.78129855574942,
+      -43.776014195642915,
+      42.58538088172525
+    ]
+  },
+  {
+    "id": 338,
+    "type": ["complex"],
+    "file": "images/minecraft/smithing_table_front.png",
+    "lab": [
+      17.52753313554673,
+      9.805042526885893,
+      3.6338367344634825
+    ]
+  },
+  {
+    "id": 339,
+    "type": ["complex"],
+    "file": "images/minecraft/smithing_table_side.png",
+    "lab": [
+      16.711918246669878,
+      9.97615522381692,
+      4.179620012744143
+    ]
+  },
+  {
+    "id": 340,
+    "type": ["complex"],
+    "file": "images/minecraft/smoker_front.png",
+    "lab": [
+      32.3101673686436,
+      2.9149907591585964,
+      12.235997100007472
+    ]
+  },
+  {
+    "id": 341,
+    "type": ["complex"],
+    "file": "images/minecraft/smoker_side.png",
+    "lab": [
+      39.40129101578521,
+      2.45941066873328,
+      10.942960947024941
+    ]
+  },
+  {
+    "id": 342,
+    "type": ["other"],
+    "file": "images/minecraft/smooth_basalt.png",
+    "lab": [
+      30.822251112918895,
+      1.6159304579297802,
+      -3.57547180242144
+    ]
+  },
+  {
+    "id": 343,
+    "type": ["other"],
+    "file": "images/minecraft/smooth_stone.png",
+    "lab": [
+      65.29403593883502,
+      0.005223621912413658,
+      -0.008366653889140593
+    ]
+  },
+  {
+    "id": 344,
+    "type": ["other"],
+    "file": "images/minecraft/smooth_stone_slab_side.png",
+    "lab": [
+      68.59910004471281,
+      0.0054359918001492015,
+      -0.008706805871215237
+    ]
+  },
+  {
+    "id": 345,
+    "type": ["other"],
+    "file": "images/minecraft/snow.png",
+    "lab": [
+      99.35608765920449,
+      -1.6933568747799446,
+      -0.6032296079500892
+    ]
+  },
+  {
+    "id": 346,
+    "type": ["other"],
+    "file": "images/minecraft/soul_sand.png",
+    "lab": [
+      27.87512516271099,
+      6.50475282010283,
+      10.22608764201762
+    ]
+  },
+  {
+    "id": 347,
+    "type": ["other"],
+    "file": "images/minecraft/soul_soil.png",
+    "lab": [
+      25.7887006592103,
+      6.248913537879554,
+      9.84183996633567
+    ]
+  },
+  {
+    "id": 348,
+    "type": ["expensive"],
+    "file": "images/minecraft/sponge.png",
+    "lab": [
+      75.98147071724902,
+      -13.267984318003716,
+      57.68657001797326
+    ]
+  },
+  {
+    "id": 349,
+    "type": ["wood"],
+    "file": "images/minecraft/spruce_log.png",
+    "lab": [
+      17.061069020759046,
+      7.4103696711260545,
+      16.94567004781123
+    ]
+  },
+  {
+    "id": 350,
+    "type": ["wood"],
+    "file": "images/minecraft/spruce_log_top.png",
+    "lab": [
+      36.32674709754635,
+      7.565131759854879,
+      24.17055925225127
+    ]
+  },
+  {
+    "id": 351,
+    "type": ["wood"],
+    "file": "images/minecraft/spruce_planks.png",
+    "lab": [
+      38.344341128377195,
+      7.879080369612352,
+      25.806054835637745
+    ]
+  },
+  {
+    "id": 352,
+    "type": ["other"],
+    "file": "images/minecraft/stone.png",
+    "lab": [
+      52.58797808292214,
+      0.004407182656194749,
+      -0.007058966465969298
+    ]
+  },
+  {
+    "id": 353,
+    "type": ["other"],
+    "file": "images/minecraft/stone_bricks.png",
+    "lab": [
+      51.12271566139341,
+      0.3603998714921163,
+      -0.2590504244350521
+    ]
+  },
+  {
+    "id": 354,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_acacia_log.png",
+    "lab": [
+      48.5437447438158,
+      30.32831906980534,
+      33.55807576330079
+    ]
+  },
+  {
+    "id": 355,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_acacia_log_top.png",
+    "lab": [
+      46.76987659967576,
+      27.318410842260423,
+      35.61975725249191
+    ]
+  },
+  {
+    "id": 356,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_bamboo_block.png",
+    "lab": [
+      70.67181371579125,
+      -4.102628971748493,
+      49.24272497211507
+    ]
+  },
+  {
+    "id": 357,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_bamboo_block_top.png",
+    "lab": [
+      65.23680364577368,
+      -3.4940445307398496,
+      46.56356955477085
+    ]
+  },
+  {
+    "id": 358,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_birch_log.png",
+    "lab": [
+      72.37022386262797,
+      -0.6005168785018141,
+      32.28355424988098
+    ]
+  },
+  {
+    "id": 359,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_birch_log_top.png",
+    "lab": [
+      70.67459154494642,
+      -0.9051887244402844,
+      31.04605161310379
+    ]
+  },
+  {
+    "id": 360,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_cherry_log.png",
+    "lab": [
+      67.2190872849046,
+      26.974033515911675,
+      8.845657638607271
+    ]
+  },
+  {
+    "id": 361,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_cherry_log_top.png",
+    "lab": [
+      72.62961006240772,
+      20.04305481975437,
+      11.914015196076113
+    ]
+  },
+  {
+    "id": 362,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_crimson_stem.png",
+    "lab": [
+      36.05131973173913,
+      37.68704785080894,
+      -2.5352405422297495
+    ]
+  },
+  {
+    "id": 363,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_crimson_stem_top.png",
+    "lab": [
+      33.10462130200085,
+      31.534031633913425,
+      -2.353883416948752
+    ]
+  },
+  {
+    "id": 364,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_dark_oak_log.png",
+    "lab": [
+      25.101829707449575,
+      3.81332616034769,
+      15.63568906652347
+    ]
+  },
+  {
+    "id": 365,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_dark_oak_log_top.png",
+    "lab": [
+      20.182068251072106,
+      7.208473471014236,
+      17.685622110433822
+    ]
+  },
+  {
+    "id": 366,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_jungle_log.png",
+    "lab": [
+      58.12873174360401,
+      8.69866179679482,
+      31.59666322323631
+    ]
+  },
+  {
+    "id": 367,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_jungle_log_top.png",
+    "lab": [
+      54.93285399972908,
+      11.602432207157092,
+      28.93005949204246
+    ]
+  },
+  {
+    "id": 368,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_mangrove_log.png",
+    "lab": [
+      31.481819034644342,
+      27.863380968488258,
+      17.562964207620855
+    ]
+  },
+  {
+    "id": 369,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_mangrove_log_top.png",
+    "lab": [
+      27.311665472609253,
+      29.081792385127322,
+      14.893621147415207
+    ]
+  },
+  {
+    "id": 370,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_oak_log.png",
+    "lab": [
+      61.66224215785541,
+      5.18407603857298,
+      35.37851840896531
+    ]
+  },
+  {
+    "id": 371,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_oak_log_top.png",
+    "lab": [
+      55.901431052571354,
+      4.843510362456136,
+      32.65888037608138
+    ]
+  },
+  {
+    "id": 372,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_pale_oak_log.png",
+    "lab": [
+      94.69653711248694,
+      2.3631168205151423,
+      1.499242534551087
+    ]
+  },
+  {
+    "id": 373,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_pale_oak_log_top.png",
+    "lab": [
+      90.75470486007471,
+      2.663666807532252,
+      1.5829879118017023
+    ]
+  },
+  {
+    "id": 374,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_spruce_log.png",
+    "lab": [
+      39.99297480649414,
+      5.475260417878813,
+      25.55969279677864
+    ]
+  },
+  {
+    "id": 375,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_spruce_log_top.png",
+    "lab": [
+      35.92541947316761,
+      6.144313205564977,
+      23.765159822209835
+    ]
+  },
+  {
+    "id": 376,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_warped_stem.png",
+    "lab": [
+      57.18195965096356,
+      -27.815903133235977,
+      -6.499118335309394
+    ]
+  },
+  {
+    "id": 377,
+    "type": ["wood"],
+    "file": "images/minecraft/stripped_warped_stem_top.png",
+    "lab": [
+      49.2778607131384,
+      -24.403469082844325,
+      -4.5599267744965415
+    ]
+  },
+  {
+    "id": 378,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/target_side.png",
+    "lab": [
+      77.92032090262161,
+      19.069303299821815,
+      15.942762275637943
+    ]
+  },
+  {
+    "id": 379,
+    "type": ["other"],
+    "file": "images/minecraft/terracotta.png",
+    "lab": [
+      45.78454208019675,
+      20.88757754176354,
+      24.93972964246826
+    ]
+  },
+  {
+    "id": 380,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/tnt_side.png",
+    "lab": [
+      51.85131129369296,
+      36.61815664414178,
+      25.536165590751224
+    ]
+  },
+  {
+    "id": 381,
+    "type": ["expensive"],
+    "file": "images/minecraft/tube_coral_block.png",
+    "lab": [
+      41.19701276576005,
+      29.085863938270798,
+      -65.38286527362082
+    ]
+  },
+  {
+    "id": 382,
+    "type": ["other"],
+    "file": "images/minecraft/tuff.png",
+    "lab": [
+      45.685856950471845,
+      -1.7028546832616487,
+      3.5185543923407963
+    ]
+  },
+  {
+    "id": 383,
+    "type": ["other"],
+    "file": "images/minecraft/tuff_bricks.png",
+    "lab": [
+      42.69686423134288,
+      -3.2744140982459062,
+      3.538491947718035
+    ]
+  },
+  {
+    "id": 384,
+    "type": ["expensive"],
+    "file": "images/minecraft/verdant_froglight_side.png",
+    "lab": [
+      90.61318842734745,
+      -12.579880809880738,
+      10.476319122545457
+    ]
+  },
+  {
+    "id": 385,
+    "type": ["expensive"],
+    "file": "images/minecraft/verdant_froglight_top.png",
+    "lab": [
+      94.86891151723636,
+      -7.971059427726509,
+      6.291053114763343
+    ]
+  },
+  {
+    "id": 386,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/warped_nylium_side.png",
+    "lab": [
+      29.367949061351524,
+      8.766249117889636,
+      7.463062132741399
+    ]
+  },
+  {
+    "id": 387,
+    "type": ["wood"],
+    "file": "images/minecraft/warped_planks.png",
+    "lab": [
+      40.14598096928866,
+      -21.139335636306814,
+      -2.6839997108904114
+    ]
+  },
+  {
+    "id": 388,
+    "type": ["wood"],
+    "file": "images/minecraft/warped_stem_top.png",
+    "lab": [
+      42.971446597866965,
+      -16.330952624593948,
+      -5.147489964909766
+    ]
+  },
+  {
+    "id": 389,
+    "type": ["wood"],
+    "file": "images/minecraft/warped_wart_block.png",
+    "lab": [
+      45.56299543262906,
+      -25.26817713425893,
+      -8.347071267210419
+    ]
+  },
+  {
+    "id": 390,
+    "type": ["other"],
+    "file": "images/minecraft/weathered_copper.png",
+    "lab": [
+      59.143540652626584,
+      -23.456953621199478,
+      17.853550097526984
+    ]
+  },
+  {
+    "id": 391,
+    "type": ["other"],
+    "file": "images/minecraft/weathered_copper_bulb.png",
+    "lab": [
+      49.72600371036904,
+      -17.303607989468073,
+      10.913935585017585
+    ]
+  },
+  {
+    "id": 392,
+    "type": ["other"],
+    "file": "images/minecraft/weathered_copper_grate.png",
+    "lab": [
+      58.97255362698074,
+      -24.042475914671975,
+      17.26167292057146
+    ]
+  },
+  {
+    "id": 393,
+    "type": ["other"],
+    "file": "images/minecraft/weathered_cut_copper.png",
+    "lab": [
+      56.871480385823425,
+      -19.551604949238673,
+      16.336714582863692
+    ]
+  },
+  {
+    "id": 394,
+    "type": ["expensive"],
+    "file": "images/minecraft/wet_sponge.png",
+    "lab": [
+      70.96969278085271,
+      -18.4498412815113,
+      53.555616718568096
+    ]
+  },
+  {
+    "id": 395,
+    "type": ["other"],
+    "file": "images/minecraft/white_concrete.png",
+    "lab": [
+      84.87630738753064,
+      -1.829835628222649,
+      -1.2068164603093279
+    ]
+  },
+  {
+    "id": 396,
+    "type": ["other"],
+    "file": "images/minecraft/white_concrete_powder.png",
+    "lab": [
+      90.27578591123135,
+      -0.5241251113115722,
+      -0.38908053368222223
+    ]
+  },
+  {
+    "id": 397,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/white_glazed_terracotta.png",
+    "lab": [
+      83.89674578141528,
+      -3.2379491058727674,
+      1.8549615457510809
+    ]
+  },
+  {
+    "id": 398,
+    "type": ["expensive"],
+    "file": "images/minecraft/white_shulker_box.png",
+    "lab": [
+      87.55279994922849,
+      -1.5944255434920787,
+      -0.8461807889966749
+    ]
+  },
+  {
+    "id": 399,
+    "type": ["other"],
+    "file": "images/minecraft/white_terracotta.png",
+    "lab": [
+      74.87937821982217,
+      8.82936710420044,
+      12.754692319241984
+    ]
+  },
+  {
+    "id": 400,
+    "type": ["wool"],
+    "file": "images/minecraft/white_wool.png",
+    "lab": [
+      93.29140480488915,
+      -0.8131946535793653,
+      -0.5608453363964822
+    ]
+  },
+  {
+    "id": 401,
+    "type": ["other"],
+    "file": "images/minecraft/yellow_concrete.png",
+    "lab": [
+      75.805677553594,
+      12.752247080138158,
+      76.05252841553668
+    ]
+  },
+  {
+    "id": 402,
+    "type": ["other"],
+    "file": "images/minecraft/yellow_concrete_powder.png",
+    "lab": [
+      81.02518606374265,
+      -2.151786271090287,
+      71.18947811225893
+    ]
+  },
+  {
+    "id": 403,
+    "type": ["high_contrast"],
+    "file": "images/minecraft/yellow_glazed_terracotta.png",
+    "lab": [
+      79.72101042958843,
+      5.360116629526503,
+      53.305257490993775
+    ]
+  },
+  {
+    "id": 404,
+    "type": ["expensive"],
+    "file": "images/minecraft/yellow_shulker_box.png",
+    "lab": [
+      79.86769264273894,
+      8.821896213541617,
+      77.8838874467251
+    ]
+  },
+  {
+    "id": 405,
+    "type": ["wool"],
+    "file": "images/minecraft/yellow_wool.png",
+    "lab": [
+      82.18542449020573,
+      4.756181043222214,
+      77.26226369948859
+    ]
+  }
+]

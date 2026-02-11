@@ -1,0 +1,267 @@
+/*--------------------------------------------- Seperate check boxes and text ---------------------------------------------*/
+.seperate {
+  display: flex;
+  justify-content: space-between; /* This pushes items to the edges */
+  align-items: center;            /* Optional: keeps them vertically centered */
+  background: rgb(182, 182, 182);
+  width: 100%;
+  height: 40px;
+}
+
+.all-none-div {
+  display: flex;
+  align-items: center;
+}
+
+/*--------------------------------------------- Save data section ---------------------------------------------*/
+.save-data {
+  display: flex;
+  justify-content: space-between; /* This pushes items to the edges */
+  align-items: center;
+  background-color: red;
+}
+
+/*--------------------------------------------- All and None check boxes ---------------------------------------------*/
+#all-check-wood {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-wood {
+  width: 30px;
+  height: 30px;
+}
+
+#all-check-ore {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-ore {
+  width: 30px;
+  height: 30px;
+}
+
+#all-check-wool {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-wool {
+  width: 30px;
+  height: 30px;
+}
+
+#all-check-complex {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-complex {
+  width: 30px;
+  height: 30px;
+}
+
+#all-check-expensive {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-expensive {
+  width: 30px;
+  height: 30px;
+}
+
+#all-check-high-contrast {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-high-contrast {
+  width: 30px;
+  height: 30px;
+}
+
+#all-check-other {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-other {
+  width: 30px;
+  height: 30px;
+}
+
+#all-check-impossible {
+  width: 30px;
+  height: 30px;
+}
+
+#none-check-impossible {
+  width: 30px;
+  height: 30px;
+}
+
+/*--------------------------------------------- Images ---------------------------------------------*/
+#previewImage, #convertedImage, #minecraftImage {
+  /* max-width: 100%; 
+  max-height: 1000px; */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: 100%;
+  height: 1000px;
+  /* width: auto;
+  height: auto; */
+}
+
+.imageConversions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+canvas, img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  object-fit: contain;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;      /* Internet Explorer/Edge */
+  user-select: none;          /* Standard syntax */
+}
+
+.imageConversions {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selectIcon {
+  max-width: 110px;
+  border: solid 2px black;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+#myToggle {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#selectImages {
+  width: 64px;
+  height: 64px;
+}
+
+#box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 64px;
+  margin: 0;
+}
+
+#centerText {
+  text-align: center;
+  margin: 0;
+}
+
+.selectIcons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.expand {
+  background-color: lightgray;
+  margin-bottom: 10px;
+}
+
+.title-text {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;      /* Internet Explorer/Edge */
+  user-select: none;          /* Standard syntax */
+}
+
+.wrapper-wood {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#wood.is-open .wrapper-wood {
+  display: flex;
+}
+
+.wrapper-ore {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#ore.is-open .wrapper-ore {
+  display: flex;
+}
+
+.wrapper-wool {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#wool.is-open .wrapper-wool {
+  display: flex;
+}
+
+.wrapper-complex {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#complex.is-open .wrapper-complex {
+  display: flex;
+}
+
+.wrapper-expensive {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#expensive.is-open .wrapper-expensive {
+  display: flex;
+}
+
+.wrapper-high-contrast {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#high-contrast.is-open .wrapper-high-contrast {
+  display: flex;
+}
+
+.wrapper-other {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#other.is-open .wrapper-other {
+  display: flex;
+}
+
+.wrapper-impossible {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#impossible.is-open .wrapper-impossible {
+  display: flex;
+}
