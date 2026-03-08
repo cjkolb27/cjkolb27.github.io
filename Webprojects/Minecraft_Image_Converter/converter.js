@@ -295,7 +295,7 @@ async function getData(link) {
 }
 
 // Get all data about icons and color codes
-const jsonData = await getData("../data.json");
+const jsonData = await getData("data.json");
 console.log(jsonData);
 const blocks = jsonData.map(b => ({
     id: b.id,

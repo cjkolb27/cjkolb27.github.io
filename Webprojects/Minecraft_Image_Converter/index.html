@@ -3,24 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="mine.css">
   <title>Caleb Kolb: Portfolio</title>
   <script async src='https://www.googletagmanager.com/gtag/js?id=G-Y9J9RT3K18'></script>
-  <script
-    id='google-analytics'
-    strategy='afterInteractive'
-    dangerouslySetInnerHTML={{
-      __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-Y9J9RT3K18', {
-          page_path: window.location.pathname,
-        });
-      `,
-    }}
-  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y9J9RT3K18', {page_path: window.location.pathname,});
+  </script>
   <script type="module">import Color from "https://cdn.jsdelivr.net/npm/colorjs.io/+esm";</script>
   <script src="https://unpkg.com/pica/dist/pica.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
@@ -28,10 +21,13 @@
 </head>
 <body>
   <div class="topnav">
-    <a class="active" href="/">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="/" id="links">Home</a>
+    <a href="/Projects" id="links">Projects</a>
+    <a class="active" href="/Webprojects" id="links">Web Projects</a>
+    <a href="/Resume" id="links">Resume</a>
+    <div id="space"></div>
+    <a href="https://github.com/cjkolb27" target="_blank" class="icon-link"><img src="../../github_logo.png" class="link-logo"></a>
+    <a href="https://www.linkedin.com/in/caleb-kolb-953107326/" target="_blank" class="icon-link"><img src="../../linkedin-logo.png" class="link-logo"></a>
   </div>
   <br>
   <div class="imageConversions">
