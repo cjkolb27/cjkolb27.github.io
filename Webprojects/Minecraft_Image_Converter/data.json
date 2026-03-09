@@ -4058,5 +4058,11 @@
       4.756181043222214,
       77.26226369948859
     ]
+  },
+  {
+    "id": 406,
+    "type": ["impossible"],
+    "file": "images/minecraft/transparent.png",
+    "lab": []
   }
 ]

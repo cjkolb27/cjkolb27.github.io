@@ -233,10 +233,15 @@ async function previewSelectedImage() {
             const distance = i * Number(width.value);
             for (let j = 0; j < Number(width.value); j++) {
                 const offset = (distance + j) * 4;
-                const lab = chroma(`rgba(${pixels[offset]}, ${pixels[offset + 1]}, ${pixels[offset + 2]}, ${pixels[offset + 3] / 255})`).lab();
-                const [l, a, b] = lab;
-                const best = findClosestBlock(l, a, b);
-                output[i][j] = best["id"];
+                if (pixels[offset + 3] == 0 && selected[blocks[blocks.length - 1]["id"]]) {
+                    console.log(pixels[offset + 3])
+                    output[i][j] = blocks[blocks.length - 1]["id"];
+                } else {
+                    const lab = chroma(`rgba(${pixels[offset]}, ${pixels[offset + 1]}, ${pixels[offset + 2]}, ${pixels[offset + 3] / 255})`).lab();
+                    const [l, a, b] = lab;
+                    const best = findClosestBlock(l, a, b);
+                    output[i][j] = best["id"];
+                }
             }
         }
         console.log(output);
@@ -301,9 +306,9 @@ const blocks = jsonData.map(b => ({
     id: b.id,
     type: b.type,
     file: b.file,
-    L: b.lab[0],
-    a: b.lab[1],
-    b: b.lab[2],
+    L: b.lab.length ? b.lab[0] : null,
+    a: b.lab.length ? b.lab[1] : null,
+    b: b.lab.length ? b.lab[2] : null,
     img: null
 }));
 
@@ -424,7 +429,7 @@ function findClosestBlock(L, a, b) {
     let minDist = Infinity;
 
     for (const block of blocks) {
-        if (selected[block.id]) {
+        if (selected[block.id] && block.L != null) {
             const d = labDistanceSq(
                 L, a, b,
                 block.L, block.a, block.b
