@@ -1,0 +1,35 @@
+.all-projects {
+    background-color: red;
+    max-width: 80%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.proj {
+    width: 300px;
+    height: 400px;
+    background-color: blue;
+}
+
+.top-div {
+    background-color: gray;
+}
+
+.bottom-div {
+    background-color: green;
+}
+
+.preview-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.p-title {
+    
+    padding: 1px;
+}

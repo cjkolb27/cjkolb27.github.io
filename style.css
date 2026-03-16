@@ -1,3 +1,7 @@
+:root {
+  --img-width: 1000px;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #1f1f1f;
@@ -48,4 +52,37 @@
   justify-content: center;
   align-items: center;
   margin-right: 5px;
+}
+
+.overlap-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: var(--img-width);
+}
+
+.overlap-video {
+  position: absolute;
+  pointer-events: none; 
+  display: block; 
+  width: var(--img-width); 
+  height: var(--img-width);
+}
+
+.overlap-img {
+  position: absolute;
+  width: var(--img-width); 
+  height: var(--img-width);
+  background-color: white;
+  pointer-events: none; 
+  object-fit: cover;
+
+  clip-path: polygon(
+    44% 0%,
+    100% 0,
+    100% 100%,
+    55% 100%
+  );
 }
