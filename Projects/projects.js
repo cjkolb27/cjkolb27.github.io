@@ -10,6 +10,9 @@ console.log(jsonData);
 jsonData.forEach(data => {
     const d1 = document.createElement("div");
     d1.classList.add("proj");
+    d1.addEventListener("click", () => {
+        window.location.href = `Project${data.link}`;
+    });
 
     const d2 = document.createElement("div");
     d2.classList.add("top-div");

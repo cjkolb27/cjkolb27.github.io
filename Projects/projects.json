@@ -1,80 +1,46 @@
 [
     {
-        "name": "Something",
+        "name": "Calendar Application",
         "file": "images/Calendar.png",
-        "description": "IDK",
+        "description": "Calendar application used for viewing calendar events. Calendar events can be uploaded to a local server to keep the calendar synced on multiple devices.",
         "lang": [
-            "C",
             "Java"
         ],
-        "link": "/?idk"
+        "link": "/?CalApp"
     },
     {
-        "name": "Something2",
-        "file": "images/2",
-        "description": "IDK2",
+        "name": "Calendar Database",
+        "file": "images/CalendarDatabase.png",
+        "description": "Database for the Calendar Application.",
         "lang": [
-            "C++",
+            "Python",
+            "MariaDB"
+        ],
+        "link": "/?CalDat"
+    },
+    {
+        "name": "Remote Desktop Application",
+        "file": "images/RemoteDesktop.png",
+        "description": "Allows for streaming a monitor at 60hz to 120hz over a local stable internet connection.",
+        "lang": [
             "Python"
         ],
-        "link": "/?idk"
+        "link": "/?RemDesk"
     },
     {
-        "name": "Something2",
-        "file": "images/2",
-        "description": "IDK2",
+        "name": "3D Printed Computer Case",
+        "file": "images/ComputerCase.png",
+        "description": "Computer case that fits an atx motherboard, 3 fan radiator, atx power supply, and a 2 fan graphics card. Case uses less than 2kg of filament.",
         "lang": [
-            "C++",
-            "Python"
+            ""
         ],
-        "link": "/?idk"
+        "link": "/?CompCase"
     },
     {
-        "name": "Something2",
-        "file": "images/2",
-        "description": "IDK2",
+        "name": "Audio Streamer",
+        "file": "images/AudioStreamer.png",
+        "description": "Allows for streaming audio from one device to another over the internet.",
         "lang": [
-            "C++",
-            "Python"
-        ],
-        "link": "/?idk"
-    },
-    {
-        "name": "Something2",
-        "file": "images/2",
-        "description": "IDK2",
-        "lang": [
-            "C++",
-            "Python"
-        ],
-        "link": "/?idk"
-    },
-    {
-        "name": "Something2",
-        "file": "images/2",
-        "description": "IDK2",
-        "lang": [
-            "C++",
-            "Python"
-        ],
-        "link": "/?idk"
-    },
-    {
-        "name": "Something2",
-        "file": "images/2",
-        "description": "IDK2",
-        "lang": [
-            "C++",
-            "Python"
-        ],
-        "link": "/?idk"
-    },
-    {
-        "name": "Something2",
-        "file": "images/2",
-        "description": "IDK2",
-        "lang": [
-            "C++",
             "Python"
         ],
         "link": "/?idk"
