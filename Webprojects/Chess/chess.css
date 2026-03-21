@@ -21,6 +21,7 @@
 }
 
 .S1 {
+    position: relative;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -28,7 +29,8 @@
 }
 
 .S2 {
-    background-color: black;
+    position: relative;
+    background-color: rgb(60, 58, 165);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,13 +42,21 @@
     height: 64px;
     border-radius: 100px;
     opacity: 0;
+    z-index: 1000;
+    position: absolute;
     transition: opacity 0.1s;
 }
 
 .S1:hover .hov {
-    opacity: 1;
+    opacity: .5;
 }
 
 .S2:hover .hov {
     opacity: .5;
+}
+
+.piece {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
