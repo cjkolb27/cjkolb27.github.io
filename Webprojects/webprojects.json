@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Chess Local/Online",
+        "file": "images/minecraft/grass_block_side.png",
+        "description": "Play chess agains a bot that runs in browser. Also have the ability to play a game agaist a friend online.",
+        "link": "Chess"
+    },
+    {
+        "name": "Minecraft Image Converter",
+        "file": "images/minecraft/grass_block_side.png",
+        "description": "Turns an uploaded image into minecraft blocks. This is run compleately client side so images are not uploaded to a server.",
+        "link": "Minecraft_Image_Converter"
+    }
+]

@@ -1,5 +1,14 @@
 :root {
-  --img-width: 1000px;
+  --img-width: 800px;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    #810000 0%,
+    #ffc1c1 100%
+  );
+  min-height: 100vh;
 }
 
 /* Add a black background color to the top navigation */
@@ -7,6 +16,10 @@
   background-color: #1f1f1f;
   overflow: hidden;
   display: flex;
+  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Style the links inside the navigation bar */
@@ -56,29 +69,34 @@
 
 .overlap-div {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: var(--img-width);
+  width: 100%;
+  max-width: var(--img-width);
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.overlap-video,
+.overlap-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
 }
 
 .overlap-video {
-  position: absolute;
-  pointer-events: none; 
-  display: block; 
-  width: var(--img-width); 
-  height: var(--img-width);
+  clip-path: polygon(
+    0% 0%,
+    45% 0%,
+    56% 100%,
+    0% 100%
+  );
 }
 
 .overlap-img {
-  position: absolute;
-  width: var(--img-width); 
-  height: var(--img-width);
-  background-color: white;
-  pointer-events: none; 
-  object-fit: cover;
-
   clip-path: polygon(
     44% 0%,
     100% 0,
