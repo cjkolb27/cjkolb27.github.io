@@ -70,7 +70,7 @@ function loadPieces(start) {
         const ctx2 = canvas2.getContext("2d");
         ctx2.drawImage(spriteSheet, w * 5, b ? 0 : w + 1, w, h, 0, 0, w, h);
         square2.appendChild(canvas2);
-        b ? white.push({ "id": i < 8 ? i + 8 : i, "c": canvas2, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`, "s": false}) : black.push({ "id": i < 8 ? i + 8 : i, "c": canvas1, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`, "s": false});
+        b ? white.push({ "id": i < 8 ? i + 8 : i, "c": canvas2, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`, "s": false}) : black.push({ "id": i < 8 ? i + 8 : i, "c": canvas2, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`, "s": false});
         b ? board[i < 8 ? 1 : 6][i < 8 ? i : i - 8] = 6 : board[i < 8 ? 1 : 6][i < 8 ? i : i - 8] = 16;
     }
     console.log(white);
@@ -95,17 +95,27 @@ function handleChessClick(side, name, div) {
         p = white;   
     }
     let found = false;
-    p.forEach(b => {
+    for (const s of place) {
+        console.log(`${s.s} ${name}`);
+        if (s.s == name) {
+            console.log(`Found: ${name}`);
+            move(side, name);
+            return;
+        }
+    }
+    for (const b of p) {
         if (name == b.l && b.s) {
             placeCheck(b.l, side, b.s);
             b.s = false;
             found = true;
+            break;
         } else if (name == b.l) {
             found = true;
             placeCheck(b.l, side, b.s);
             b.s = true;
+            break;
         }
-    });
+    }
     if (found) {
         p.forEach(b => {
             if (name != b.l && b.s) {
@@ -119,10 +129,42 @@ function handleChessClick(side, name, div) {
     console.log(p);
 }
 
+function move(side, move) {
+    let p = [];
+    if (side == 0) {
+        p = black;
+    } else {
+        p = white;   
+    }
+    for (const b of p) {
+        if (b.s) {
+            const x1 = rowChars.indexOf(b.l[0]);
+            const y1 = Number(b.l[1]) - 1;
+            const x2 = rowChars.indexOf(move[0]);
+            const y2 = Number(move[1]) - 1;
+            console.log(`${y1}, ${x1}, ${y2}, ${x2}`);
+            placeCheck("", 0, true);
+            const div = document.querySelector(`#${b.l}`);
+            div.classList.remove("selected");
+            div.removeChild(b.c);
+            b.s = false;
+            board[y1][x1] = 0;
+            board[y2][x2] = side == 0 ? b.t + 10 : b.t;
+            const last = document.querySelector(`#${move}`);
+            last.appendChild(b.c);
+            b.l = move;
+            break;
+        }
+    }
+    board.forEach(bo => {
+        console.log(bo);
+    });
+}
+
 function placeCheck(name, side, disable) {
     console.log(place.length);
     while (place.length > 0) {
-        const r = place.pop();
+        const r = place.pop().m;
         r.classList.remove("moves");
     }
     if (!disable) {
@@ -137,6 +179,7 @@ function placeCheck(name, side, disable) {
             console.log("Bishop");
         } else if (type - (side == 0 ? 10 : 0) == 4) {
             console.log("Horse");
+            
         } else if (type - (side == 0 ? 10 : 0) == 5) {
             console.log("Rook");
         } else if (type - (side == 0 ? 10 : 0) == 6) {
@@ -144,22 +187,22 @@ function placeCheck(name, side, disable) {
             if (y + pawn[0][1] >= 0 && x + pawn[0][0] >= 0 && board[y + pawn[0][1]][x + pawn[0][0]] >= (side == 0 ? 1 : 11) && board[y + pawn[0][1]][x + pawn[0][0]] <= (side == 0 ? 6 : 16)) {
                 const move = document.querySelector(`#${rowChars[x + pawn[0][0]]}${y + pawn[0][1] + 1}`);
                 move.classList.add("moves");
-                place.push(move);
+                place.push({ "m": move, "s": `${rowChars[x + pawn[0][0]]}${y + pawn[0][1] + 1}`});
             }
             if (y + pawn[1][1] >= 0 && x + pawn[1][0] <= 7  && board[y + pawn[1][1]][x + pawn[1][0]] >= (side == 0 ? 1 : 11) && board[y + pawn[1][1]][x + pawn[1][0]] <= (side == 0 ? 6 : 16)) {
                 const move = document.querySelector(`#${rowChars[x + pawn[1][0]]}${y + pawn[1][1] + 1}`);
                 move.classList.add("moves");
-                place.push(move);
+                place.push({ "m": move, "s": `${rowChars[x + pawn[1][0]]}${y + pawn[1][1] + 1}`});
             }
             if (y + pawn[2][1] >= 0 && board[y + pawn[2][1]][x] == 0) {
                 const move = document.querySelector(`#${rowChars[x]}${y + pawn[2][1] + 1}`);
                 move.classList.add("moves");
-                place.push(move);
+                place.push({ "m": move, "s": `${rowChars[x]}${y + pawn[2][1] + 1}`});
             }
-            if (y + pawn[3][1] >= 0 && board[y + pawn[3][1]][x] == 0 && board[y + pawn[3][1] + 1][x] == 0) {
+            if (y == 6 && y + pawn[3][1] >= 0 && board[y + pawn[3][1]][x] == 0 && board[y + pawn[3][1] + 1][x] == 0) {
                 const move = document.querySelector(`#${rowChars[x]}${y + pawn[3][1] + 1}`);
                 move.classList.add("moves");
-                place.push(move);
+                place.push({ "m": move, "s": `${rowChars[x]}${y + pawn[3][1] + 1}`});
             }
         }
     }
