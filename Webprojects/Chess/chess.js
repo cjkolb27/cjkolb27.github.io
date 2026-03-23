@@ -12,21 +12,32 @@ function loadImage(src) {
 const spriteSheet = await loadImage("../images/chess/Chess_Pieces.png");
 console.log("after");
 
-window.addEventListener("beforeunload", (event) => {
-  event.preventDefault();
-});
+// window.addEventListener("beforeunload", (event) => {
+//   event.preventDefault();
+// });
 
 const white = [];
 const black = [];
+const place = [];
 const startRow = [5, 4, 3, 2, 1, 3, 4, 5];
 const rowChars = ["A", "B", "C", "D", "E", "F", "G", "H"];
+const board = [ [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0], ]
+const pawn = [[-1, -1], [1, -1], [0, -1], [0, -2]];
+const horse = [[-1, -2], [1, -2], [-2, -1], [2, -1], [-2, 1], [2, 1], [-1, 2], [1, 2]];
 let temp = 0;
 
 if (Math.random() < .5) {
-    console.log("White");
+    console.log("Black");
     temp = 0;
 } else {
-    console.log("Black");
+    console.log("White");
     temp = 1;
 }
 const you = temp;
@@ -48,7 +59,8 @@ function loadPieces(start) {
         const ctx1 = canvas1.getContext("2d");
         ctx1.drawImage(spriteSheet, w * (startRow[i < 8 ? i : i - 8] - 1), b ? 0 : w + 1, w, h, 0, 0, w, h);
         square1.appendChild(canvas1);
-        b ? white.push({ "id": i < 8 ? i : i - 8, "c": canvas1, "t": startRow[i < 8 ? i : i - 8], "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "1" : "8"}`}) : black.push({ "id": i < 8 ? i : i - 8, "c": canvas1, "t": startRow[i < 8 ? i : i - 8], "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "1" : "8"}`});
+        b ? white.push({ "id": i < 8 ? i : i - 8, "c": canvas1, "t": startRow[i < 8 ? i : i - 8], "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "1" : "8"}`, "s": false}) : black.push({ "id": i < 8 ? i : i - 8, "c": canvas1, "t": startRow[i < 8 ? i : i - 8], "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "1" : "8"}`, "s": false});
+        b ? board[i < 8 ? 0 : 7][i < 8 ? i : i - 8] = startRow[i < 8 ? i : i - 8] : board[i < 8 ? 0 : 7][i < 8 ? i : i - 8] = startRow[i < 8 ? i : i - 8] + 10;
 
         const square2 = document.querySelector(`#${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`);
         const canvas2 = document.createElement("canvas");
@@ -58,8 +70,97 @@ function loadPieces(start) {
         const ctx2 = canvas2.getContext("2d");
         ctx2.drawImage(spriteSheet, w * 5, b ? 0 : w + 1, w, h, 0, 0, w, h);
         square2.appendChild(canvas2);
-        b ? white.push({ "id": i < 8 ? i + 8 : i, "c": canvas2, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`}) : black.push({ "id": i < 8 ? i + 8 : i, "c": canvas1, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`});
+        b ? white.push({ "id": i < 8 ? i + 8 : i, "c": canvas2, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`, "s": false}) : black.push({ "id": i < 8 ? i + 8 : i, "c": canvas1, "t": 6, "l": `${rowChars[i < 8 ? i : i - 8]}${i < 8 ? "2" : "7"}`, "s": false});
+        b ? board[i < 8 ? 1 : 6][i < 8 ? i : i - 8] = 6 : board[i < 8 ? 1 : 6][i < 8 ? i : i - 8] = 16;
     }
     console.log(white);
     console.log(black);
+    board.forEach(bo => {
+        console.log(bo);
+    });
+}
+
+for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+        const div = document.querySelector(`#${rowChars[j]}${i + 1}`);
+        div.addEventListener("click", () => handleChessClick(you, `${rowChars[j]}${i + 1}`, div));
+    }
+}
+
+function handleChessClick(side, name, div) {
+    let p = [];
+    if (side == 0) {
+        p = black;
+    } else {
+        p = white;   
+    }
+    let found = false;
+    p.forEach(b => {
+        if (name == b.l && b.s) {
+            placeCheck(b.l, side, b.s);
+            b.s = false;
+            found = true;
+        } else if (name == b.l) {
+            found = true;
+            placeCheck(b.l, side, b.s);
+            b.s = true;
+        }
+    });
+    if (found) {
+        p.forEach(b => {
+            if (name != b.l && b.s) {
+                b.s = false;
+                const last = document.querySelector(`#${b.l}`);
+                last.classList.remove("selected");
+            }
+        });
+        div.classList.toggle("selected");
+    }
+    console.log(p);
+}
+
+function placeCheck(name, side, disable) {
+    console.log(place.length);
+    while (place.length > 0) {
+        const r = place.pop();
+        r.classList.remove("moves");
+    }
+    if (!disable) {
+        const x = rowChars.indexOf(name[0]);
+        const y = Number(name[1]) - 1;
+        const type = board[y][x];
+        if (type - (side == 0 ? 10 : 0) == 1) {
+            console.log("King");
+        } else if (type - (side == 0 ? 10 : 0) == 2) {
+            console.log("Queen");
+        } else if (type - (side == 0 ? 10 : 0) == 3) {
+            console.log("Bishop");
+        } else if (type - (side == 0 ? 10 : 0) == 4) {
+            console.log("Horse");
+        } else if (type - (side == 0 ? 10 : 0) == 5) {
+            console.log("Rook");
+        } else if (type - (side == 0 ? 10 : 0) == 6) {
+            console.log("Pawn");
+            if (y + pawn[0][1] >= 0 && x + pawn[0][0] >= 0 && board[y + pawn[0][1]][x + pawn[0][0]] >= (side == 0 ? 1 : 11) && board[y + pawn[0][1]][x + pawn[0][0]] <= (side == 0 ? 6 : 16)) {
+                const move = document.querySelector(`#${rowChars[x + pawn[0][0]]}${y + pawn[0][1] + 1}`);
+                move.classList.add("moves");
+                place.push(move);
+            }
+            if (y + pawn[1][1] >= 0 && x + pawn[1][0] <= 7  && board[y + pawn[1][1]][x + pawn[1][0]] >= (side == 0 ? 1 : 11) && board[y + pawn[1][1]][x + pawn[1][0]] <= (side == 0 ? 6 : 16)) {
+                const move = document.querySelector(`#${rowChars[x + pawn[1][0]]}${y + pawn[1][1] + 1}`);
+                move.classList.add("moves");
+                place.push(move);
+            }
+            if (y + pawn[2][1] >= 0 && board[y + pawn[2][1]][x] == 0) {
+                const move = document.querySelector(`#${rowChars[x]}${y + pawn[2][1] + 1}`);
+                move.classList.add("moves");
+                place.push(move);
+            }
+            if (y + pawn[3][1] >= 0 && board[y + pawn[3][1]][x] == 0 && board[y + pawn[3][1] + 1][x] == 0) {
+                const move = document.querySelector(`#${rowChars[x]}${y + pawn[3][1] + 1}`);
+                move.classList.add("moves");
+                place.push(move);
+            }
+        }
+    }
 }
