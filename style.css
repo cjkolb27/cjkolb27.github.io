@@ -104,3 +104,20 @@ body {
     55% 100%
   );
 }
+
+.popup {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  background: white;
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 20px;
+  font-size: 28px;
+  display: none;
+  z-index: 1000;
+}
+
+#closePopup {
+  font-size: 28px;
+}
