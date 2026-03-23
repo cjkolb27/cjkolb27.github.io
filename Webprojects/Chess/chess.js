@@ -179,7 +179,46 @@ function placeCheck(name, side, disable) {
             console.log("Bishop");
         } else if (type - (side == 0 ? 10 : 0) == 4) {
             console.log("Horse");
-            
+            if (y + horse[0][1] >= 0 && x + horse[0][0] >= 0 && ((board[y + horse[0][1]][x + horse[0][0]] >= (side == 0 ? 1 : 11) && board[y + horse[0][1]][x + horse[0][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[0][1]][x + horse[0][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[0][0]]}${y + horse[0][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[0][0]]}${y + horse[0][1] + 1}`});
+            }
+            if (y + horse[1][1] >= 0 && x + horse[1][0] <= 7 && ((board[y + horse[1][1]][x + horse[1][0]] >= (side == 0 ? 1 : 11) && board[y + horse[1][1]][x + horse[1][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[1][1]][x + horse[1][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[1][0]]}${y + horse[1][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[1][0]]}${y + horse[1][1] + 1}`});
+            }
+            if (y + horse[2][1] >= 0 && x + horse[2][0] >= 0 && ((board[y + horse[2][1]][x + horse[2][0]] >= (side == 0 ? 1 : 11) && board[y + horse[2][1]][x + horse[2][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[2][1]][x + horse[2][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[2][0]]}${y + horse[2][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[2][0]]}${y + horse[2][1] + 1}`});
+            }
+            if (y + horse[3][1] >= 0 && x + horse[3][0] <= 7 && ((board[y + horse[3][1]][x + horse[3][0]] >= (side == 0 ? 1 : 11) && board[y + horse[3][1]][x + horse[3][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[3][1]][x + horse[3][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[3][0]]}${y + horse[3][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[3][0]]}${y + horse[3][1] + 1}`});
+            }
+            if (y + horse[4][1] <= 7 && x + horse[4][0] >= 0 && ((board[y + horse[4][1]][x + horse[4][0]] >= (side == 0 ? 1 : 11) && board[y + horse[4][1]][x + horse[4][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[4][1]][x + horse[4][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[4][0]]}${y + horse[4][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[4][0]]}${y + horse[4][1] + 1}`});
+            }
+            if (y + horse[5][1] <= 7 && x + horse[5][0] <= 7 && ((board[y + horse[5][1]][x + horse[5][0]] >= (side == 0 ? 1 : 11) && board[y + horse[5][1]][x + horse[5][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[5][1]][x + horse[5][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[5][0]]}${y + horse[5][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[5][0]]}${y + horse[5][1] + 1}`});
+            }
+            if (y + horse[6][1] <= 7 && x + horse[6][0] >= 0 && ((board[y + horse[6][1]][x + horse[6][0]] >= (side == 0 ? 1 : 11) && board[y + horse[6][1]][x + horse[6][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[6][1]][x + horse[6][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[6][0]]}${y + horse[6][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[6][0]]}${y + horse[6][1] + 1}`});
+            }
+            if (y + horse[7][1] <= 7 && x + horse[7][0] <= 7 && ((board[y + horse[7][1]][x + horse[7][0]] >= (side == 0 ? 1 : 11) && board[y + horse[7][1]][x + horse[7][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[7][1]][x + horse[7][0]] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + horse[7][0]]}${y + horse[7][1] + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + horse[7][0]]}${y + horse[7][1] + 1}`});
+            }
         } else if (type - (side == 0 ? 10 : 0) == 5) {
             console.log("Rook");
         } else if (type - (side == 0 ? 10 : 0) == 6) {
