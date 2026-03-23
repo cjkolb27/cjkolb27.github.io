@@ -173,10 +173,188 @@ function placeCheck(name, side, disable) {
         const type = board[y][x];
         if (type - (side == 0 ? 10 : 0) == 1) {
             console.log("King");
+            if (y - 1 >= 0 && ((board[y - 1][x] >= (side == 0 ? 1 : 11) && board[y - 1][x] <= (side == 0 ? 6 : 16)) || board[y - 1][x] == 0)) {
+                const move = document.querySelector(`#${rowChars[x]}${y}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x]}${y}`});
+            }
+            if (y - 1 >= 0 && x + 1 <= 7 && ((board[y - 1][x + 1] >= (side == 0 ? 1 : 11) && board[y - 1][x + 1] <= (side == 0 ? 6 : 16)) || board[y - 1][x + 1] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + 1]}${y}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + 1]}${y}`});
+            }
+            if (x + 1 <= 7 && ((board[y][x + 1] >= (side == 0 ? 1 : 11) && board[y][x + 1] <= (side == 0 ? 6 : 16)) || board[y][x + 1] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + 1]}${y + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + 1]}${y + 1}`});
+            }
+            if (x + 1 <= 7 && y + 1 <= 7 && ((board[y+ 1][x + 1] >= (side == 0 ? 1 : 11) && board[y + 1][x + 1] <= (side == 0 ? 6 : 16)) || board[y + 1][x + 1] == 0)) {
+                const move = document.querySelector(`#${rowChars[x + 1]}${y + 2}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x + 1]}${y + 2}`});
+            }
+            if (y + 1 <= 7 && ((board[y + 1][x] >= (side == 0 ? 1 : 11) && board[y + 1][x] <= (side == 0 ? 6 : 16)) || board[y + 1][x] == 0)) {
+                const move = document.querySelector(`#${rowChars[x]}${y + 2}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x]}${y + 2}`});
+            }
+            if (y + 1 <= 7 && x - 1 >= 0 && ((board[y + 1][x - 1] >= (side == 0 ? 1 : 11) && board[y + 1][x - 1] <= (side == 0 ? 6 : 16)) || board[y + 1][x - 1] == 0)) {
+                const move = document.querySelector(`#${rowChars[x - 1]}${y + 2}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x - 1]}${y + 2}`});
+            }
+            if (x - 1 >= 0 && ((board[y][x - 1] >= (side == 0 ? 1 : 11) && board[y][x - 1] <= (side == 0 ? 6 : 16)) || board[y][x - 1] == 0)) {
+                const move = document.querySelector(`#${rowChars[x - 1]}${y + 1}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x - 1]}${y + 1}`});
+            }
+            if (x - 1 >= 0 && y - 1 >= 0 && ((board[y - 1][x - 1] >= (side == 0 ? 1 : 11) && board[y - 1][x - 1] <= (side == 0 ? 6 : 16)) || board[y - 1][x - 1] == 0)) {
+                const move = document.querySelector(`#${rowChars[x - 1]}${y}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${rowChars[x - 1]}${y}`});
+            }
         } else if (type - (side == 0 ? 10 : 0) == 2) {
             console.log("Queen");
+            let r1 = true;
+            let r2 = true;
+            let r3 = true;
+            let r4 = true;
+            let b1 = true;
+            let b2 = true;
+            let b3 = true;
+            let b4 = true;
+            for (let i = 0; i < 7; i++) {
+                if (r1 && y - i - 1 >= 0  && ((board[y - i - 1][x] >= (side == 0 ? 1 : 11) && board[y - i - 1][x] <= (side == 0 ? 6 : 16)) || board[y - i - 1][x] == 0)) {
+                    if (board[y - i - 1][x] >= (side == 0 ? 1 : 11) && board[y - i - 1][x] <= (side == 0 ? 6 : 16)) {
+                        r1 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x]}${y - i}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x]}${y - i}`});
+                } else {
+                    r1 = false;
+                }
+                if (r2 && y + i + 1 <= 7  && ((board[y + i + 1][x] >= (side == 0 ? 1 : 11) && board[y + i + 1][x] <= (side == 0 ? 6 : 16)) || board[y + i + 1][x] == 0)) {
+                    if (board[y + i + 1][x] >= (side == 0 ? 1 : 11) && board[y + i + 1][x] <= (side == 0 ? 6 : 16)) {
+                        r2 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x]}${y + i + 2}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x]}${y + i + 2}`});
+                } else {
+                    r2 = false;
+                }
+                if (r3 && x - i - 1 >= 0  && ((board[y][x - i - 1] >= (side == 0 ? 1 : 11) && board[y][x - i - 1] <= (side == 0 ? 6 : 16)) || board[y][x - i - 1] == 0)) {
+                    if (board[y][x - i - 1] >= (side == 0 ? 1 : 11) && board[y][x - i - 1] <= (side == 0 ? 6 : 16)) {
+                        r3 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x - i - 1]}${y + 1}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x - i - 1]}${y + 1}`});
+                } else {
+                    r3 = false;
+                }
+                if (r4 && x + i + 1 <= 7  && ((board[y][x + i + 1] >= (side == 0 ? 1 : 11) && board[y][x + i + 1] <= (side == 0 ? 6 : 16)) || board[y][x + i + 1] == 0)) {
+                    if (board[y][x + i + 1] >= (side == 0 ? 1 : 11) && board[y][x + i + 1] <= (side == 0 ? 6 : 16)) {
+                        r4 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x + i + 1]}${y + 1}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x + i + 1]}${y + 1}`});
+                } else {
+                    r4 = false;
+                }
+            }
+            for (let i = 0; i < 7; i++) {
+                if (b1 && y - i - 1 >= 0 && x - i - 1 >= 0 && ((board[y - i - 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x - i - 1] <= (side == 0 ? 6 : 16)) || board[y - i - 1][x - i - 1] == 0)) {
+                    if (board[y - i - 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x - i - 1] <= (side == 0 ? 6 : 16)) {
+                        b1 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x - i - 1]}${y - i}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x - i - 1]}${y - i}`});
+                } else {
+                    b1 = false;
+                }
+                if (b2 && y + i + 1 <= 7 && x + i + 1 && ((board[y + i + 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x + i + 1] <= (side == 0 ? 6 : 16)) || board[y + i + 1][x + i + 1] == 0)) {
+                    if (board[y + i + 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x + i + 1] <= (side == 0 ? 6 : 16)) {
+                        b2 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x + i + 1]}${y + i + 2}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x + i + 1]}${y + i + 2}`});
+                } else {
+                    b2 = false;
+                }
+                if (b3 && x - i - 1 >= 0 && y + i + 1 <= 7 && ((board[y + i + 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x - i - 1] <= (side == 0 ? 6 : 16)) || board[y + i + 1][x - i - 1] == 0)) {
+                    if (board[y + i + 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x - i - 1] <= (side == 0 ? 6 : 16)) {
+                        b3 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x - i - 1]}${y + i + 2}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x - i - 1]}${y + i + 2}`});
+                } else {
+                    b3 = false;
+                }
+                if (b4 && x + i + 1 <= 7 && y - i - 1 >= 0 && ((board[y - i - 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x + i + 1] <= (side == 0 ? 6 : 16)) || board[y - i - 1][x + i + 1] == 0)) {
+                    if (board[y - i - 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x + i + 1] <= (side == 0 ? 6 : 16)) {
+                        b4 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x + i + 1]}${y - i}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x + i + 1]}${y - i}`});
+                } else {
+                    b4 = false;
+                }
+            }
         } else if (type - (side == 0 ? 10 : 0) == 3) {
             console.log("Bishop");
+            let b1 = true;
+            let b2 = true;
+            let b3 = true;
+            let b4 = true;
+            for (let i = 0; i < 7; i++) {
+                if (b1 && y - i - 1 >= 0 && x - i - 1 >= 0 && ((board[y - i - 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x - i - 1] <= (side == 0 ? 6 : 16)) || board[y - i - 1][x - i - 1] == 0)) {
+                    if (board[y - i - 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x - i - 1] <= (side == 0 ? 6 : 16)) {
+                        b1 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x - i - 1]}${y - i}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x - i - 1]}${y - i}`});
+                } else {
+                    b1 = false;
+                }
+                if (b2 && y + i + 1 <= 7 && x + i + 1 && ((board[y + i + 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x + i + 1] <= (side == 0 ? 6 : 16)) || board[y + i + 1][x + i + 1] == 0)) {
+                    if (board[y + i + 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x + i + 1] <= (side == 0 ? 6 : 16)) {
+                        b2 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x + i + 1]}${y + i + 2}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x + i + 1]}${y + i + 2}`});
+                } else {
+                    b2 = false;
+                }
+                if (b3 && x - i - 1 >= 0 && y + i + 1 <= 7 && ((board[y + i + 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x - i - 1] <= (side == 0 ? 6 : 16)) || board[y + i + 1][x - i - 1] == 0)) {
+                    if (board[y + i + 1][x - i - 1] >= (side == 0 ? 1 : 11) && board[y + i + 1][x - i - 1] <= (side == 0 ? 6 : 16)) {
+                        b3 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x - i - 1]}${y + i + 2}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x - i - 1]}${y + i + 2}`});
+                } else {
+                    b3 = false;
+                }
+                if (b4 && x + i + 1 <= 7 && y - i - 1 >= 0 && ((board[y - i - 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x + i + 1] <= (side == 0 ? 6 : 16)) || board[y - i - 1][x + i + 1] == 0)) {
+                    if (board[y - i - 1][x + i + 1] >= (side == 0 ? 1 : 11) && board[y - i - 1][x + i + 1] <= (side == 0 ? 6 : 16)) {
+                        b4 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x + i + 1]}${y - i}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x + i + 1]}${y - i}`});
+                } else {
+                    b4 = false;
+                }
+            }
         } else if (type - (side == 0 ? 10 : 0) == 4) {
             console.log("Horse");
             if (y + horse[0][1] >= 0 && x + horse[0][0] >= 0 && ((board[y + horse[0][1]][x + horse[0][0]] >= (side == 0 ? 1 : 11) && board[y + horse[0][1]][x + horse[0][0]] <= (side == 0 ? 6 : 16)) || board[y + horse[0][1]][x + horse[0][0]] == 0)) {
@@ -221,6 +399,52 @@ function placeCheck(name, side, disable) {
             }
         } else if (type - (side == 0 ? 10 : 0) == 5) {
             console.log("Rook");
+            let r1 = true;
+            let r2 = true;
+            let r3 = true;
+            let r4 = true;
+            for (let i = 0; i < 7; i++) {
+                if (r1 && y - i - 1 >= 0  && ((board[y - i - 1][x] >= (side == 0 ? 1 : 11) && board[y - i - 1][x] <= (side == 0 ? 6 : 16)) || board[y - i - 1][x] == 0)) {
+                    if (board[y - i - 1][x] >= (side == 0 ? 1 : 11) && board[y - i - 1][x] <= (side == 0 ? 6 : 16)) {
+                        r1 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x]}${y - i}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x]}${y - i}`});
+                } else {
+                    r1 = false;
+                }
+                if (r2 && y + i + 1 <= 7  && ((board[y + i + 1][x] >= (side == 0 ? 1 : 11) && board[y + i + 1][x] <= (side == 0 ? 6 : 16)) || board[y + i + 1][x] == 0)) {
+                    if (board[y + i + 1][x] >= (side == 0 ? 1 : 11) && board[y + i + 1][x] <= (side == 0 ? 6 : 16)) {
+                        r2 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x]}${y + i + 2}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x]}${y + i + 2}`});
+                } else {
+                    r2 = false;
+                }
+                if (r3 && x - i - 1 >= 0  && ((board[y][x - i - 1] >= (side == 0 ? 1 : 11) && board[y][x - i - 1] <= (side == 0 ? 6 : 16)) || board[y][x - i - 1] == 0)) {
+                    if (board[y][x - i - 1] >= (side == 0 ? 1 : 11) && board[y][x - i - 1] <= (side == 0 ? 6 : 16)) {
+                        r3 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x - i - 1]}${y + 1}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x - i - 1]}${y + 1}`});
+                } else {
+                    r3 = false;
+                }
+                if (r4 && x + i + 1 <= 7  && ((board[y][x + i + 1] >= (side == 0 ? 1 : 11) && board[y][x + i + 1] <= (side == 0 ? 6 : 16)) || board[y][x + i + 1] == 0)) {
+                    if (board[y][x + i + 1] >= (side == 0 ? 1 : 11) && board[y][x + i + 1] <= (side == 0 ? 6 : 16)) {
+                        r4 = false;
+                    }
+                    const move = document.querySelector(`#${rowChars[x + i + 1]}${y + 1}`);
+                    move.classList.add("moves");
+                    place.push({ "m": move, "s": `${rowChars[x + i + 1]}${y + 1}`});
+                } else {
+                    r4 = false;
+                }
+            }
         } else if (type - (side == 0 ? 10 : 0) == 6) {
             console.log("Pawn");
             if (y + pawn[0][1] >= 0 && x + pawn[0][0] >= 0 && board[y + pawn[0][1]][x + pawn[0][0]] >= (side == 0 ? 1 : 11) && board[y + pawn[0][1]][x + pawn[0][0]] <= (side == 0 ? 6 : 16)) {

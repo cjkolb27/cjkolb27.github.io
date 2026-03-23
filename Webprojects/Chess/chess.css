@@ -38,8 +38,8 @@
 
 .hov {
     background-color: gray;
-    width: 64px;
-    height: 64px;
+    width: 50%;
+    height: 50%;
     border-radius: 100px;
     opacity: 0;
     z-index: 1000;
@@ -57,29 +57,13 @@
     transition: opacity 0.1s;
 }
 
-/* .S1:hover .hov {
-    opacity: .5;
-}
-
-.S2:hover .hov {
-    opacity: .5;
-} */
-
 .selected .select {
     opacity: 0.5;
 }
 
 .moves .hov {
-    opacity: 0.5;
+    opacity: 0.6;
 }
-
-/* .S1:hover .select {
-    opacity: .5;
-}
-
-.S2:hover .select {
-    opacity: .5;
-} */
 
 .piece {
     position: absolute;
