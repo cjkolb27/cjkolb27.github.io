@@ -20,9 +20,17 @@
     grid-template-rows: repeat(8, 1fr);
 }
 
+.board.flipped {
+  transform: rotate(180deg);
+}
+
+.board.flipped canvas {
+  transform: rotate(180deg);
+}
+
 .S1 {
     position: relative;
-    background-color: white;
+    background-color: rgb(60, 58, 165);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +38,7 @@
 
 .S2 {
     position: relative;
-    background-color: rgb(60, 58, 165);
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
