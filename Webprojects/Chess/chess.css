@@ -28,6 +28,24 @@
   transform: rotate(180deg);
 }
 
+.board.flipped .locationy {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: auto;
+    right: 0;
+}
+
+.board.flipped .locationx {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    left: 0;
+}
+
 .S1 {
     position: relative;
     background-color: rgb(60, 58, 165);
@@ -36,12 +54,22 @@
     align-items: center;
 }
 
+.S1 p {
+    z-index: 1001;
+    color: white;
+}
+
 .S2 {
     position: relative;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.S2 p {
+    z-index: 1001;
+    color: black;
 }
 
 .hov {
@@ -75,6 +103,42 @@
 
 .piece {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
+}
+
+.locationy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 2px;
+}
+
+.locationx {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 2px;
+}
+
+@media (max-width: 630px) {
+    .locationx {
+        font-size: 18px;
+    }
+    .locationy {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .locationx {
+        font-size: 12px;
+    }
+    .locationy {
+        font-size: 12px;
+    }
 }

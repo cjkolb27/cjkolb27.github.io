@@ -106,6 +106,18 @@ function loadPieces(start) {
        const div = document.querySelector(".board");
        div.classList.add("flipped");
     }
+    for (let i = 0; i < 8; i++) {
+        const div1 = document.querySelector(`#${start == 0 ? "H" : "A"}${start == 0 ? 8 - i : i + 1}`);
+        const p1 = document.createElement("p");
+        p1.textContent = start == 0 ? 8 - i : i + 1;
+        p1.classList.add("locationy");
+        div1.appendChild(p1);
+        const div2 = document.querySelector(`#${rowChars[start == 0 ? 7 - i : i]}${start == 0 ? 8 : 1}`);
+        const p2 = document.createElement("p");
+        p2.textContent = rowChars[start == 0 ? 7 - i : i];
+        p2.classList.add("locationx");
+        div2.appendChild(p2);
+    }
 }
 
 // Add a click listener for every square on the board
