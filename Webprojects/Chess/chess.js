@@ -193,7 +193,6 @@ function move(side, move) {
             div.removeChild(b.c);
             b.s = false;
             if (board[y2][x2] >= (side == 0 ? 1 : 11) && board[y2][x2] <= (side == 0 ? 6 : 16)) {
-                take1.currentTime = .3;
                 take1.volume = .8;
                 take1.play();
                 board[y1][x1] = 0;
@@ -243,6 +242,11 @@ function takePiece(side, take) {
             // });
             if (isKingChecked(side == 0 ? 1 : 0)) {
                 console.log("CHECK");
+                if (isCheckmate(side == 0 ? 1 : 0)) {
+                    console.log("MATE");
+                } else {
+                    console.log("not mate");
+                }
             } else {
                 console.log("no check");
             }
@@ -298,6 +302,66 @@ function isKingChecked(side) {
     const king = p.find(k => k.t == 1).l;
     console.log(`KING: ${king}`);
     return isBeingAttacked(king, side == 0 ? 1 : 0);
+}
+
+function isCheckmate(side) {
+    let p = [];
+    let p2 = [];
+    if (side == 0) {
+        p = black;
+        p2 = white;
+    } else {
+        p = white;
+        p2 = black;
+    }
+    const king = p.find(k => k.t == 1).l;
+    console.log(`KING: ${king}`);
+
+    if (!isBeingAttacked(king, side == 0 ? 1 : 0)) {
+        return false;
+    }
+
+    for (const piece of p) {
+        const allMoves = findAllMoves(piece.l, side);
+        for (const m of allMoves) {
+            const oldPos = piece.l;
+            const x1 = rowChars.indexOf(piece.l[0]);
+            const y1 = 8 - Number(piece.l[1]);
+            const x2 = rowChars.indexOf(m[0]);
+            const y2 = 8 - Number(m[1]);
+
+            board[y1][x1] = 0;
+            piece.l = m;
+            const oldSpot = board[y2][x2];
+            board[y2][x2] = side == 0 ? piece.t + 10 : piece.t;
+            // const index = p2.findIndex(o => o.l == m);
+            // const removed = p2.splice(index, 1)[0];
+            let result = false;
+            if (piece.t == 1) {
+                console.log("KING MOVED!");
+                result = isBeingAttacked(m, side == 0 ? 1 : 0);
+            } else {
+                result = isBeingAttacked(king, side == 0 ? 1 : 0);
+            }
+            if (!result) {
+                console.log(`FAILED: ${y1} ${x1}, ${side} ${piece.l} ${m}`);
+                console.log(piece);
+                console.log(p);
+                board.forEach(bo => {
+                    console.log(bo);
+                });
+            }
+
+            board[y1][x1] = side == 0 ? piece.t + 10 : piece.t;
+            board[y2][x2] = oldSpot;
+            piece.l = oldPos;
+            // p2.push(removed);
+            if (!result) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 /** Find all spots a piece can move to */
