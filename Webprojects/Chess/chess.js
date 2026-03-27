@@ -10,6 +10,9 @@ function loadImage(src) {
   });
 }
 
+// 0 = control any, 1 = offline, 2 = online
+let gametype = 0;
+
 // All placing audio
 const place1 = new Audio("../audio/place1.mp3");
 const place2 = new Audio("../audio/place2.mp3");
@@ -18,19 +21,22 @@ const take1 = new Audio("../audio/take1.mp3");
 
 // Piece sprite sheet
 const spriteSheet = await loadImage("../images/chess/Chess_Pieces.png");
-console.log("after");
 
 // window.addEventListener("beforeunload", (event) => {
 //   event.preventDefault();
 // });
 
 // Create board, moves, and pieces holder
+let turn = 1;
 const white = [];
 const black = [];
 const place = [];
+let whiteCheck = false;
+let blackCheck = false;
+const whiteCastle = [false, false, false];
+const blackCastle = [false, false, false];
 const startRow = [5, 4, 3, 2, 1, 3, 4, 5];
 const rowChars = ["A", "B", "C", "D", "E", "F", "G", "H"];
-// const rowChars = ["H", "G", "F", "E", "D", "C", "B", "A"];
 const board = [ [15, 14, 13, 12, 11, 13, 14, 15],
                 [16, 16, 16, 16, 16, 16, 16, 16],
                 [0, 0, 0, 0, 0, 0, 0, 0],
@@ -52,8 +58,20 @@ if (Math.random() < .5) {
     console.log("White");
     temp = 1;
 }
-const you = temp;
+let you = temp;
 loadPieces(you);
+startGame(gametype);
+
+/** Start of the game code */
+function startGame(type) {
+    if (type == 0) {
+        you = turn;
+    } else if (type == 1) {
+
+    } else {
+
+    }
+}
 
 /** Load all pieces on the board */
 function loadPieces(start) {
@@ -130,6 +148,9 @@ for (let i = 0; i < 8; i++) {
 
 /** Handle clicking on an square on the board and interact with your chess pieces */
 function handleChessClick(side, name, div) {
+    if (side != turn) {
+        return;
+    }
     let p = [];
     if (side == 0) {
         p = black;
@@ -138,7 +159,7 @@ function handleChessClick(side, name, div) {
     }
     let found = false;
     for (const s of place) {
-        console.log(`${s.s} ${name}`);
+        // console.log(`${s.s} ${name}`);
         if (s.s == name) {
             console.log(`Found: ${name}`);
             move(side, name);
@@ -173,6 +194,9 @@ function handleChessClick(side, name, div) {
 
 /** Move a given piece */
 function move(side, move) {
+    if (side != turn) {
+        return;
+    }
     let p = [];
     if (side == 0) {
         p = black;
@@ -186,6 +210,94 @@ function move(side, move) {
             const y1 = 8 - Number(b.l[1]);
             const x2 = rowChars.indexOf(move[0]);
             const y2 = 8 - Number(move[1]);
+            if (b.t == 1) {
+                const div = document.querySelector(`#${b.l}`);
+                div.classList.remove("checked");
+                if ((x1 - x2) == 2) {
+                    if (side == 0) {
+                        const div1 = document.querySelector("#A8");
+                        const c = p.find(k => k.l == "A8");
+                        console.log(c);
+                        div1.removeChild(c.c);
+                        const div2 = document.querySelector("#D8");
+                        div2.appendChild(c.c);
+                        board[0][0] = 0;
+                        board[0][3] = 15;
+                        c.l = "D8";
+                    } else {
+                        const div1 = document.querySelector("#A1");
+                        const c = p.find(k => k.l == "A1");
+                        console.log(c);
+                        div1.removeChild(c.c);
+                        const div2 = document.querySelector("#D1");
+                        div2.appendChild(c.c);
+                        board[7][0] = 0;
+                        board[7][3] = 5;
+                        c.l = "D1";
+                    }
+                } else if ((x1 - x2) == -2) {
+                    if (side == 0) {
+                        const div1 = document.querySelector("#H8");
+                        const c = p.find(k => k.l == "H8");
+                        console.log(c);
+                        div1.removeChild(c.c);
+                        const div2 = document.querySelector("#F8");
+                        div2.appendChild(c.c);
+                        board[0][7] = 0;
+                        board[0][5] = 15;
+                        c.l = "F8";
+                    } else {
+                        const div1 = document.querySelector("#H1");
+                        const c = p.find(k => k.l == "H1");
+                        console.log(c);
+                        div1.removeChild(c.c);
+                        const div2 = document.querySelector("#F1");
+                        div2.appendChild(c.c);
+                        board[7][7] = 0;
+                        board[7][5] = 5;
+                        c.l = "F1";
+                    }
+                }
+            }
+            if (board[y1][x1] == (side == 0 ? 15 : 5)) {
+                if (side == 0) {
+                    if (x1 == 0) {
+                        blackCastle[0] = true;
+                    } else {
+                        blackCastle[2] = true;
+                    }
+                } else {
+                    if (x1 == 0) {
+                        whiteCastle[0] = true;
+                    } else {
+                        whiteCastle[2] = true;
+                    }
+                }
+            }
+            if (board[y2][x2] == (side == 0 ? 5 : 15)) {
+                if (side == 0) {
+                    if (x1 == 0) {
+                        whiteCastle[0] = true;
+                    } else {
+                        whiteCastle[2] = true;
+                    }
+                } else {
+                    if (x1 == 0) {
+                        blackCastle[0] = true;
+                    } else {
+                        blackCastle[2] = true;
+                    }
+                }
+            }
+            if (board[y1][x1] == (side == 0 ? 11 : 1)) {
+                if (side == 0) {
+                    blackCastle[1] = true;
+                } else {
+                    whiteCastle[1] = true;
+                }
+            }
+            console.log(whiteCastle);
+            console.log(blackCastle);
             console.log(`${y1}, ${x1}, ${y2}, ${x2}`);
             placeCheck("", 0, true);
             const div = document.querySelector(`#${b.l}`);
@@ -201,7 +313,7 @@ function move(side, move) {
                 takePiece(side, move);
             } else {
                 let num = Math.floor(Math.random() * 3);
-                console.log(`Sound: ${num}`);
+                // console.log(`Sound: ${num}`);
                 if (num == 0) {
                     place1.play();
                 } else if (num == 1) {
@@ -212,15 +324,43 @@ function move(side, move) {
                 board[y1][x1] = 0;
                 board[y2][x2] = side == 0 ? b.t + 10 : b.t;
                 b.l = move;
+                if (isKingChecked(side == 0 ? 1 : 0)) {
+                    console.log("CHECK");
+                    if (side == 0) {
+                        whiteCheck = true;
+                    } else {
+                        blackCheck = true;
+                    }
+                    if (isCheckmate(side == 0 ? 1 : 0)) {
+                        console.log("MATE");
+                    } else {
+                        console.log("not mate");
+                    }
+                } else {
+                    console.log("no check");
+                    if (side == 0) {
+                        whiteCheck = false;
+                    } else {
+                        blackCheck = false;
+                    }
+                }
             }
             const last = document.querySelector(`#${move}`);
             last.appendChild(b.c);
             break;
         }
     }
-    board.forEach(bo => {
-        console.log(bo);
-    });
+    turn = turn == 0 ? 1 : 0;
+    you = turn;
+    if (whiteCheck) {
+        isKingChecked(1);
+    }
+    if (blackCheck) {
+        isKingChecked(0);
+    }
+    // board.forEach(bo => {
+    //     console.log(bo);
+    // });
 }
 
 /** Take an enemies piece */
@@ -242,6 +382,11 @@ function takePiece(side, take) {
             // });
             if (isKingChecked(side == 0 ? 1 : 0)) {
                 console.log("CHECK");
+                if (side == 0) {
+                    whiteCheck = true;
+                } else {
+                    blackCheck = true;
+                }
                 if (isCheckmate(side == 0 ? 1 : 0)) {
                     console.log("MATE");
                 } else {
@@ -249,6 +394,11 @@ function takePiece(side, take) {
                 }
             } else {
                 console.log("no check");
+                if (side == 0) {
+                    whiteCheck = false;
+                } else {
+                    blackCheck = false;
+                }
             }
         }
     });
@@ -266,7 +416,6 @@ function isBeingAttacked(space, attackColor) {
     }
     for (const piece of p) {
         const allMoves = findAllMoves(piece.l, attackColor);
-        console.log(allMoves);
         for (let m of allMoves) {
             if (m == space) {
                 return true;
@@ -274,22 +423,6 @@ function isBeingAttacked(space, attackColor) {
         }
     }
     return false;
-    // for (let i = 0; i < 8; i++) {
-    //     for (let j = 0; j < 8; j++) {
-    //         let piece = board[i][j];
-    //         if (piece == 0 || (piece >= (attackColor == 0 ? 1 : 11) && piece <= (attackColor == 0 ? 6 : 16))) {
-    //             console.log(`FAILED: ${piece}`)
-    //             continue;
-    //         }
-    //         console.log(`Piece ${piece} ${rowChars[j]}${i + 1} ${i} ${j}`);
-    //         const allMoves = findAllMoves(`${rowChars[j]}${i + 1}`, attackColor);
-    //         for (let m of allMoves) {
-    //             if (m == space) {
-    //                 return true;
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 function isKingChecked(side) {
@@ -301,25 +434,39 @@ function isKingChecked(side) {
     }
     const king = p.find(k => k.t == 1).l;
     console.log(`KING: ${king}`);
-    return isBeingAttacked(king, side == 0 ? 1 : 0);
+    const result = isBeingAttacked(king, side == 0 ? 1 : 0);
+    const div = document.querySelector(`#${king}`);
+    if (result) {
+        div.classList.add("checked");
+        if (side == 0) {
+            blackCheck = true;
+        } else {
+            whiteCheck = true;
+        }
+    } else {
+        div.classList.remove("checked");
+        if (side == 0) {
+            blackCheck = false;
+        } else {
+            whiteCheck = false;
+        }
+    }
+    return result;
 }
 
 function isCheckmate(side) {
     let p = [];
-    let p2 = [];
     if (side == 0) {
         p = black;
-        p2 = white;
     } else {
         p = white;
-        p2 = black;
     }
     const king = p.find(k => k.t == 1).l;
     console.log(`KING: ${king}`);
 
-    if (!isBeingAttacked(king, side == 0 ? 1 : 0)) {
-        return false;
-    }
+    // if (!isBeingAttacked(king, side == 0 ? 1 : 0)) {
+    //     return false;
+    // }
 
     for (const piece of p) {
         const allMoves = findAllMoves(piece.l, side);
@@ -343,14 +490,14 @@ function isCheckmate(side) {
             } else {
                 result = isBeingAttacked(king, side == 0 ? 1 : 0);
             }
-            if (!result) {
-                console.log(`FAILED: ${y1} ${x1}, ${side} ${piece.l} ${m}`);
-                console.log(piece);
-                console.log(p);
-                board.forEach(bo => {
-                    console.log(bo);
-                });
-            }
+            // if (!result) {
+            //     console.log(`FAILED: ${y1} ${x1}, ${side} ${piece.l} ${m}`);
+            //     console.log(piece);
+            //     console.log(p);
+            //     board.forEach(bo => {
+            //         console.log(bo);
+            //     });
+            // }
 
             board[y1][x1] = side == 0 ? piece.t + 10 : piece.t;
             board[y2][x2] = oldSpot;
@@ -361,6 +508,8 @@ function isCheckmate(side) {
             }
         }
     }
+    const div = document.querySelector(`#${king}`);
+    div.classList.add("checkmated");
     return true;
 }
 
@@ -370,13 +519,54 @@ function placeCheck(name, side, disable) {
         const r = place.pop().m;
         r.classList.remove("moves");
     }
+    let p = [];
+    if (side == 0) {
+        p = black;
+    } else {
+        p = white;   
+    }
+    const king = p.find(k => k.t == 1).l;
     if (!disable) {
         const foundMoves = findAllMoves(name, side);
         console.log(foundMoves);
         for (const m of foundMoves) {
-            const move = document.querySelector(`#${m}`);
-            move.classList.add("moves");
-            place.push({ "m": move, "s": `${m}`});
+            console.log(name);
+            const oldPos = name;
+            const x1 = rowChars.indexOf(name[0]);
+            const y1 = 8 - Number(name[1]);
+            const x2 = rowChars.indexOf(m[0]);
+            const y2 = 8 - Number(m[1]);
+            const oldBoardPiece = board[y1][x1];
+            board[y1][x1] = 0;
+            name = m;
+            const oldSpot = board[y2][x2];
+            board[y2][x2] = oldBoardPiece;
+            // const index = p2.findIndex(o => o.l == m);
+            // const removed = p2.splice(index, 1)[0];
+            let result = false;
+            if (oldBoardPiece == 1) {
+                console.log("KING MOVED!");
+                result = isBeingAttacked(m, side == 0 ? 1 : 0);
+            } else {
+                result = isBeingAttacked(king, side == 0 ? 1 : 0);
+            }
+            // if (!result) {
+            //     console.log(`FAILED: ${y1} ${x1}, ${side} ${piece.l} ${m}`);
+            //     console.log(piece);
+            //     console.log(p);
+            //     board.forEach(bo => {
+            //         console.log(bo);
+            //     });
+            // }
+
+            board[y1][x1] = oldBoardPiece;
+            board[y2][x2] = oldSpot;
+            name = oldPos;
+            if (!result) {
+                const move = document.querySelector(`#${m}`);
+                move.classList.add("moves");
+                place.push({ "m": move, "s": `${m}`});
+            }
         }
     }
 }
@@ -386,24 +576,24 @@ function findAllMoves(name, side) {
     const x = rowChars.indexOf(name[0]);
     const y = 8 - Number(name[1]);
     const type = board[y][x];
-    console.log(`${y} ${x} ${type}`);
+    // console.log(`${y} ${x} ${type}`);
     if (type - (side == 0 ? 10 : 0) == 1) {
-        console.log("King");
+        // console.log("King");
         return kingMoves(side, y, x);
     } else if (type - (side == 0 ? 10 : 0) == 2) {
-        console.log("Queen");
+        // console.log("Queen");
         return queenMoves(side, y, x);
     } else if (type - (side == 0 ? 10 : 0) == 3) {
-        console.log("Bishop");
+        // console.log("Bishop");
         return bishopMoves(side, y, x);
     } else if (type - (side == 0 ? 10 : 0) == 4) {
-        console.log("Horse");
+        // console.log("Horse");
         return horseMoves(side, y, x);
     } else if (type - (side == 0 ? 10 : 0) == 5) {
-        console.log("Rook");
+        // console.log("Rook");
         return rookMoves(side, y, x);
     } else if (type - (side == 0 ? 10 : 0) == 6) {
-        console.log("Pawn");
+        // console.log("Pawn");
         return pawnMoves(side, y, x);
     }
     return [];
@@ -435,6 +625,21 @@ function kingMoves(side, y, x) {
     }
     if (x - 1 >= 0 && y - 1 >= 0 && ((board[y - 1][x - 1] >= (side == 0 ? 1 : 11) && board[y - 1][x - 1] <= (side == 0 ? 6 : 16)) || board[y - 1][x - 1] == 0)) {
         foundMoves.push(`${rowChars[x - 1]}${9 - y}`);
+    }
+    if (side == 0) {
+        if (!blackCheck && !blackCastle[1] && !blackCastle[0] && board[y][x - 1] == 0 && board[y][x - 2] == 0 && board[y][x - 3] == 0) {
+            foundMoves.push(`${rowChars[x - 2]}${8 - y}`);
+        }
+        if (!blackCheck && !blackCastle[1] && !blackCastle[2] && board[y][x + 1] == 0 && board[y][x + 2] == 0) {
+            foundMoves.push(`${rowChars[x + 2]}${8 - y}`);
+        }
+    } else {
+        if (!whiteCheck && !whiteCastle[1] && !whiteCastle[0] && board[y][x - 1] == 0 && board[y][x - 2] == 0 && board[y][x - 3] == 0) {
+            foundMoves.push(`${rowChars[x - 2]}${8 - y}`);
+        }
+        if (!whiteCheck && !whiteCastle[1] && !whiteCastle[2] && board[y][x + 1] == 0 && board[y][x + 2] == 0) {
+            foundMoves.push(`${rowChars[x + 2]}${8 - y}`);
+        }
     }
     return foundMoves;
 }

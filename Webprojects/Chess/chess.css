@@ -93,6 +93,34 @@
     transition: opacity 0.1s;
 }
 
+.check {
+    background-color: rgb(255, 106, 20);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1000;
+    position: absolute;
+    transition: opacity 0.1s;
+}
+
+.checkmate {
+    background-color: rgb(114, 0, 0);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1000;
+    position: absolute;
+    transition: opacity 0.1s;
+}
+
+.checkmated .checkmate {
+    opacity: 0.5;
+}
+
+.checked .check {
+    opacity: 0.8;
+}
+
 .selected .select {
     opacity: 0.5;
 }
