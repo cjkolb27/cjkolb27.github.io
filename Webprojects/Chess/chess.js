@@ -522,7 +522,9 @@ function isCheckmate(side) {
         }
     }
     const div = document.querySelector(`#${king}`);
+    div.classList.remove("checked");
     div.classList.add("checkmated");
+    turn = 3;
     return true;
 }
 
@@ -557,7 +559,10 @@ function placeCheck(name, side, disable) {
             // const index = p2.findIndex(o => o.l == m);
             // const removed = p2.splice(index, 1)[0];
             let result = false;
-            if (oldBoardPiece == 1) {
+            board.forEach(bo => {
+                console.log(bo);
+            });
+            if (oldBoardPiece == (side == 0 ? 11 : 1)) {
                 console.log("KING MOVED!");
                 result = isBeingAttacked(m, side == 0 ? 1 : 0);
             } else {
