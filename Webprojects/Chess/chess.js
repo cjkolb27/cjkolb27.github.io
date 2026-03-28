@@ -22,10 +22,6 @@ const take1 = new Audio("../audio/take1.mp3");
 // Piece sprite sheet
 const spriteSheet = await loadImage("../images/chess/Chess_Pieces.png");
 
-// window.addEventListener("beforeunload", (event) => {
-//   event.preventDefault();
-// });
-
 // Create board, moves, and pieces holder
 let turn = 1;
 const white = [];
@@ -48,24 +44,39 @@ const board = [ [15, 14, 13, 12, 11, 13, 14, 15],
 const pawn = [[-1, -1], [1, -1], [0, -1], [0, -2]];
 const bpawn = [[1, 1], [-1, 1], [0, 1], [0, 2]];
 const horse = [[-1, -2], [1, -2], [-2, -1], [2, -1], [-2, 1], [2, 1], [-1, 2], [1, 2]];
-let temp = 0;
+let you = 0;
+let gameStarted = false;
 
-// Start as black or white
-if (Math.random() < .5) {
-    console.log("Black");
-    temp = 0;
-} else {
-    console.log("White");
-    temp = 1;
-}
-let you = temp;
-loadPieces(you);
-startGame(gametype);
+document.querySelector(`#button0`).addEventListener("click", () => {
+    startGame(0);
+    document.querySelector(".gamemode").style.display = "none";
+});
+document.querySelector(`#button1`);
+document.querySelector(`#button2`);
+
+window.addEventListener("beforeunload", (event) => {
+    if (gameStarted) {
+        event.preventDefault();
+    }
+});
 
 /** Start of the game code */
 function startGame(type) {
+    if (gameStarted) {
+        return;
+    }
+    gameStarted = true;
     if (type == 0) {
         you = turn;
+        if (Math.random() < .5) {
+            console.log("Black");
+            you = 0;
+        } else {
+            console.log("White");
+            you = 1;
+        }
+        loadPieces(you);
+        you = 1;
     } else if (type == 1) {
 
     } else {
@@ -351,7 +362,9 @@ function move(side, move) {
         }
     }
     turn = turn == 0 ? 1 : 0;
-    you = turn;
+    if (gametype == 0) {
+        you = turn;
+    }
     if (whiteCheck) {
         isKingChecked(1);
     }

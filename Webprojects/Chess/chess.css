@@ -170,3 +170,36 @@
         font-size: 12px;
     }
 }
+
+.gamemode {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 20px;
+    border: black 2px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+    max-width: 400px;
+    align-items: center;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.60);
+}
+
+.gamemode-button {
+    width: 90%;
+    height: 40px;
+    font-size: 34px;
+}
+
+#gamemode-text {
+    background-color: white;
+    font-size: 40px;
+    padding: 4px;
+    border-radius: 20px;
+    border: black 2px solid;
+}
