@@ -1,3 +1,6 @@
+let peer = null;
+let connection = null;
+
 /** Used to load an image */
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -27,6 +30,7 @@ let turn = 1;
 const white = [];
 const black = [];
 const place = [];
+const lastMoves = [];
 let whiteCheck = false;
 let blackCheck = false;
 const whiteCastle = [false, false, false];
@@ -51,8 +55,133 @@ document.querySelector(`#button0`).addEventListener("click", () => {
     startGame(0);
     document.querySelector(".gamemode").style.display = "none";
 });
+
 document.querySelector(`#button1`);
-document.querySelector(`#button2`);
+
+document.querySelector(`#button2`).addEventListener("click", () => {
+    console.log("ONLINE");
+    document.querySelector("#button0").style.display = "none";
+    document.querySelector("#button1").style.display = "none";
+    document.querySelector("#button2").style.display = "none";
+    document.querySelector(".onlineSection").style.display = "flex";
+});
+
+document.querySelector("#onlineCancel").addEventListener("click", () => {
+    console.log("CANCEL ONLINE");
+    document.querySelector("#button0").style.display = "";
+    document.querySelector("#button1").style.display = "";
+    document.querySelector("#button2").style.display = "";
+    document.querySelector(".onlineSection").style.display = "";
+});
+
+document.querySelector("#onlineJoin").addEventListener("click", () => {
+    const code = document.querySelector("#roomCode");
+    console.log("JOIN", code.value);
+
+    peer = new Peer();
+
+    peer.on("open", () => {
+        const conn = peer.connect(`CALEBKOLB-chess-${code.value}`);
+        peer.on("error", (err) => {
+            console.log("Peer error:", err);
+        });
+
+        connection = conn;
+
+        conn.on("open", () => {
+            document.querySelector(".gamemode").style.display = "none";
+            conn.send("Get\r\n");
+        });
+
+        conn.on("data", (data) => {
+            const request = data.split("\r\n");
+            console.log("Player message:", request);
+            if (request[0] == "Post") {
+                console.log("You are:", request[1]);
+                you = Number(request[1]);
+                startGame(3);
+            } else if (request[0] == "Put") {
+                if (request[1] == "chat") {
+
+                } else if (request[1] == "cancel") {
+
+                } else {
+                    if (request.length >= 3) {
+                        const side = you == 0 ? 1 : 0;
+                        const s = request[1];
+                        const m = request[2];
+                        let p = [];
+                        if (side == 0) {
+                            p = black;
+                        } else {
+                            p = white;   
+                        }
+                        for (const b of p) {
+                            if (b.l == s) {
+                                b.s = true;
+                            }
+                        }
+                        move(side, m);
+                        console.log("               MOVE 1");
+                    }
+                }
+            }
+        });
+    });
+});
+
+document.querySelector("#onlineCreate").addEventListener("click", () => {
+    const code = document.querySelector("#roomCode");
+    console.log("CREATING", code.value);
+    peer = new Peer(`CALEBKOLB-chess-${code.value}`);
+
+    peer.on("error", (err) => {
+        console.log("Peer error:", err);
+    });
+
+    peer.on("open", (id) => {
+        console.log("Connected with ID:", id);
+        startGame(2);
+    });
+
+    peer.on("connection", (conn) => {
+        document.querySelector(".gamemode").style.display = "none";
+        connection = conn;
+        conn.on("data", (data) => {
+            const request = data.split("\r\n");
+            console.log("Player message:", request);
+            if (request[0] == "Get") {
+                console.log("Sending board");
+                conn.send(`Post\r\n${you == 0 ? 1 : 0}\r\n`);
+            } else if (request[0] == "Put") {
+                if (request[1] == "chat") {
+
+                } else if (request[1] == "cancel") {
+
+                } else {
+                    if (request.length >= 3) {
+                        const side = you == 0 ? 1 : 0;
+                        const s = request[1];
+                        const m = request[2];
+                        let p = [];
+                        if (side == 0) {
+                            p = black;
+                        } else {
+                            p = white;   
+                        }
+                        for (const b of p) {
+                            if (b.l == s) {
+                                b.s = true;
+                            }
+                        }
+                        move(side, m);
+                        console.log("               MOVE 2");
+                    }
+                }
+            }
+        });
+    });
+});
 
 window.addEventListener("beforeunload", (event) => {
     if (gameStarted) {
@@ -79,19 +208,31 @@ function startGame(type) {
         you = 1;
     } else if (type == 1) {
 
-    } else {
-
+    } else if (type == 2) {
+        console.log("Creating Host Online Game");
+        if (Math.random() < .5) {
+            console.log("Black");
+            you = 0;
+        } else {
+            console.log("White");
+            you = 1;
+        }
+        gametype = 2;
+        loadPieces(you);
+    } else if (type == 3) {
+        gametype = 2;
+        loadPieces(you);
     }
 }
 
 /** Load all pieces on the board */
 function loadPieces(start) {
+    const w = 213;
+    const h = 213;
     for (let i = 0; i < 8; i++) {
         const square1 = document.querySelector(`#${rowChars[i]}8`);
         const canvas1 = document.createElement("canvas");
         canvas1.classList.add("piece");
-        const w = 213;
-        const h = 213;
         canvas1.width = w;
         canvas1.height = h;
         const ctx1 = canvas1.getContext("2d");
@@ -147,6 +288,15 @@ function loadPieces(start) {
         p2.classList.add("locationx");
         div2.appendChild(p2);
     }
+    const upgrades = document.querySelector(".upgrading");
+    for (let i = 0; i < 4; i++) {
+        const canvas = document.createElement("canvas");
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(spriteSheet, w * (startRow[i] - 1), 0, w, h, 0, 0, w, h);
+        upgrades.appendChild(canvas);
+    }
 }
 
 // Add a click listener for every square on the board
@@ -174,6 +324,7 @@ function handleChessClick(side, name, div) {
         if (s.s == name) {
             console.log(`Found: ${name}`);
             move(side, name);
+            console.log("               MOVE 3");
             return;
         }
     }
@@ -205,6 +356,7 @@ function handleChessClick(side, name, div) {
 
 /** Move a given piece */
 function move(side, move) {
+    let oldMove = "";
     if (side != turn) {
         return;
     }
@@ -214,16 +366,29 @@ function move(side, move) {
     } else {
         p = white;   
     }
+
+    for (const movements of lastMoves) {
+        const div = document.querySelector(`#${movements}`);
+        div.classList.remove("lastMoved");
+    }
     // isKingChecked(0);
     for (const b of p) {
         if (b.s) {
             const x1 = rowChars.indexOf(b.l[0]);
             const y1 = 8 - Number(b.l[1]);
+            oldMove = b.l;
             const x2 = rowChars.indexOf(move[0]);
             const y2 = 8 - Number(move[1]);
+            const movement1 = document.querySelector(`#${move}`);
+            movement1.classList.add("lastMoved");
+            const movement2 = document.querySelector(`#${b.l}`);
+            movement2.classList.add("lastMoved");
+            lastMoves.push(`${move}`);
+            lastMoves.push(`${b.l}`);
             if (b.t == 1) {
                 const div = document.querySelector(`#${b.l}`);
                 div.classList.remove("checked");
+                div.classList.add("lastMoved");
                 if ((x1 - x2) == 2) {
                     if (side == 0) {
                         const div1 = document.querySelector("#A8");
@@ -361,16 +526,27 @@ function move(side, move) {
             break;
         }
     }
-    turn = turn == 0 ? 1 : 0;
-    if (gametype == 0) {
-        you = turn;
-    }
     if (whiteCheck) {
         isKingChecked(1);
     }
     if (blackCheck) {
         isKingChecked(0);
     }
+    if (gametype == 0) {
+        if (turn != 3) {
+            turn = (turn == 0 ? 1 : 0);
+            you = turn;
+        }
+    } else if (gametype == 2 && (you == turn || turn == 3)) {
+        if (turn != 3) {
+            turn = (turn == 0 ? 1 : 0);
+        }
+        connection.send(`Put\r\n${oldMove}\r\n${move}\r\n`);
+    } else {
+        turn = (turn == 0 ? 1 : 0);
+    }
+
+    console.log("THIS IS THE TURN:", side, turn, move);
     // board.forEach(bo => {
     //     console.log(bo);
     // });
@@ -800,7 +976,7 @@ function pawnMoves(side, y, x) {
         if (y + p[2][1] <= 7 && board[y + p[2][1]][x] == 0) {
             foundMoves.push(`${rowChars[x]}${8 - (y + p[2][1])}`);
         }
-        if (y == 1 && y + p[3][1] <= 7 && board[y + p[3][1]][x] == 0 && board[y + p[3][1] + 1][x] == 0) {
+        if (y == 1 && y + p[3][1] <= 7 && board[y + p[3][1]][x] == 0 && board[y + p[3][1] - 1][x] == 0) {
             foundMoves.push(`${rowChars[x]}${8 - (y + p[3][1])}`);
         }
     } else {
