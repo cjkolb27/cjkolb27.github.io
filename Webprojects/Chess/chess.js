@@ -122,7 +122,7 @@ document.querySelector("#onlineJoin").addEventListener("click", () => {
                             }
                         }
                         move(side, m);
-                        console.log("               MOVE 1");
+                        // console.log("               MOVE 1");
                     }
                 }
             }
@@ -175,7 +175,7 @@ document.querySelector("#onlineCreate").addEventListener("click", () => {
                             }
                         }
                         move(side, m);
-                        console.log("               MOVE 2");
+                        // console.log("               MOVE 2");
                     }
                 }
             }
@@ -198,10 +198,8 @@ function startGame(type) {
     if (type == 0) {
         you = turn;
         if (Math.random() < .5) {
-            console.log("Black");
             you = 0;
         } else {
-            console.log("White");
             you = 1;
         }
         loadPieces(you);
@@ -209,12 +207,12 @@ function startGame(type) {
     } else if (type == 1) {
 
     } else if (type == 2) {
-        console.log("Creating Host Online Game");
+        // console.log("Creating Host Online Game");
         if (Math.random() < .5) {
-            console.log("Black");
+            // console.log("Black");
             you = 0;
         } else {
-            console.log("White");
+            // console.log("White");
             you = 1;
         }
         gametype = 2;
@@ -270,8 +268,8 @@ function loadPieces(start) {
         square22.appendChild(canvas22);
         white.push({ "id": i + 8, "c": canvas22, "t": 6, "l": `${rowChars[i]}2`, "s": false});
     }
-    console.log(white);
-    console.log(black);
+    // console.log(white);
+    // console.log(black);
     if (start == 0) {
        const div = document.querySelector(".board");
        div.classList.add("flipped");
@@ -322,9 +320,9 @@ function handleChessClick(side, name, div) {
     for (const s of place) {
         // console.log(`${s.s} ${name}`);
         if (s.s == name) {
-            console.log(`Found: ${name}`);
+            // console.log(`Found: ${name}`);
             move(side, name);
-            console.log("               MOVE 3");
+            // console.log("               MOVE 3");
             return;
         }
     }
@@ -351,7 +349,7 @@ function handleChessClick(side, name, div) {
         });
         div.classList.toggle("selected");
     }
-    console.log(p);
+    // console.log(p);
 }
 
 /** Move a given piece */
@@ -393,7 +391,7 @@ function move(side, move) {
                     if (side == 0) {
                         const div1 = document.querySelector("#A8");
                         const c = p.find(k => k.l == "A8");
-                        console.log(c);
+                        // console.log(c);
                         div1.removeChild(c.c);
                         const div2 = document.querySelector("#D8");
                         div2.appendChild(c.c);
@@ -403,7 +401,7 @@ function move(side, move) {
                     } else {
                         const div1 = document.querySelector("#A1");
                         const c = p.find(k => k.l == "A1");
-                        console.log(c);
+                        // console.log(c);
                         div1.removeChild(c.c);
                         const div2 = document.querySelector("#D1");
                         div2.appendChild(c.c);
@@ -415,7 +413,7 @@ function move(side, move) {
                     if (side == 0) {
                         const div1 = document.querySelector("#H8");
                         const c = p.find(k => k.l == "H8");
-                        console.log(c);
+                        // console.log(c);
                         div1.removeChild(c.c);
                         const div2 = document.querySelector("#F8");
                         div2.appendChild(c.c);
@@ -425,7 +423,7 @@ function move(side, move) {
                     } else {
                         const div1 = document.querySelector("#H1");
                         const c = p.find(k => k.l == "H1");
-                        console.log(c);
+                        // console.log(c);
                         div1.removeChild(c.c);
                         const div2 = document.querySelector("#F1");
                         div2.appendChild(c.c);
@@ -472,9 +470,9 @@ function move(side, move) {
                     whiteCastle[1] = true;
                 }
             }
-            console.log(whiteCastle);
-            console.log(blackCastle);
-            console.log(`${y1}, ${x1}, ${y2}, ${x2}`);
+            // console.log(whiteCastle);
+            // console.log(blackCastle);
+            // console.log(`${y1}, ${x1}, ${y2}, ${x2}`);
             placeCheck("", 0, true);
             const div = document.querySelector(`#${b.l}`);
             div.classList.remove("selected");
@@ -546,7 +544,7 @@ function move(side, move) {
         turn = (turn == 0 ? 1 : 0);
     }
 
-    console.log("THIS IS THE TURN:", side, turn, move);
+    // console.log("THIS IS THE TURN:", side, turn, move);
     // board.forEach(bo => {
     //     console.log(bo);
     // });
@@ -565,7 +563,7 @@ function takePiece(side, take) {
             p.splice(i, 1);
             const div = document.querySelector(`#${take}`);
             div.removeChild(s.c);
-            console.log("TRY CHECK");
+            // console.log("TRY CHECK");
             // board.forEach(bo => {
             //     console.log(bo);
             // });
@@ -591,12 +589,12 @@ function takePiece(side, take) {
             }
         }
     });
-    console.log(p);
+    // console.log(p);
 }
 
 /** Check if a space is under attack */
 function isBeingAttacked(space, attackColor) {
-    console.log(`ATTACK COLOR: ${attackColor}`);
+    // console.log(`ATTACK COLOR: ${attackColor}`);
     let p = [];
     if (attackColor == 0) {
         p = black;
@@ -622,7 +620,7 @@ function isKingChecked(side) {
         p = white;   
     }
     const king = p.find(k => k.t == 1).l;
-    console.log(`KING: ${king}`);
+    // console.log(`KING: ${king}`);
     const result = isBeingAttacked(king, side == 0 ? 1 : 0);
     const div = document.querySelector(`#${king}`);
     if (result) {
@@ -651,7 +649,7 @@ function isCheckmate(side) {
         p = white;
     }
     const king = p.find(k => k.t == 1).l;
-    console.log(`KING: ${king}`);
+    // console.log(`KING: ${king}`);
 
     // if (!isBeingAttacked(king, side == 0 ? 1 : 0)) {
     //     return false;
@@ -674,7 +672,7 @@ function isCheckmate(side) {
             // const removed = p2.splice(index, 1)[0];
             let result = false;
             if (piece.t == 1) {
-                console.log("KING MOVED!");
+                // console.log("KING MOVED!");
                 result = isBeingAttacked(m, side == 0 ? 1 : 0);
             } else {
                 result = isBeingAttacked(king, side == 0 ? 1 : 0);
@@ -719,9 +717,9 @@ function placeCheck(name, side, disable) {
     const king = p.find(k => k.t == 1).l;
     if (!disable) {
         const foundMoves = findAllMoves(name, side);
-        console.log(foundMoves);
+        // console.log(foundMoves);
         for (const m of foundMoves) {
-            console.log(name);
+            // console.log(name);
             const oldPos = name;
             const x1 = rowChars.indexOf(name[0]);
             const y1 = 8 - Number(name[1]);
@@ -735,11 +733,11 @@ function placeCheck(name, side, disable) {
             // const index = p2.findIndex(o => o.l == m);
             // const removed = p2.splice(index, 1)[0];
             let result = false;
-            board.forEach(bo => {
-                console.log(bo);
-            });
+            // board.forEach(bo => {
+            //     console.log(bo);
+            // });
             if (oldBoardPiece == (side == 0 ? 11 : 1)) {
-                console.log("KING MOVED!");
+                // console.log("KING MOVED!");
                 result = isBeingAttacked(m, side == 0 ? 1 : 0);
             } else {
                 result = isBeingAttacked(king, side == 0 ? 1 : 0);
