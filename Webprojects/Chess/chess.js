@@ -1,6 +1,9 @@
 let peer = null;
 let connection = null;
 
+/** Sleep function */
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 /** Used to load an image */
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -26,7 +29,12 @@ const take1 = new Audio("../audio/take1.mp3");
 const spriteSheet = await loadImage("../images/chess/Chess_Pieces.png");
 
 // Create board, moves, and pieces holder
+const w = 213;
+const h = 213;
+let botSkill = 0;
 let turn = 1;
+let up = false;
+let uplast = [];
 const white = [];
 const black = [];
 const place = [];
@@ -56,7 +64,10 @@ document.querySelector(`#button0`).addEventListener("click", () => {
     document.querySelector(".gamemode").style.display = "none";
 });
 
-document.querySelector(`#button1`);
+document.querySelector(`#button1`).addEventListener("click", () => {
+    startGame(1);
+    document.querySelector(".gamemode").style.display = "none";
+});
 
 document.querySelector(`#button2`).addEventListener("click", () => {
     console.log("ONLINE");
@@ -125,6 +136,28 @@ document.querySelector("#onlineJoin").addEventListener("click", () => {
                         // console.log("               MOVE 1");
                     }
                 }
+            } else if (request[0] == "Puts") {
+                if (request.length >= 4) {
+                    const side = you == 0 ? 1 : 0;
+                    const s = request[1];
+                    const m = request[2];
+                    const change = request[3];
+                    let p = [];
+                    if (side == 0) {
+                        p = black;
+                    } else {
+                        p = white;   
+                    }
+                    for (const b of p) {
+                        if (b.l == s) {
+                            b.s = true;
+                        }
+                    }
+                    move(side, m);
+                    uplast = [s, m];
+                    promotion(change);
+                    // console.log("               MOVE 1");
+                }
             }
         });
     });
@@ -178,6 +211,28 @@ document.querySelector("#onlineCreate").addEventListener("click", () => {
                         // console.log("               MOVE 2");
                     }
                 }
+            } else if (request[0] == "Puts") {
+                if (request.length >= 4) {
+                    const side = you == 0 ? 1 : 0;
+                    const s = request[1];
+                    const m = request[2];
+                    const change = request[3];
+                    let p = [];
+                    if (side == 0) {
+                        p = black;
+                    } else {
+                        p = white;   
+                    }
+                    for (const b of p) {
+                        if (b.l == s) {
+                            b.s = true;
+                        }
+                    }
+                    move(side, m);
+                    uplast = [s, m];
+                    promotion(change);
+                    // console.log("               MOVE 1");
+                }
             }
         });
     });
@@ -205,7 +260,15 @@ function startGame(type) {
         loadPieces(you);
         you = 1;
     } else if (type == 1) {
-
+        gametype = 1;
+        if (Math.random() < .5) {
+            you = 0;
+            loadPieces(you);
+            botMove(botSkill);
+        } else {
+            you = 1;
+            loadPieces(you);
+        }
     } else if (type == 2) {
         // console.log("Creating Host Online Game");
         if (Math.random() < .5) {
@@ -225,8 +288,6 @@ function startGame(type) {
 
 /** Load all pieces on the board */
 function loadPieces(start) {
-    const w = 213;
-    const h = 213;
     for (let i = 0; i < 8; i++) {
         const square1 = document.querySelector(`#${rowChars[i]}8`);
         const canvas1 = document.createElement("canvas");
@@ -288,12 +349,85 @@ function loadPieces(start) {
     }
     const upgrades = document.querySelector(".upgrading");
     for (let i = 0; i < 4; i++) {
+        const button = document.createElement("button");
+        button.classList.add("upgrading-button");
+
+        button.addEventListener("click", () => {
+            if (up) {
+                promotion(i);
+            }
+        });
+
         const canvas = document.createElement("canvas");
         canvas.width = w;
         canvas.height = h;
+        canvas.classList.add("upgrading-canvas");
         const ctx = canvas.getContext("2d");
-        ctx.drawImage(spriteSheet, w * (startRow[i] - 1), 0, w, h, 0, 0, w, h);
-        upgrades.appendChild(canvas);
+        ctx.drawImage(spriteSheet, w * (startRow[i] - 1), (start == 0 ? (w + 1) : 0), w, h, 0, 0, w, h);
+        button.appendChild(canvas);
+        upgrades.appendChild(button);
+    }
+}
+
+/** Function for when a pawn reaches the back rank */
+function promotion(i) {
+    console.log(`Button: ${i}`);
+    turn = turn - 10;
+    up = false;
+    const upgrades = document.querySelector(".upgrading");
+    upgrades.classList.remove("upgraded");
+    if (turn == 0) {
+        let count = 0;
+        for (let j = 0; j < 8; j++) {
+            if (board[7][j] == 16) {
+                count = j;
+                break;
+            }
+        }
+        console.log(`Piece At: ${count}`);
+        board[7][count] = 15 - i;
+        const piece = black.find(k => k.l == `${rowChars[count]}1`);
+        piece.t = 5 - i;
+        const ctx = piece.c.getContext("2d");
+        ctx.clearRect(0, 0, piece.c.width, piece.c.height);
+        ctx.drawImage(spriteSheet, w * (4 - i), w + 1, w, h, 0, 0, w, h);
+    } else {
+        let count = 0;
+        for (let j = 0; j < 8; j++) {
+            if (board[0][j] == 6) {
+                count = j;
+                break;
+            }
+        }
+        console.log(`Piece At: ${count}`);
+        board[0][count] = 5 - i;
+        const piece = white.find(k => k.l == `${rowChars[count]}8`);
+        piece.t = 5 - i;
+        const ctx = piece.c.getContext("2d");
+        ctx.clearRect(0, 0, piece.c.width, piece.c.height);
+        ctx.drawImage(spriteSheet, w * (4 - i), 0, w, h, 0, 0, w, h);
+    }
+    board.forEach(bo => {
+        console.log(bo);
+    });
+    if (isKingChecked(1)) {
+        isCheckmate(1);
+    }
+    if (isKingChecked(0)) {
+        isCheckmate(0);
+    }
+    if (gametype == 0) {
+        if (turn != 3) {
+            turn = (turn == 0 ? 1 : 0);
+            you = turn;
+        }
+    } else if (gametype == 2 && (you == turn || turn == 3)) {
+        if (turn != 3) {
+            turn = (turn == 0 ? 1 : 0);
+        }
+        connection.send(`Puts\r\n${uplast[0]}\r\n${uplast[1]}\r\n${i}\r\n`);
+    } else {
+        turn = (turn == 0 ? 1 : 0);
     }
 }
 
@@ -470,9 +604,7 @@ function move(side, move) {
                     whiteCastle[1] = true;
                 }
             }
-            // console.log(whiteCastle);
-            // console.log(blackCastle);
-            // console.log(`${y1}, ${x1}, ${y2}, ${x2}`);
+
             placeCheck("", 0, true);
             const div = document.querySelector(`#${b.l}`);
             div.classList.remove("selected");
@@ -521,6 +653,19 @@ function move(side, move) {
             }
             const last = document.querySelector(`#${move}`);
             last.appendChild(b.c);
+            if ((y2 == 0 || y2 == 7) && (board[y2][x2] == 16 || board[y2][x2] == 6)) {
+                console.log("                 UPGRADE");
+                if (turn == you) {
+                    up = true;
+                    uplast = [oldMove, move];
+                    const upgrades = document.querySelector(".upgrading");
+                    upgrades.classList.add("upgraded");
+                    turn = turn + 10;
+                    return;
+                }
+                turn = turn + 10;
+                return;
+            }
             break;
         }
     }
@@ -535,6 +680,14 @@ function move(side, move) {
             turn = (turn == 0 ? 1 : 0);
             you = turn;
         }
+    } else if (gametype == 1) {
+        if (turn != 3) {
+            turn = (turn == 0 ? 1 : 0);
+            if (turn != you) {
+                console.log("Bot Moving");
+                botMove(botSkill);
+            }
+        }
     } else if (gametype == 2 && (you == turn || turn == 3)) {
         if (turn != 3) {
             turn = (turn == 0 ? 1 : 0);
@@ -548,6 +701,39 @@ function move(side, move) {
     // board.forEach(bo => {
     //     console.log(bo);
     // });
+}
+
+async function botMove(difficuly) {
+    // Random moves
+    if (difficuly == 0) {
+        await sleep(500);
+        let p = [];
+        if (you != 0) {
+            p = black;
+        } else {
+            p = white;   
+        }
+        const moveable = [];
+        for (const p1 of p) {
+            placeCheck(p1.l, (you == 0 ? 1 : 0), false);
+            if (place.length > 0) {
+                moveable.push(p1);
+            }
+            placeCheck(p1.l, (you == 0 ? 1 : 0), true);
+        }
+        console.log(moveable);
+        const index = moveable[Math.floor(Math.random() * moveable.length)];
+        index.s = true;
+        placeCheck(index.l, (you == 0 ? 1 : 0), false);
+        const choices = place;
+        const theMove = choices[Math.floor(Math.random() * choices.length)];
+        placeCheck(index.l, (you == 0 ? 1 : 0), true);
+        console.log(theMove.s);
+        move((you == 0 ? 1 : 0), theMove.s);
+        if (index.t == 6 && (theMove.s[1] == 8 || theMove.s[1] == 1)) {
+            promotion(Math.floor(Math.random() * 4));
+        }
+    }
 }
 
 /** Take an enemies piece */
