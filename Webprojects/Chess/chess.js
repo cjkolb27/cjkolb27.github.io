@@ -421,6 +421,14 @@ function promotion(i) {
             turn = (turn == 0 ? 1 : 0);
             you = turn;
         }
+    } else if (gametype == 1) {
+        if (turn != 3) {
+            turn = (turn == 0 ? 1 : 0);
+            if (turn != you) {
+                console.log("Bot Moving");
+                botMove(botSkill);
+            }
+        }
     } else if (gametype == 2 && (you == turn || turn == 3)) {
         if (turn != 3) {
             turn = (turn == 0 ? 1 : 0);
