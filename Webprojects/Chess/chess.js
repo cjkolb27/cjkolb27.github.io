@@ -43,6 +43,8 @@ let whiteCheck = false;
 let blackCheck = false;
 const whiteCastle = [false, false, false];
 const blackCastle = [false, false, false];
+let whiteenpassant = [0, 0, 0, 0, 0, 0, 0, 0];
+let blackenpassant = [0, 0, 0, 0, 0, 0, 0, 0];
 const startRow = [5, 4, 3, 2, 1, 3, 4, 5];
 const rowChars = ["A", "B", "C", "D", "E", "F", "G", "H"];
 const board = [ [15, 14, 13, 12, 11, 13, 14, 15],
@@ -514,6 +516,7 @@ function move(side, move) {
     // isKingChecked(0);
     for (const b of p) {
         if (b.s) {
+            console.log(`B: ${b.l}, M: ${move}`);
             const x1 = rowChars.indexOf(b.l[0]);
             const y1 = 8 - Number(b.l[1]);
             oldMove = b.l;
@@ -525,6 +528,15 @@ function move(side, move) {
             movement2.classList.add("lastMoved");
             lastMoves.push(`${move}`);
             lastMoves.push(`${b.l}`);
+            if (b.t == 6) {
+                console.log("Pawn");
+                console.log(`Distance: ${y1 - y2}`);
+                if (y1 - y2 == -2) {
+                    blackenpassant[x1] = 1;
+                } else if (y1 - y2 == 2) {
+                    whiteenpassant[x1] = 1;
+                }
+            }
             if (b.t == 1) {
                 const div = document.querySelector(`#${b.l}`);
                 div.classList.remove("checked");
@@ -618,13 +630,26 @@ function move(side, move) {
             div.classList.remove("selected");
             div.removeChild(b.c);
             b.s = false;
-            if (board[y2][x2] >= (side == 0 ? 1 : 11) && board[y2][x2] <= (side == 0 ? 6 : 16)) {
+            let e = false;
+            if (board[y1][x1] == 6 || board[y1][x1] == 16) {
+                if (board[y2][x2] == 0 && x2 - x1 != 0) {
+                    e = true;
+                }
+            }
+            if ((board[y2][x2] >= (side == 0 ? 1 : 11) && board[y2][x2] <= (side == 0 ? 6 : 16)) || e) {
                 take1.volume = .8;
                 take1.play();
                 board[y1][x1] = 0;
                 board[y2][x2] = side == 0 ? b.t + 10 : b.t;
+                let oldB = b.l[1];
                 b.l = move;
-                takePiece(side, move);
+                if (e) {
+                    console.log(`SOMETHING THING: ${move[0]}${oldB}`);
+                    board[y1][x2] = 0;
+                    takePiece(side, `${move[0]}${oldB}`);
+                } else {
+                    takePiece(side, move);
+                }
             } else {
                 let num = Math.floor(Math.random() * 3);
                 // console.log(`Sound: ${num}`);
@@ -683,6 +708,16 @@ function move(side, move) {
     if (blackCheck) {
         isKingChecked(0);
     }
+
+    if (turn == 1) {
+        blackenpassant = [0, 0, 0, 0, 0, 0, 0, 0];
+    } else {
+        whiteenpassant = [0, 0, 0, 0, 0, 0, 0, 0];
+    }
+
+    console.log(`Black En Passant: ${blackenpassant}`);
+    console.log(`White En Passant: ${whiteenpassant}`);
+
     if (gametype == 0) {
         if (turn != 3) {
             turn = (turn == 0 ? 1 : 0);
@@ -1159,10 +1194,10 @@ function pawnMoves(side, y, x) {
     let p = pawn;
     if (side == 0) {
         p = bpawn;
-        if (y + p[0][1] <= 7 && x + p[0][0] >= 0 && board[y + p[0][1]][x + p[0][0]] >= (side == 0 ? 1 : 11) && board[y + p[0][1]][x + p[0][0]] <= (side == 0 ? 6 : 16)) {
+        if (y + p[0][1] <= 7 && x + p[0][0] >= 0 && board[y + p[0][1]][x + p[0][0]] >= 1 && board[y + p[0][1]][x + p[0][0]] <= 6) {
             foundMoves.push(`${rowChars[x + p[0][0]]}${8 - (y + p[0][1])}`)
         }
-        if (y + p[1][1] <= 7 && x + p[1][0] <= 7  && board[y + p[1][1]][x + p[1][0]] >= (side == 0 ? 1 : 11) && board[y + p[1][1]][x + p[1][0]] <= (side == 0 ? 6 : 16)) {
+        if (y + p[1][1] <= 7 && x + p[1][0] <= 7  && board[y + p[1][1]][x + p[1][0]] >= 1 && board[y + p[1][1]][x + p[1][0]] <= 6) {
             foundMoves.push(`${rowChars[x + p[1][0]]}${8 - (y + p[1][1])}`);
         }
         if (y + p[2][1] <= 7 && board[y + p[2][1]][x] == 0) {
@@ -1171,11 +1206,19 @@ function pawnMoves(side, y, x) {
         if (y == 1 && y + p[3][1] <= 7 && board[y + p[3][1]][x] == 0 && board[y + p[3][1] - 1][x] == 0) {
             foundMoves.push(`${rowChars[x]}${8 - (y + p[3][1])}`);
         }
-    } else {
-        if (y + p[0][1] >= 0 && x + p[0][0] >= 0 && board[y + p[0][1]][x + p[0][0]] >= (side == 0 ? 1 : 11) && board[y + p[0][1]][x + p[0][0]] <= (side == 0 ? 6 : 16)) {
+
+        // En Passant
+        if (y + p[0][1] <= 7 && x + p[0][0] >= 0 && whiteenpassant[x + p[0][0]] == 1 && board[y + p[0][1]][x + p[0][0]] == 0) {
             foundMoves.push(`${rowChars[x + p[0][0]]}${8 - (y + p[0][1])}`)
         }
-        if (y + p[1][1] >= 0 && x + p[1][0] <= 7  && board[y + p[1][1]][x + p[1][0]] >= (side == 0 ? 1 : 11) && board[y + p[1][1]][x + p[1][0]] <= (side == 0 ? 6 : 16)) {
+        if (y + p[1][1] <= 7 && x + p[1][0] <= 7  && whiteenpassant[x + p[1][0]] == 1 && board[y + p[1][1]][x + p[1][0]] == 0) {
+            foundMoves.push(`${rowChars[x + p[1][0]]}${8 - (y + p[1][1])}`);
+        }
+    } else {
+        if (y + p[0][1] >= 0 && x + p[0][0] >= 0 && board[y + p[0][1]][x + p[0][0]] >= 11 && board[y + p[0][1]][x + p[0][0]] <= 16) {
+            foundMoves.push(`${rowChars[x + p[0][0]]}${8 - (y + p[0][1])}`)
+        }
+        if (y + p[1][1] >= 0 && x + p[1][0] <= 7  && board[y + p[1][1]][x + p[1][0]] >= 11 && board[y + p[1][1]][x + p[1][0]] <= 16) {
             foundMoves.push(`${rowChars[x + p[1][0]]}${8 - (y + p[1][1])}`);
         }
         if (y + p[2][1] >= 0 && board[y + p[2][1]][x] == 0) {
@@ -1183,6 +1226,14 @@ function pawnMoves(side, y, x) {
         }
         if (y == 6 && y + p[3][1] >= 0 && board[y + p[3][1]][x] == 0 && board[y + p[3][1] + 1][x] == 0) {
             foundMoves.push(`${rowChars[x]}${8 - (y + p[3][1])}`);
+        }
+
+        // En Passant
+        if (y + p[0][1] >= 0 && x + p[0][0] >= 0 && blackenpassant[x + p[0][0]] == 1 && board[y + p[0][1]][x + p[0][0]] == 0) {
+            foundMoves.push(`${rowChars[x + p[0][0]]}${8 - (y + p[0][1])}`)
+        }
+        if (y + p[1][1] >= 0 && x + p[1][0] <= 7  && blackenpassant[x + p[1][0]] == 1 && board[y + p[1][1]][x + p[1][0]] == 0) {
+            foundMoves.push(`${rowChars[x + p[1][0]]}${8 - (y + p[1][1])}`);
         }
     }
     return foundMoves;
