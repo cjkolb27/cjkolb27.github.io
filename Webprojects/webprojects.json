@@ -1,7 +1,7 @@
 [
     {
         "name": "Chess Local/Online",
-        "file": "images/minecraft/grass_block_side.png",
+        "file": "images/chess/Chess_Board.png",
         "description": "Play chess agains a bot that runs in browser. Also have the ability to play a game agaist a friend online.",
         "link": "Chess"
     },

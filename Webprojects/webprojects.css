@@ -45,7 +45,10 @@
 .preview-img {
     aspect-ratio: 16 / 8;
     object-fit: cover;
+    image-rendering: crisp-edges;
     width: 100%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .p-title {

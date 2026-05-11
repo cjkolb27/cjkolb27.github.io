@@ -9,6 +9,7 @@ body {
     #ffc1c1 100%
   );
   min-height: 100vh;
+  text-align: center;
 }
 
 /* Add a black background color to the top navigation */
@@ -120,4 +121,13 @@ body {
 
 #closePopup {
   font-size: 28px;
+}
+
+#name {
+  display: inline-block;
+  background-color: white;
+  border: black 3px solid;
+  border-radius: 15px;
+  max-width: 1200px;
+  padding: 30px;
 }
