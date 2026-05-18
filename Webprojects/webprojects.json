@@ -2,7 +2,7 @@
     {
         "name": "Chess Local/Online",
         "file": "images/chess/Chess_Board.png",
-        "description": "Play chess agains a bot that runs in the browser. Also have the ability to play a game agaist a friend online.",
+        "description": "Play chess against a bot that runs in the browser. Also have the ability to play a game agaist a friend online.",
         "link": "Chess"
     },
     {
