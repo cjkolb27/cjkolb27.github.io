@@ -6,7 +6,7 @@
         "lang": [
             "Java"
         ],
-        "link": "/?CalApp"
+        "link": "/?name=CalApp"
     },
     {
         "name": "Calendar Database",
@@ -16,7 +16,7 @@
             "Python",
             "MariaDB"
         ],
-        "link": "/?CalDat"
+        "link": "/?name=CalDat"
     },
     {
         "name": "Remote Desktop Application",
@@ -25,7 +25,7 @@
         "lang": [
             "Python"
         ],
-        "link": "/?RemDesk"
+        "link": "/?name=RemDesk"
     },
     {
         "name": "3D Printed Computer Case",
@@ -34,7 +34,7 @@
         "lang": [
             ""
         ],
-        "link": "/?CompCase"
+        "link": "/?name=CompCase"
     },
     {
         "name": "Audio Streamer",
@@ -43,6 +43,6 @@
         "lang": [
             "Python"
         ],
-        "link": "/?idk"
+        "link": "/?name=idk"
     }
 ]
