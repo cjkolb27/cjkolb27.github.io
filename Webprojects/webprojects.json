@@ -1,5 +1,11 @@
 [
     {
+        "name": "Wordly",
+        "file": "images/wordly/wordly.png",
+        "description": "Wordle-like game that does a dayly word guess and do random words.",
+        "link": "Wordly"
+    },
+    {
         "name": "Chess Local/Online",
         "file": "images/chess/Chess_Board.png",
         "description": "Play chess against a bot that runs in the browser. Also have the ability to play a game agaist a friend online.",
